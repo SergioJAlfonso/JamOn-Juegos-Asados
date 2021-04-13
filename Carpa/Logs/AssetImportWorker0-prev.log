@@ -11,19 +11,19 @@ C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/The Broken Yggdrasil/Documents/Unity/Carpa
+H:/Carpa/JamOn-Juegos-Asados/Carpa
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62617
-Successfully changed project path to: C:/Users/The Broken Yggdrasil/Documents/Unity/Carpa
-C:/Users/The Broken Yggdrasil/Documents/Unity/Carpa
+63595
+Successfully changed project path to: H:/Carpa/JamOn-Juegos-Asados/Carpa
+H:/Carpa/JamOn-Juegos-Asados/Carpa
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 44.22 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 44.10 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.3f1 (76626098c1c4)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/The Broken Yggdrasil/Documents/Unity/Carpa/Assets
+[Subsystems] Discovering subsystems at path H:/Carpa/JamOn-Juegos-Asados/Carpa/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -35,7 +35,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56668
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56176
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -43,61 +43,125 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.3f1/E
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.006585 seconds.
+Registered in 0.005346 seconds.
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 49.19 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 45.25 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.853 seconds
+- Completed reload, in  1.826 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001271 seconds.
+Registered in 0.000936 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 38.02 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 49.78 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.142 seconds
+- Completed reload, in  1.176 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1808 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1810 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 84.9 MB.
 System memory in use after: 84.9 MB.
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2250.
-Total: 3.389900 ms (FindLiveObjects: 0.509700 ms CreateObjectMapping: 0.093300 ms MarkObjects: 2.635000 ms  DeleteObjects: 0.149800 ms)
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2252.
+Total: 2.107500 ms (FindLiveObjects: 0.222600 ms CreateObjectMapping: 0.071500 ms MarkObjects: 1.701300 ms  DeleteObjects: 0.110600 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets
-  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2e0e235c0f4af3754229b664788db90') in 0.006156 seconds
-  Import took 0.010128 seconds .
+  path: Assets/Scripts
+  artifactKey: Guid(b4edd0c971cef114ca1dd16432e5f763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(b4edd0c971cef114ca1dd16432e5f763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b340d29ac76603cf77f95996e529547') in 0.005562 seconds
+  Import took 0.009036 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Scenes
-  artifactKey: Guid(6227234fdd1437140adadb6c55cb5460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(6227234fdd1437140adadb6c55cb5460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58727a736e3e6dab727a8aa975f07714') in 0.003531 seconds
-  Import took 0.007597 seconds .
+  Time since last request: 0.000188 seconds.
+  path: Assets/Scripts/CameraFollow.cs
+  artifactKey: Guid(9a94bff735cd08a4e8cd88574b955969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CameraFollow.cs using Guid(9a94bff735cd08a4e8cd88574b955969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8983bfbf9312fea3f797ff2e12fb83d6') in 0.055753 seconds
+  Import took 0.059142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 78.665809 seconds.
+  path: Assets/Scripts/CameraFollow.cs
+  artifactKey: Guid(9a94bff735cd08a4e8cd88574b955969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CameraFollow.cs using Guid(9a94bff735cd08a4e8cd88574b955969) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37f9c0073be00f4aff311215e70bc16c') in 0.009902 seconds
+  Import took 0.016236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.164146 seconds.
+  path: Assets/Scripts/CameraFollowPlayer.cs
+  artifactKey: Guid(bcd53e38ddbf2ed449312411f72b0f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CameraFollowPlayer.cs using Guid(bcd53e38ddbf2ed449312411f72b0f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2475c78827602ace454f1fd6d6dab05') in 0.012260 seconds
+  Import took 0.026877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.307924 seconds.
+  path: Assets/Scripts/CameraFollowPlayer.cs
+  artifactKey: Guid(bcd53e38ddbf2ed449312411f72b0f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CameraFollowPlayer.cs using Guid(bcd53e38ddbf2ed449312411f72b0f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '983bade30a0dedf2e5d808e37332007c') in 0.049660 seconds
+  Import took 0.078050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.659028 seconds.
+  path: Assets/Scripts/CameraFollowPlayer.cs
+  artifactKey: Guid(bcd53e38ddbf2ed449312411f72b0f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CameraFollowPlayer.cs using Guid(bcd53e38ddbf2ed449312411f72b0f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65d4ac5d16eadc29dcf1306aa5cfd7d2') in 0.011596 seconds
+  Import took 0.022239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.022303 seconds.
+  path: Assets/Scripts/CameraFollowPlayer.cs
+  artifactKey: Guid(bcd53e38ddbf2ed449312411f72b0f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CameraFollowPlayer.cs using Guid(bcd53e38ddbf2ed449312411f72b0f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65d4ac5d16eadc29dcf1306aa5cfd7d2') in 0.008377 seconds
+  Import took 0.015085 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.011506 seconds.
+  path: Assets/FPlayer.cs
+  artifactKey: Guid(aca918f0b8be66e4ba756fadb3ee36f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FPlayer.cs using Guid(aca918f0b8be66e4ba756fadb3ee36f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f36078391d71cc5be85d518b022a60b7') in 0.003877 seconds
+  Import took 0.008129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.052759 seconds.
+  path: Assets/scrip.cs
+  artifactKey: Guid(62c7356282594ab40bcf90e6afaea920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/scrip.cs using Guid(62c7356282594ab40bcf90e6afaea920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a151fd41fc7c5514f21324f1cc0f5d6') in 0.007052 seconds
+  Import took 0.010572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.208856 seconds.
+  path: Assets/Scripts/PlayerController.cs
+  artifactKey: Guid(63edd10f4cc724b4d8987e043239e9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerController.cs using Guid(63edd10f4cc724b4d8987e043239e9a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a508db8df1c1f07162513b277cbe9769') in 0.003776 seconds
+  Import took 0.008128 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
