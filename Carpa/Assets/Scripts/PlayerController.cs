@@ -7,44 +7,34 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     float speed = 15;
-    Vector2 direccion;
-    Animator[] anim;
+    //Animator[] anim;
+    Transform tr;
     Rigidbody2D rb;
+    Vector3 mousePos;
+    Vector2 direction;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        tr = GetComponent<Transform>();
         //anim[0] player //anim[1] sword
         //anim = GetComponentsInChildren<Animator>();
-        Cursor.visible = false;
+        Cursor.visible = true;
     }
 
     void Update()
     {
-        Vector2 direccionx;
-        Vector2 direcciony;
 
-            if (Input.GetKey("w")) direcciony = new Vector2(0, 1);
-            else if (Input.GetKey("s")) direcciony = new Vector2(0, -1);
-            else direcciony = new Vector2(0, 0);
 
-            if (Input.GetKey("d")) direccionx = new Vector2(1, 0);
-            else if (Input.GetKey("a")) direccionx = new Vector2(-1, 0);
-            else direccionx = new Vector2(0, 0);
-
-            direccion = direccionx + direcciony;
-            direccion.Normalize();
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        direction = (mousePos - tr.position).normalized;
+        rb.velocity = new Vector2(direction.x * speed, 0);
 
         //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
     }
 
-    private void FixedUpdate()
-    {
-        rb.velocity = direccion * speed;
-    }
-
-    //Metodos usados en los PowerUps Verde y Azul para manejar la velocidad del jugador
+    //Por si queremos modificar la espid
     public void MulSpeed(int x)
     {
         speed *= x;
