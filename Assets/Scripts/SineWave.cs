@@ -7,6 +7,7 @@ public class SineWave : MonoBehaviour
     public int numberOfDots = 28;
     public float factor = 5;
     public float amplitude = 5;
+    public int numberOfDotsWave = 28;
     public GameObject[] waveDots;
     public GameObject waveDotPrefab;
 
@@ -38,7 +39,9 @@ public class SineWave : MonoBehaviour
         Vector3 direction = (target.localPosition - waveDots[1].transform.localPosition);
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        
         waveDots[1].transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+         
 
         // move the prefab clones as a sine wave
         for (int i = 1; i < numberOfDots; i++)
@@ -54,7 +57,10 @@ public class SineWave : MonoBehaviour
 
             Vector3 position = waveDots[i].transform.localPosition; // tengo que mover esta posicion ademas con la rotacion, eso quiere decir que tengo que tener en cuenta la direccion del elemento anterior
             position.x = target.localPosition.x - (waveDots[i].transform.localScale.x * i);
-            position.y = target.localPosition.y + Mathf.Sin(Time.time + i * factor) * amplitude;
+            float aux = i * 1.0f / numberOfDotsWave;
+            position.y = target.localPosition.y + Mathf.Sin((Time.time * speed + aux * factor)) * amplitude;
+         
+            Debug.Log(aux + " \n");
             waveDots[i].transform.localPosition = position;
         }
 

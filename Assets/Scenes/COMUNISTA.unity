@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440302849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.88, y: -0.09, z: -0.16205312}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8103333, y: 0.8816666, z: 1}
   m_Children: []
   m_Father: {fileID: 1941832318}
@@ -167,9 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49883d028ee32b44d8e0df1d7b62ba2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfDots: 6
-  factor: -1
-  amplitude: 0.5
+  numberOfDots: 20
+  factor: -10
+  amplitude: 0.3
+  numberOfDotsWave: 4
   waveDots:
   - {fileID: 1941832317}
   waveDotPrefab: {fileID: 4444898357947774438, guid: 65e606b2cdfd18e40befcd8324db60f2, type: 3}
@@ -337,8 +338,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941832317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.366, y: 0.404, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalPosition: {x: 2.8192, y: 0.5405, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1440302850}
   m_Father: {fileID: 0}
