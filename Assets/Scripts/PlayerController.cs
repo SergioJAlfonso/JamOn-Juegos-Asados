@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
         direction = (mousePos - tr.position);
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -61,6 +62,16 @@ public class PlayerController : MonoBehaviour
         //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
     }
+
+    public Vector3 GetWorldPositionOnPlane(Vector3 screenPosition, float z)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(screenPosition);
+        Plane xy = new Plane(Vector3.forward, new Vector3(0, 0, z));
+        float distance;
+        xy.Raycast(ray, out distance);
+        return ray.GetPoint(distance);
+    }
+
     //Por si queremos modificar la espid
 
     public void MulSpeed(int x)
