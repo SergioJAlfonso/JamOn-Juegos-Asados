@@ -12,16 +12,19 @@ public class PlayerController : MonoBehaviour
     //Animator[] anim;
     Transform tr;
     Rigidbody2D rb;
+    SpriteRenderer sp;
     Vector3 mousePos;
     Vector2 direction;
     float posZ = 0; // Posición z
     float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
+    float alphaValue;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<Transform>();
-
+        sp = GetComponent<SpriteRenderer>();
+        alphaValue = sp.color.a;
         Cursor.visible = true;
     }
 
@@ -41,36 +44,48 @@ public class PlayerController : MonoBehaviour
             if (posZ <= 0)
             {
                 posZ -= 1.0f;
-                if(transform.localScale.x + (posZ / 1000) > 0.4 && transform.localScale.x + (posZ / 1000) < 1.6)
-                    transform.localScale = new Vector3(transform.localScale.x + (posZ / 1000), transform.localScale.y + (posZ / 1000), transform.localScale.z);
+                if (tr.localScale.x + (posZ / 1000) > 0.4 && tr.localScale.x + (posZ / 1000) < 1.6)
+                {
+                    tr.localScale = new Vector3(tr.localScale.x + (posZ / 1000), tr.localScale.y + (posZ / 1000), tr.localScale.z);
+                    if (sp.color.a - 0.02 > 0.6) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
+                }
                 diveReach = -posZ;
             }
         }
-        else 
+        else
         {
             if (posZ < diveReach)
             {
                 posZ += 1.0f;
-                if(transform.localScale.x + (posZ / 1000) > 0.4 && transform.localScale.x + (posZ / 1000) < 1.6)
-                    transform.localScale = new Vector3(transform.localScale.x + (posZ / 1000), transform.localScale.y + (posZ / 1000), transform.localScale.z);
-            }               
+                if (tr.localScale.x + (posZ / 1000) > 0.4 && tr.localScale.x + (posZ / 1000) < 1.6)
+                {
+                    tr.localScale = new Vector3(tr.localScale.x + (posZ / 1000), tr.localScale.y + (posZ / 1000), tr.localScale.z);
+                    if(sp.color.a + 0.015 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.015f);
+                }
+            }
             else if (posZ >= diveReach)
             {
                 diveReach = 0;
                 if (posZ > 0)
                 {
                     posZ -= 1.0f;
-                    if(transform.localScale.x - (posZ / 1000) >= 1) 
-                        transform.localScale = new Vector3(transform.localScale.x - (posZ / 1000), transform.localScale.y - (posZ / 1000), transform.localScale.z);
-                }                    
+                    if (posZ < 75 && tr.localScale.x - (posZ / 1000) >= 1)
+                    {
+                        tr.localScale = new Vector3(tr.localScale.x - (posZ / 1000), tr.localScale.y - (posZ / 1000), tr.localScale.z);
+                        if (sp.color.a - 0.03 > alphaValue) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.03f);
+                    }
+                }
                 else
+                {
                     posZ = 0;
+                    sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, alphaValue);
+                }
             }
         }
 
         rb.velocity = new Vector2(direction.x * speed, 0);
-        
-        Debug.Log("p " + posZ);
+
+        Debug.Log("p " + sp.color.a);
     }
 
     public Vector3 GetWorldPositionOnPlane(Vector3 screenPosition, float z)
