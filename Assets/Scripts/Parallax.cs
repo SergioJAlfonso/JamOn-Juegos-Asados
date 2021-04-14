@@ -18,7 +18,13 @@ public class Parallax : MonoBehaviour
     {
         float temp = (transform.position.y * (1 - parallaxEffect));
 
-        transform.Translate(Vector2.down * parallaxEffect * Time.smoothDeltaTime);
+        //Si está en el menu de Play, el parallax se mueve la mitad de rapido
+        if (PlayMenu.isPlaying)
+            transform.Translate(Vector2.down * parallaxEffect * Time.smoothDeltaTime);
+        else
+            transform.Translate(Vector2.down * (parallaxEffect / 2) * Time.smoothDeltaTime);
+
+
         if (transform.position.y < startPos - length) transform.position = new Vector2(0, startPos);
     }
 }

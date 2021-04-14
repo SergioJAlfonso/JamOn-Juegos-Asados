@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ANDALUZPORRO.unity
+    guid: bf418bd57ad2c7b47ac2803bc96ec600
   m_configObjects: {}
