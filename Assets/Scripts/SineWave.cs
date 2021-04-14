@@ -28,19 +28,22 @@ public class SineWave : MonoBehaviour
         for (int i = 1; i < numberOfDots; i++)
         {
             waveDots[i] = Instantiate(waveDotPrefab, new Vector3(0, 0, i), Quaternion.identity) as GameObject;
+
+            waveDots[i].transform.parent = target.transform;
         }
     }
 
     void Update()
     {
+
         // move the prefab clones as a sine wave
         for (int i = 1; i < numberOfDots; i++)
         {
 
-            Vector3 position = waveDots[i].transform.localPosition;
-            position.y = target.position.y - (waveDots[i].transform.lossyScale.y * i);
-            position.x = target.position.x + Mathf.Sin(Time.time + i * factor) * amplitude;
-            waveDots[i].transform.position = position;
+            Vector3 position = waveDots[i].transform.localPosition; // tengo que mover esta posicion ademas con la rotacion, eso quiere decir que tengo que tener en cuenta la direccion del elemento anterior
+            position.x = target.localPosition.x - (waveDots[i].transform.localScale.x * i);
+            position.y = target.localPosition.y + Mathf.Sin(Time.time + i * factor) * amplitude;
+            waveDots[i].transform.localPosition = position;
         }
 
     }

@@ -28,10 +28,11 @@ public class PlayerController : MonoBehaviour
     {
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        direction = (mousePos - tr.position).normalized;
+        direction = (mousePos - tr.position);
 
-        float angle = Mathf.Atan2(tr.position.y, mousePos.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         tr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        direction.Normalize();
 
         if (Input.GetMouseButton(0))
         {
