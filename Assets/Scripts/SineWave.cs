@@ -35,10 +35,22 @@ public class SineWave : MonoBehaviour
 
     void Update()
     {
+        Vector3 direction = (target.localPosition - waveDots[1].transform.localPosition);
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        waveDots[1].transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
         // move the prefab clones as a sine wave
         for (int i = 1; i < numberOfDots; i++)
         {
+            if (i > 1)
+            {
+                direction = (waveDots[i-1].transform.localPosition - waveDots[i].transform.localPosition);
+
+                angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                waveDots[i].transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+            }
 
             Vector3 position = waveDots[i].transform.localPosition; // tengo que mover esta posicion ademas con la rotacion, eso quiere decir que tengo que tener en cuenta la direccion del elemento anterior
             position.x = target.localPosition.x - (waveDots[i].transform.localScale.x * i);
