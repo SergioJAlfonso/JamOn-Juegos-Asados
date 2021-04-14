@@ -6,27 +6,37 @@ public class Rock : MonoBehaviour
 {
     //ROCK_TYPE type_;
     [SerializeField]
-    int speed_ = 0;
+    int speed_ = 0, limit_ = -10;
 
     //public Rock(ROCK_TYPE type, int speed, int size)
     //{
     //    type_ = type;
     //    speed_ = speed;
-    //    size_ = size;
+    //  
     //}
-
-    Rigidbody2D rb;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        if(rb != null){
-            rb.velocity = new Vector2(0, -speed_);
-        }
+        
     }
 
     void Update()
     {
+        if (transform.position.y <= limit_)
+            Destroy(this.gameObject);
+    }
+
+    public void initialize(int speed, float size)
+    {
+        speed_ = speed;
+
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        if(rb != null)
+            rb.velocity = new Vector2(0, -speed_);
         
+
+        transform.localScale.Set(size, size, 0);
     }
 }

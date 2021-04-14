@@ -2,20 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ROCK_TYPE : ushort { DIAGONAL, RECTANGULAR, TRIANGLE };
-
 public class RockManager : MonoBehaviour
 {
 
-    const int topY = 700;
+    const int topY = 15;
 
     [System.Serializable]
     private struct RockPrefab
     {
         public int speed;
-        public int size;
+        public float size;
         public Vector2 pos;
-        public ROCK_TYPE type;
+        public GameObject type;
     }
 
     [System.Serializable]
@@ -35,18 +33,18 @@ public class RockManager : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        if (timer >= WAVES[actualWave].duration)
+        if (actualWave < WAVES.Length && timer >= WAVES[actualWave].duration)
         {
             spawnWave();
             actualWave++;
-            timer = 0;
+            timer = 0f;
         }
     }
 
@@ -54,15 +52,16 @@ public class RockManager : MonoBehaviour
     {
         for (int i = 0; i < WAVES[actualWave].rocks.Length; ++i)
         {
-            //Rock r = new Rock(WAVES[actualWave].rocks[i].type,
-            //                  WAVES[actualWave].rocks[i].speed,
-            //                  WAVES[actualWave].rocks[i].size);
-
             Vector2 pos = WAVES[actualWave].rocks[i].pos;
 
+            //Sacamos la posición relativa al tope de la cámara
             relativePos(ref pos);
 
-            //Instantiate(r, pos, Quaternion.identity);
+            //Instanciamos la roca
+            GameObject rock = Instantiate(WAVES[actualWave].rocks[i].type, pos, Quaternion.identity);
+
+            //Y actualizamos sus parámetros
+            rock.GetComponent<Rock>().initialize(WAVES[actualWave].rocks[i].speed, WAVES[actualWave].rocks[i].size);
         }
     }
 
