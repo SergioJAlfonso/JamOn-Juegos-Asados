@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] GameObject player = null;
