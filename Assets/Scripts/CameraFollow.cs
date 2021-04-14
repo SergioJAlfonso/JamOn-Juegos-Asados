@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] GameObject player = null;
@@ -24,4 +25,5 @@ public class CameraFollow : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, boundPos, smoothDelay*Time.fixedDeltaTime);
         }
     }
+
 }
