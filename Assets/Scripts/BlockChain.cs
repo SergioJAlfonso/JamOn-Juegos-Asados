@@ -1,44 +1,93 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BlockChain : MonoBehaviour
 {
-    public Transform target;
-    public float speed = 1.0f;
-    public float minDistance = 0.3f;
-    Vector3 DistancefromTarget = new Vector3(0,0,0);
-    Vector3 direction;
-    // Animator m_Animator;
+
+    public List<Transform> bodyParts = new List<Transform>();
+
+    public float minDistance = 0.25f;
+
+    public int beginSize;
+
+    public float speed = 1;
+    public float rotationSpeed = 50;
+
+    public GameObject bodyprefabs;
+
+    private float dis;
+    private Transform curBodyPart;
+    private Transform PrevBodyPart;
+
+
+    // Start is called before the first frame update
     void Start()
     {
-        //followers[0] = player;
-        //m_Animator = GetComponent<Animator>();
-    }
-
-
-
-    void Follow()
-    {
-        //a ver mamerto, si la distancia es no muy chikita te apegas al bicho, se mueve en el eje z
-       // transform.LookAt(player);
-        if (DistancefromTarget.magnitude > minDistance)
+        for (int i = 0; i < beginSize - 1; i++)
         {
-            transform.Translate(speed * Time.deltaTime * -direction.x,
-                                speed * Time.deltaTime * -direction.y,
-                                0.0f);
+
+            AddBodyPart();
+
         }
     }
 
-    private void FixedUpdate()
+    // Update is called once per frame
+    void Update()
     {
-        DistancefromTarget = transform.position - target.position;
-        direction = DistancefromTarget.normalized;
+        Move();
+
+        if (Input.GetKey(KeyCode.Q))
+            AddBodyPart();
     }
 
-    void LateUpdate()
+    public void Move()
     {
-        Follow();
-        
+
+        float curspeed = speed;
+
+        if (Input.GetKey(KeyCode.W))
+            curspeed *= 2;
+
+        bodyParts[0].Translate(bodyParts[0].forward * curspeed * Time.smoothDeltaTime, Space.World);
+
+        if (Input.GetAxis("Horizontal") != 0)
+            bodyParts[0].Rotate(Vector3.up * rotationSpeed * Time.deltaTime * Input.GetAxis("Horizontal"));
+
+        for (int i = 1; i < bodyParts.Count; i++)
+        {
+
+            curBodyPart = bodyParts[i];
+            PrevBodyPart = bodyParts[i - 1];
+
+            dis = Vector3.Distance(PrevBodyPart.position, curBodyPart.position);
+
+            Vector3 newpos = PrevBodyPart.position;
+
+            newpos.y = bodyParts[0].position.y;
+
+            float T = Time.deltaTime * dis / minDistance * curspeed;
+
+            if (T > 0.5f)
+                T = 0.5f;
+            curBodyPart.position = Vector3.Slerp(curBodyPart.position, newpos, T);
+            curBodyPart.rotation = Quaternion.Slerp(curBodyPart.rotation, PrevBodyPart.rotation, T);
+
+
+
+        }
     }
+
+
+    public void AddBodyPart()
+    {
+
+        Transform newpart = (Instantiate(bodyprefabs, bodyParts[bodyParts.Count - 1].position, bodyParts[bodyParts.Count - 1].rotation) as GameObject).transform;
+
+        newpart.SetParent(transform);
+
+        bodyParts.Add(newpart);
+    }
+
 }
