@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Carpa
-  - 
+  - Obstaculo
   - 
   - 
   - 
@@ -40,4 +40,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Obstaculos
+    uniqueID: 2992862035
     locked: 0
