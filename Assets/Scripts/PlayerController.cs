@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         direction = (mousePos - tr.position).normalized;
-        rb.velocity = new Vector2(direction.x * speed, 0);
+        rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
 
         //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
