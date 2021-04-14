@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  depth: 1000
 --- !u!212 &1633483985
 SpriteRenderer:
   m_ObjectHideFlags: 0

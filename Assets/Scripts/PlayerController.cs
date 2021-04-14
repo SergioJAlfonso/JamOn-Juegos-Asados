@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     float speed = 15;
+    [SerializeField]
+    float depth = 100;
     //Animator[] anim;
     Transform tr;
     Rigidbody2D rb;
@@ -14,13 +16,12 @@ public class PlayerController : MonoBehaviour
     Vector2 direction;
     float posZ = 0; // Posición z
     float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
-     
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<Transform>();
-        //anim[0] player //anim[1] sword
-        //anim = GetComponentsInChildren<Animator>();
+
         Cursor.visible = true;
     }
 
@@ -34,32 +35,41 @@ public class PlayerController : MonoBehaviour
         tr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         direction.Normalize();
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && posZ > -depth)
         {
             if (posZ <= 0)
             {
                 posZ -= 1.0f;
+                if(transform.localScale.x + (posZ / 1000) > 0.4 && transform.localScale.x + (posZ / 1000) < 1.6)
+                    transform.localScale = new Vector3(transform.localScale.x + (posZ / 1000), transform.localScale.y + (posZ / 1000), transform.localScale.z);
                 diveReach = -posZ;
             }
         }
         else 
         {
             if (posZ < diveReach)
+            {
                 posZ += 1.0f;
+                if(transform.localScale.x + (posZ / 1000) > 0.4 && transform.localScale.x + (posZ / 1000) < 1.6)
+                    transform.localScale = new Vector3(transform.localScale.x + (posZ / 1000), transform.localScale.y + (posZ / 1000), transform.localScale.z);
+            }               
             else if (posZ >= diveReach)
             {
                 diveReach = 0;
                 if (posZ > 0)
+                {
                     posZ -= 1.0f;
+                    if(transform.localScale.x - (posZ / 1000) >= 1) 
+                        transform.localScale = new Vector3(transform.localScale.x - (posZ / 1000), transform.localScale.y - (posZ / 1000), transform.localScale.z);
+                }                    
                 else
                     posZ = 0;
             }
         }
 
         rb.velocity = new Vector2(direction.x * speed, 0);
+        
         Debug.Log("p " + posZ);
-        //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
-        //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
     }
     //Por si queremos modificar la espid
 
