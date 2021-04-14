@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     float speed = 15;
     //Animator[] anim;
     Transform tr;
-    Rigidbody rb;
+    Rigidbody2D rb;
     Vector3 mousePos;
     Vector2 direction;
     float posZ = 0; // Posición z
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
      
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<Transform>();
         //anim[0] player //anim[1] sword
         //anim = GetComponentsInChildren<Animator>();
