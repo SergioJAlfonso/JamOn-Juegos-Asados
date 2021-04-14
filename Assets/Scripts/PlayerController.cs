@@ -9,13 +9,13 @@ public class PlayerController : MonoBehaviour
     float speed = 15;
     //Animator[] anim;
     Transform tr;
-    Rigidbody2D rb;
+    Rigidbody rb;
     Vector3 mousePos;
     Vector2 direction;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
         tr = GetComponent<Transform>();
         //anim[0] player //anim[1] sword
         //anim = GetComponentsInChildren<Animator>();
@@ -24,8 +24,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
-
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         direction = (mousePos - tr.position).normalized;
         rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
