@@ -12,7 +12,9 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Vector3 mousePos;
     Vector2 direction;
-
+    float posZ = 0; // Posición z
+    float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
+     
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,11 +27,33 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         direction = (mousePos - tr.position).normalized;
-        rb.velocity = new Vector2(direction.x * speed, 0);
 
+        if (Input.GetMouseButton(0))
+        {
+            if (posZ <= 0)
+            {
+                posZ -= 1.0f;
+                diveReach = -posZ;
+            }
+        }
+        else 
+        {
+            if (posZ < diveReach)
+                posZ += 1.0f;
+            else if (posZ >= diveReach)
+            {
+                diveReach = 0;
+                if (posZ > 0)
+                    posZ -= 1.0f;
+                else
+                    posZ = 0;
+            }
+        }
+
+        rb.velocity = new Vector2(direction.x * speed, 0);
+        Debug.Log("p " + posZ);
         //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
     }
