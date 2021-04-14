@@ -28,11 +28,14 @@ public class PlayerController : MonoBehaviour
         direction = (mousePos - tr.position).normalized;
         rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
 
+        float angle = Mathf.Atan2(tr.position.y, mousePos.x) * Mathf.Rad2Deg;
+        tr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
         //anim[0].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
         //anim[1].SetFloat("Speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
     }
-
     //Por si queremos modificar la espid
+
     public void MulSpeed(int x)
     {
         speed *= x;
