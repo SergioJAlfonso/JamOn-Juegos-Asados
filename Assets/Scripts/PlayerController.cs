@@ -53,7 +53,9 @@ public class PlayerController : MonoBehaviour
             tr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         direction.Normalize();
 
-        if (Input.GetMouseButton(0) && posZ > -depth)
+        //propongo hacer un lerpeo ajajaja
+
+        if (Input.GetMouseButton(0) && posZ > -depth) //profundidad maxima
         {
             if (posZ <= 0)
             {
@@ -69,7 +71,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (posZ < diveReach)
+            if (posZ < diveReach) //subida y bajada
             {
                 posZ += 1.0f;
                 if (tr.localScale.x + (posZ / 2000) > 0.8 && tr.localScale.x + (posZ / 2000) < 1.3)
@@ -79,9 +81,9 @@ public class PlayerController : MonoBehaviour
                     if (sp.color.a + 0.015 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.015f);
                 }
             }
-            else if (posZ >= diveReach)
+            else if (posZ >= diveReach) //cuando llega al maximo de arriba
             {
-                diveReach = 0;
+                diveReach = 0; //reseteo de la profundidad
                 if (posZ > 0)
                 {
                     posZ -= 1.0f;
@@ -101,6 +103,12 @@ public class PlayerController : MonoBehaviour
 
         }
         rb.velocity = new Vector2(direction.x * speed, 0);
+
+
+        if (Input.GetMouseButton(1) && posZ > -depth)
+        {
+
+        }
     }
 
     public Vector3 GetWorldPositionOnPlane(Vector3 screenPosition, float z)

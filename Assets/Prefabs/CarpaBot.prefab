@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1916614550939629826}
   - component: {fileID: 1916614550939629827}
   - component: {fileID: 1714989744414295197}
+  - component: {fileID: 1725820373666318683}
   m_Layer: 6
   m_Name: CarpaBot
   m_TagString: Untagged
@@ -117,3 +118,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c970c3baae121fe46bb47dbdc9f3fc87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  factorX: 1
+  amplitudeX: 1
+  factorY: 1
+  amplitudeY: 1
+  speed: 1
+  speedX: 1
+  speedY: 1
+  distYOffSet: 2
+--- !u!114 &1725820373666318683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916614550939629825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c109fa98b6199454a9ea2d1ebced22bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite_: {fileID: 1916614550939629826}
+  transform_: {fileID: 1916614550939629853}

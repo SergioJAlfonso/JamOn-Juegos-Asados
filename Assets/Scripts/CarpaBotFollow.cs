@@ -20,16 +20,24 @@ public class CarpaBotFollow : MonoBehaviour
 
     void Start()
     {
-       
+
         factorX = Random.Range(-2.0f, 2.0f);
+        if (Mathf.Abs(factorX) < 0.5) factorX = factorX * 0.5f;
         amplitudeX = Random.Range(-2.0f, 2.0f);
+        if (Mathf.Abs(amplitudeX) < 0.5) amplitudeX = amplitudeX * 0.5f;
+
         factorY = Random.Range(-2.0f, 2.0f);
+        if (Mathf.Abs(factorY) < 0.5) factorY = factorY * 0.5f;
         amplitudeY = Random.Range(-2.0f, 2.0f);
+        if (Mathf.Abs(amplitudeY) < 0.5) amplitudeY = amplitudeY * 0.5f;
+
         speed = Random.Range(1.0f, 2.0f);
         /*
         speedX = Random.Range(1.0f, 2.0f);
         speedY = Random.Range(1.0f, 2.0f);
          */
+
+
 
     }
 

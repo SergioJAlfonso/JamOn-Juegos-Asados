@@ -13,23 +13,23 @@ public class ChangeColor : MonoBehaviour
     {
         sprite_ = GetComponent<SpriteRenderer>();
         transform_ = GetComponent<Transform>();
-        spaceBetweenLayer = 3;
+        spaceBetweenLayer = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform_.position.z >= 0)
+        if(-transform_.position.z >= 0)
             sprite_.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-        else if (transform_.position.z < 0 && transform_.position.z > -spaceBetweenLayer)
+        else if (-transform_.position.z < 0 && -transform_.position.z > -spaceBetweenLayer)
         {
             sprite_.color = new Color(79.0f/255, 98.0f / 255, 142.0f / 255, 1.0f);
         }
-        else if (transform_.position.z < -spaceBetweenLayer && transform_.position.z > -spaceBetweenLayer * 2)
+        else if (-transform_.position.z < -spaceBetweenLayer && -transform_.position.z > -spaceBetweenLayer * 2)
         {
             sprite_.color = new Color(22.0f / 255, 41.0f / 255, 85.0f / 255, 1.0f);
         }
-        else if (transform_.position.z < -spaceBetweenLayer * 2 && transform_.position.z > -spaceBetweenLayer * 3)
+        else if (-transform_.position.z < -spaceBetweenLayer * 2 && -transform_.position.z > -spaceBetweenLayer * 3)
         {
             sprite_.color = new Color(6.0f / 255, 21.0f / 255, 57.0f / 255, 1.0f);
         }
