@@ -588,6 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   depth: 100
+  nextPiece: {fileID: 0}
 --- !u!58 &1223164828
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -725,14 +726,36 @@ MonoBehaviour:
       size: 1
       pos: {x: 4, y: 0}
       type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
-    duration: 5
+    duration: 0
   - obstacles:
     - speed: 6
       size: 1
       pos: {x: -4, y: 0}
-      type: {fileID: 6558476095424974809, guid: 82c3d2f2ec66c9f459e1822b3ab19ced, type: 3}
-    duration: 5
-  - obstacles: []
+      type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
+    duration: 1
+  - obstacles:
+    - speed: 6
+      size: 1
+      pos: {x: 0, y: 0}
+      type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
+    duration: 2
+  - obstacles:
+    - speed: 6
+      size: 1
+      pos: {x: 5, y: 0}
+      type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
+    duration: 3
+  - obstacles:
+    - speed: 6
+      size: 1
+      pos: {x: -3, y: 0}
+      type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
+    duration: 4
+  - obstacles:
+    - speed: 6
+      size: 1
+      pos: {x: -10, y: 0}
+      type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
     duration: 5
   actualWave: 0
 --- !u!4 &1324946756

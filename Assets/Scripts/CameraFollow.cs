@@ -22,7 +22,7 @@ public class CameraFollow : MonoBehaviour
 
             // Si el jugador está activo (vivo), la cámara le sigue en un intervalo de tiempo dado por delay
             if (player.gameObject.activeSelf)
-                transform.position = Vector3.Lerp(transform.position, boundPos, smoothDelay*Time.fixedDeltaTime);
+                transform.position = Vector3.Lerp(transform.position, boundPos, smoothDelay * Time.fixedDeltaTime);
         }
     }
 
