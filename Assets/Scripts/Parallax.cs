@@ -7,9 +7,11 @@ public class Parallax : MonoBehaviour
     private float length, startPos;
     //public GameObject cam;
     public float parallaxEffect;
+    public float parallaxMinEffect;
 
     void Start()
     {
+        parallaxMinEffect = parallaxEffect; // para volver al minimo en algun moemnto
         startPos = transform.position.y;
         length = GetComponent<SpriteRenderer>().bounds.size.y;
     }
@@ -26,5 +28,10 @@ public class Parallax : MonoBehaviour
 
 
         if (transform.position.y < startPos - length) transform.position = new Vector2(0, startPos);
+    }
+
+    public void parallEffectMultiplier(float val)
+    {
+        parallaxEffect *= val; 
     }
 }

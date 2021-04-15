@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Carpa
-  - Obstaculo
+  - 
   - 
   - 
   - 
@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: boost
+    uniqueID: 1225994517
+    locked: 0
+  - name: Carpa
+    uniqueID: 2635689805
+    locked: 0
   - name: Obstaculos
-    uniqueID: 2992862035
+    uniqueID: 1266160429
     locked: 0
