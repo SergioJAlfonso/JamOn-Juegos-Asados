@@ -9,7 +9,17 @@ public class GameManager : MonoBehaviour
     public int actualScene = 1;
 
     public GameObject bg;
+    public Transform playerTr;
     Parallax[] childrenParallax;
+    float[] originParallaxVel;
+
+    float originalFOV;
+    float originalScaleY;
+    float restoreTime = 0;
+    bool hasToRestore = false;
+    bool FOVRestoration = false;
+
+    int velChain = 0;
 
 
     // En el método Awake comprueba si hay otro GameManger
@@ -27,12 +37,21 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        //Pilla movidas del parallax
         int numChildren = bg.transform.childCount;
         childrenParallax = new Parallax[numChildren];
+        originParallaxVel = new float[numChildren];
         for (int i = 0; i < numChildren; i++)
         {
             childrenParallax[i] = bg.transform.GetChild(i).gameObject.GetComponent<Parallax>();
+            originParallaxVel[i] = childrenParallax[i].parallaxEffect;
         }
+
+        //Pilla
+        originalFOV = Camera.main.fieldOfView;
+
+        //playerTR
+        originalScaleY = playerTr.localScale.y;
     }
     public void parallaxMultiplier(float val)
     {
@@ -42,87 +61,62 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //public void FullscreenToggleState(bool isFullscreen)
-    //{
-    //    if (isFullscreen)
-    //        fullScreenToggle = true;
-    //    else
-    //        fullScreenToggle = false;
-    //}
-    //public void ControlToggle(bool isMando)
-    //{
-    //    mando = isMando;
-    //}
-    ///*public void DeathToggle(bool isDeath)
-    //{
-    //    toggleDeath = !isDeath;
-    //}*/
-    //public void MainSliderState (float volume)
-    //{
-    //    mainVolSlider = volume;
-    //}
-    //public void MusicSliderState(float volume)
-    //{
-    //    musicVolSlider = volume;
-    //}
-    //public void SFXSliderState(float volume)
-    //{
-    //    SFXVolSlider = volume;
-    //}
+    private void Update()
+    {
+        if (hasToRestore)
+        {
+            restoreTime -= Time.deltaTime;
 
-    //public void ChangeScene()
-    //{
-    //    checkpoint = new Vector2(0, 0);
-    //    deadVal = -1;
-    //    Time.timeScale = 1;
-    //    //OnSceneChange(SceneManager.GetActiveScene().buildIndex);
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    //}
+            if (restoreTime <= 0)
+            {
+                restoreOriginalStats();
+            }
+        }
+        if (FOVRestoration)
+        {
+            if (Camera.main.fieldOfView > originalFOV)
+                Camera.main.fieldOfView -= 0.1f;
+            else
+            {
+                FOVRestoration = false;
+                Camera.main.fieldOfView = originalFOV;
+            }
+        }
+    }
 
-    //private void OnLevelWasLoaded(int level)
-    //{
-    //    if (level != 0 && level != SceneManager.sceneCountInBuildSettings - 1)
-    //        actualScene = level;
-    //    switch (level)
-    //    {
-    //        case (0):
-    //            AudioManager.instance.StopAll();
-    //            AudioManager.instance.Play(AudioManager.ESounds.Menu);
-    //            break;
-    //        case (1):
-    //            AudioManager.instance.StopAll();
-    //            AudioManager.instance.Play(AudioManager.ESounds.Level1Low);
-    //            break;
-    //        case (3):
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Level1Low);
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Menu);
-    //            AudioManager.instance.Play(AudioManager.ESounds.Level1);
-    //            break;
-    //        case (5):
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Level1);
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Menu);
-    //            AudioManager.instance.Play(AudioManager.ESounds.Level2);
-    //            break;
-    //        case (6):
-    //        case (8):
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Level2);
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Menu);
-    //            AudioManager.instance.Play(AudioManager.ESounds.Level2Low);
-    //            break;
-    //        case (7):
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Level2Low);
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Menu);
-    //            AudioManager.instance.Play(AudioManager.ESounds.Level2);
-    //            break;
-    //        case (9):
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Level2Low);
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Menu);
-    //            break;
-    //        case (10):
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Boss);
-    //            AudioManager.instance.Stop(AudioManager.ESounds.Menu);
-    //            AudioManager.instance.Play(AudioManager.ESounds.Credits);
-    //            break;
-    //    }
-    //}
+    private void restoreOriginalStats()
+    {
+        //Parallax
+        for (int i = 0; i < bg.transform.childCount; ++i)
+        {
+            childrenParallax[i].parallaxEffect = originParallaxVel[i];
+        }
+        //Scale
+        playerTr.localScale = new Vector3(playerTr.localScale.x, originalScaleY, playerTr.localScale.z);
+
+        //FOV
+        FOVRestoration = true;
+
+        hasToRestore = false;
+        velChain = 0;
+    }
+
+
+    public void addVelChain()
+    {
+        velChain++;
+    }
+    public int getVelChain()
+    {
+        return velChain;
+    }
+    public void setHasToRestore(bool b)
+    {
+        hasToRestore = b;
+        if (hasToRestore)
+        {
+            restoreTime = 5;
+            velChain++;
+        }
+    }
 }

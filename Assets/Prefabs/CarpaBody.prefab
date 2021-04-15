@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  depth: 100
+  depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 395725200767601667}
 --- !u!50 &395725200243494370
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  depth: 100
+  depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 0}
 --- !u!50 &395725200396624841
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  depth: 100
+  depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 395725200891226539}
 --- !u!50 &395725200498461907
@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  depth: 100
+  depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 395725200396624840}
 --- !u!50 &395725200767601668
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  depth: 100
+  depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 395725200243494369}
 --- !u!50 &395725200891226537
