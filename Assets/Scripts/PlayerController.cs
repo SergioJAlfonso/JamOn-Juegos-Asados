@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
         direction = (mousePos - tr.position);
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
         tr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         direction.Normalize();
 
