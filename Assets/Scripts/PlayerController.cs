@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float depth = 100;
     [SerializeField]
+    float maxDif = 50;
+    [SerializeField]
     Transform nextPiece;
     //Animator[] anim;
     Transform tr;
@@ -38,6 +40,9 @@ public class PlayerController : MonoBehaviour
         if (nextPiece == null) mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
         else mousePos = nextPiece.position;
         direction = (mousePos - tr.position);
+
+        if (direction.x >= maxDif) direction.x = maxDif;
+        else if (direction.x <= -maxDif) direction.x = -maxDif;
 
         float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90);
         if (angle < maxAngle && angle > -maxAngle)
@@ -91,8 +96,6 @@ public class PlayerController : MonoBehaviour
 
         }
         rb.velocity = new Vector2(direction.x * speed, 0);
-
-        Debug.Log("p " + sp.color.a);
     }
 
     public Vector3 GetWorldPositionOnPlane(Vector3 screenPosition, float z)
