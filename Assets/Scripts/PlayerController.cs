@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     float speed = 15;
     [SerializeField]
     float depth = 100;
+    [SerializeField]
+    Transform nextPiece;
     //Animator[] anim;
     Transform tr;
     Rigidbody2D rb;
@@ -19,34 +21,37 @@ public class PlayerController : MonoBehaviour
     float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
     float alphaValue;
 
+    const float maxAngle = 20;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<Transform>();
         sp = GetComponent<SpriteRenderer>();
         alphaValue = sp.color.a;
+
         Cursor.visible = true;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-
-        //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
+        if (nextPiece == null) mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
+        else mousePos = nextPiece.position;
         direction = (mousePos - tr.position);
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
-        tr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90);
+        if (angle < maxAngle && angle > -maxAngle)
+            tr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         direction.Normalize();
-
         if (Input.GetMouseButton(0) && posZ > -depth)
         {
             if (posZ <= 0)
             {
                 posZ -= 1.0f;
-                if (tr.localScale.x + (posZ / 1000) > 0.4 && tr.localScale.x + (posZ / 1000) < 1.6)
+                if (tr.localScale.x + (posZ / 2000) > 0.8 && tr.localScale.x + (posZ / 2000) < 1.3)
                 {
-                    tr.localScale = new Vector3(tr.localScale.x + (posZ / 1000), tr.localScale.y + (posZ / 1000), tr.localScale.z);
+                    tr.position = new Vector3(tr.position.x, tr.position.y * 0.989f, tr.position.z);
+                    tr.localScale = new Vector3(tr.localScale.x + (posZ / 2000), tr.localScale.y + (posZ / 1000), tr.localScale.z);
                     if (sp.color.a - 0.02 > 0.6) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
                 }
                 diveReach = -posZ;
@@ -57,10 +62,11 @@ public class PlayerController : MonoBehaviour
             if (posZ < diveReach)
             {
                 posZ += 1.0f;
-                if (tr.localScale.x + (posZ / 1000) > 0.4 && tr.localScale.x + (posZ / 1000) < 1.6)
+                if (tr.localScale.x + (posZ / 2000) > 0.8 && tr.localScale.x + (posZ / 2000) < 1.3)
                 {
-                    tr.localScale = new Vector3(tr.localScale.x + (posZ / 1000), tr.localScale.y + (posZ / 1000), tr.localScale.z);
-                    if(sp.color.a + 0.015 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.015f);
+                    tr.position = new Vector3(tr.position.x, tr.position.y / 0.989f, tr.position.z);
+                    tr.localScale = new Vector3(tr.localScale.x + (posZ / 2000), tr.localScale.y + (posZ / 1000), tr.localScale.z);
+                    if (sp.color.a + 0.015 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.015f);
                 }
             }
             else if (posZ >= diveReach)
@@ -69,9 +75,10 @@ public class PlayerController : MonoBehaviour
                 if (posZ > 0)
                 {
                     posZ -= 1.0f;
-                    if (posZ < 75 && tr.localScale.x - (posZ / 1000) >= 1)
+                    if (posZ < 75 && tr.localScale.x - (posZ / 2000) >= 1)
                     {
-                        tr.localScale = new Vector3(tr.localScale.x - (posZ / 1000), tr.localScale.y - (posZ / 1000), tr.localScale.z);
+                        tr.position = new Vector3(tr.position.x, tr.position.y * 0.989f, tr.position.z);
+                        tr.localScale = new Vector3(tr.localScale.x - (posZ / 2000), tr.localScale.y - (posZ / 1000), tr.localScale.z);
                         if (sp.color.a - 0.03 > alphaValue) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.03f);
                     }
                 }
@@ -81,8 +88,8 @@ public class PlayerController : MonoBehaviour
                     sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, alphaValue);
                 }
             }
-        }
 
+        }
         rb.velocity = new Vector2(direction.x * speed, 0);
 
         Debug.Log("p " + sp.color.a);

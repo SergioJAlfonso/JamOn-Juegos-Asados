@@ -94,7 +94,7 @@ public class SineWave : MonoBehaviour
     }
 
 
-void Follow()
+    void Follow()
     {
         //a ver mamerto, si la distancia es no muy chikita te apegas al bicho, se mueve en el eje z
         // transform.LookAt(player);
