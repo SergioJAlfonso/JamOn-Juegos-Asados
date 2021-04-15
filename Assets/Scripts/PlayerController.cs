@@ -9,8 +9,7 @@ public class PlayerController : MonoBehaviour
     float depth = 15;
     [SerializeField]
     float maxDif = 1.2f;
-    [SerializeField]
-    Transform nextPiece;
+    public Transform nextPiece;
     [SerializeField]
     float amplitude = 0.5f;
     [SerializeField]
