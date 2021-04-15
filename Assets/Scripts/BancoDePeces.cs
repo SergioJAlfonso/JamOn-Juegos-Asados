@@ -16,7 +16,7 @@ public class BancoDePeces : MonoBehaviour
     {
         GameObject nuevo = Instantiate(CarpaBotPrefab, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
 
-        nuevo.GetComponent<CarpaBotFollow>().setTarget(transform);
+        nuevo.GetComponent<CarpaBotFollow>().setTarget(transform, 0.0f);
         carpas.Add(nuevo);
     }
 
@@ -36,7 +36,7 @@ public class BancoDePeces : MonoBehaviour
             for (int i = 0; i < carpas.Count; i++)
             {
                 aux.Add(carpas[i]); //meros punteros a las carpas
-                carpas[i].GetComponent<CarpaBotFollow>().setTarget(collision.gameObject.transform);
+                carpas[i].GetComponent<CarpaBotFollow>().setTarget(collision.gameObject.transform, 1.5f);
                 //bodyParts[i].transform.parent = collision.transform;
                 Debug.Log("cambiado " + i);
 
