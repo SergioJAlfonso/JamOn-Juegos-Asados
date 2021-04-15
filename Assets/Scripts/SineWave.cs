@@ -75,6 +75,8 @@ public class SineWave : MonoBehaviour
 
             // waveDots[i].transform.Translate(waveDots[i].transform.right * speed * Time.smoothDeltaTime, Space.Self);
 
+
+
             waveDots[i].transform.position = Vector3.Slerp(waveDots[i].transform.position, destino, 0.5f);
             waveDots[i].transform.rotation = Quaternion.Slerp(waveDots[i].transform.rotation, Quaternion.Euler(new Vector3(0, 0, angle)), 0.5f);
 
