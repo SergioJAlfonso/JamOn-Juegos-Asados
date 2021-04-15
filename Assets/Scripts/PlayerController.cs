@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
     float alphaValue;
 
-    const float maxAngle = 20;
+    const float maxAngle = 30;
 
     void Awake()
     {
@@ -37,7 +37,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (nextPiece == null) mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
+        if (nextPiece == null)
+        {
+            mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
+            mousePos.y = 3;
+        }
         else mousePos = nextPiece.position;
         direction = (mousePos - tr.position);
 
@@ -48,6 +52,7 @@ public class PlayerController : MonoBehaviour
         if (angle < maxAngle && angle > -maxAngle)
             tr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         direction.Normalize();
+
         if (Input.GetMouseButton(0) && posZ > -depth)
         {
             if (posZ <= 0)
