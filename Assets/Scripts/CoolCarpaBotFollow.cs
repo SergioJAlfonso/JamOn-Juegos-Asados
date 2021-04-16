@@ -6,6 +6,8 @@ public class CoolCarpaBotFollow : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform target;
+
+    public Transform puntito;
     public float factorX = 1.0f;
     public float amplitudeX = 1.0f;
     public float factorY = 1.0f;
@@ -51,6 +53,7 @@ public class CoolCarpaBotFollow : MonoBehaviour
         destino.z = target.position.z;
 
         destino = target.transform.position + target.transform.InverseTransformPoint(destino);
+        puntito.transform.position = destino;
         //destino.y = -destino.y;
 
 

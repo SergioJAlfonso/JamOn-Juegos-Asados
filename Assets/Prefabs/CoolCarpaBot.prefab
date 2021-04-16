@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 6232201403209238401}
   - component: {fileID: 3443074328858250825}
   m_Layer: 6
-  m_Name: Carpa
+  m_Name: CarpaBotHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 6118918246491692102}
   - component: {fileID: 5732654942230735731}
   m_Layer: 6
-  m_Name: Carpa (2)
+  m_Name: CarpaBody (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 6118918246917650443}
   - component: {fileID: 9193051991751563680}
   m_Layer: 6
-  m_Name: Carpa (3)
+  m_Name: CarpaBody (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 6118918247007411620}
   - component: {fileID: 2601408059664085789}
   m_Layer: 6
-  m_Name: Carpa (1)
+  m_Name: CarpaBody (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 6118918247275666801}
   - component: {fileID: 6837830612466754922}
   m_Layer: 6
-  m_Name: Carpa (4)
+  m_Name: CarpaBody (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
