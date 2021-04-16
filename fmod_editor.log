@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002C884CD9D78 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001A8A42AD7A8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,24 +15,180 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7855744
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 21408
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000075C33F568
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB0EC27B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB0EC27AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB0EC27BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB0EC27CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001A9191A9B48
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WaterEnter', format=5, channels=2, frequency=48000, lengthbytes=6272, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.158639.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7855744
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 21408
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000075C33F568
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB0EC27B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB0EC27AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB0EC27BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB0EC27CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001A9191A9B48
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WaterExit', format=5, channels=2, frequency=48000, lengthbytes=7136, lengthpcm=27000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.172119.
+[LOG] SystemI::createSound                     : filename = ..\..\FMOD Studio\jam0n\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001A90B56A448 : node = 000001A917263BE0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001A91D6309C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001A90B56A448
+[LOG] SystemI::createSoundInternal             :     Create name='..\..\FMOD Studio\jam0n\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7855744
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21408
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001A917263CF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='water', format=5, channels=2, frequency=48000, lengthbytes=793024, lengthpcm=2367048, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.153648.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001A90B56A448
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7855744
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 21408
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000075C33F568
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB0EC27B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB0EC27AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB0EC27BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB0EC27CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001A918851988
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Jump2', format=5, channels=2, frequency=48000, lengthbytes=10560, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.156869.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7855744
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 21408
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000075C33F568
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB0EC27B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB0EC27AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB0EC27BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB0EC27CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001A918851988
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Jump3', format=5, channels=2, frequency=48000, lengthbytes=10592, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.135562.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 7855744
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 21408
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000075C33F568
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB0EC27B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB0EC27AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB0EC27BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB0EC27CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001A918851988
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Jump1', format=5, channels=2, frequency=48000, lengthbytes=10176, lengthpcm=48000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.205144.
+[LOG] SystemI::createSound                     : filename = ..\..\FMOD Studio\jam0n\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001A90B56BD98 : node = 000001A8A2FDBE90
+[LOG] SystemI::createSound                     : add node to async list : head = 000001A91D6309C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001A90B56BD98
+[LOG] SystemI::createSoundInternal             :     Create name='..\..\FMOD Studio\jam0n\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7855744
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21408
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001A8A2FDBFA0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='water', format=5, channels=2, frequency=48000, lengthbytes=793024, lengthpcm=2367048, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.153648.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001A90B56BD98
+[LOG] SoundI::release                          : water (000001A90B565198)
+[LOG] SoundI::release                          :     water (000001A8A0A9D7B8)
+[LOG] SoundI::release                          :     water (000001A90B568948)
+[LOG] SoundI::release                          : water (000001A90B56A448)
+[LOG] SoundI::release                          :     water (000001A8A0342AC8)
+[LOG] SoundI::release                          :     water (000001A90B56B018)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSound                     : filename = ..\..\FMOD Studio\jam0n\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001A90B56A7A8 : node = 000001A8A2FDBC10
+[LOG] SystemI::createSound                     : add node to async list : head = 000001A91D6309C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001A90B56A7A8
+[LOG] SystemI::createSoundInternal             :     Create name='..\..\FMOD Studio\jam0n\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7855744
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 21408
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001A8A2FDBD20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='water', format=5, channels=2, frequency=48000, lengthbytes=793024, lengthpcm=2367048, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.153648.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001A90B56A7A8
+[LOG] SoundI::release                          : water (000001A90B56BD98)
+[LOG] SoundI::release                          :     water (000001A8A0342E08)
+[LOG] SoundI::release                          :     water (000001A90B56B6D8)
+[LOG] SoundI::release                          : water (000001A90B56A7A8)
+[LOG] SoundI::release                          :     water (000001A8A0344188)
+[LOG] SoundI::release                          :     water (000001A90B56BBE8)
+[LOG] SoundI::release                          :  (000001A91D7B59F8)
+[LOG] SoundI::release                          :     WaterEnter (000001A8A0343B08)
+[LOG] SoundI::release                          :  (000001A91D7B5E48)
+[LOG] SoundI::release                          :     WaterExit (000001A8A0344668)
+[LOG] SoundI::release                          :  (000001A91422B3A8)
+[LOG] SoundI::release                          :     Jump1 (000001A8A0343FE8)
+[LOG] SoundI::release                          :  (000001A91422BC48)
+[LOG] SoundI::release                          :     Jump2 (000001A8A0342C68)
+[LOG] SoundI::release                          :  (000001A91422B7F8)
+[LOG] SoundI::release                          :     Jump3 (000001A8A03437C8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
-[ERR] OutputWASAPI::getDriverInfo              : IMMDevice::Activate returned 0x88890004.  Device was unplugged!
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
