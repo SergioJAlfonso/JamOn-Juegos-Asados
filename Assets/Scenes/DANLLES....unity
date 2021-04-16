@@ -153,21 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WAVES:
-  - rocks:
-    - speed: 2
-      size: 1
-      pos: {x: -2, y: 0}
-      type: {fileID: 6558476095424974809, guid: 82c3d2f2ec66c9f459e1822b3ab19ced, type: 3}
-    - speed: 3
-      size: 3
-      pos: {x: 3, y: 0}
-      type: {fileID: 6558476095424974809, guid: 63e056cdbb33f824eb51f32d04f9672b, type: 3}
-    duration: 5
-  - rocks:
-    - speed: 4
-      size: 0.5
-      pos: {x: -5, y: 5}
-      type: {fileID: 6558476095424974809, guid: 8ef36c79bd4fd6f4a9353c626114e7c1, type: 3}
+  - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
+    speed: 5
     duration: 5
   actualWave: 0
 --- !u!4 &137982636
@@ -312,6 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0
+  parallaxMinEffect: 0
 --- !u!114 &269961577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0
+  parallaxMinEffect: 0
 --- !u!212 &269961578
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -423,6 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 2
+  parallaxMinEffect: 0
 --- !u!114 &1311298506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0
+  parallaxMinEffect: 0
 --- !u!212 &1311298507
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -900,6 +891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 1.5
+  parallaxMinEffect: 0
 --- !u!114 &1914513168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -913,6 +905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0
+  parallaxMinEffect: 0
 --- !u!212 &1914513169
 SpriteRenderer:
   m_ObjectHideFlags: 0
