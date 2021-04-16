@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8903968117100305033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WaterBackground/HorizontalDistance
+  m_EditorClassIdentifier: 
+  Name: HorizontalDistance
+  Min: 0
+  Max: 100
+  Default: 50
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-8585148559915118589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +240,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 1913800265090037474}
+  - {fileID: -8903968117100305033}
   MinDistance: 1
   MaxDistance: 20
   Length: 49313
@@ -404,6 +424,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-5291318059769214503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicMaster/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-5184345642342364447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,7 +519,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/jam0n/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637541811245250460
+  lastModified: 637541908529162704
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -937,7 +977,7 @@ MonoBehaviour:
   - {fileID: 2929713664162920026}
   StringsBanks:
   - {fileID: -4226907826248439086}
-  stringsBankWriteTime: 637541811245250460
+  stringsBankWriteTime: 637541908529162704
   cacheVersion: 6
 --- !u!114 &857171454535227702
 MonoBehaviour:
@@ -1197,7 +1237,7 @@ MonoBehaviour:
   Path: ../../FMOD Studio/jam0n/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637541811245230522
+  lastModified: 637541908529142757
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1404,6 +1444,46 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &4835674319968810281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicMaster/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &5203480911736461493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WaterBackground/HorizontalDistance
+  m_EditorClassIdentifier: 
+  Name: HorizontalDistance
+  Min: 0
+  Max: 100
+  Default: 50
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &5206297505123477160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1444,7 +1524,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 9160731913953882906}
+  - {fileID: -5291318059769214503}
   MinDistance: 1
   MaxDistance: 20
   Length: 120000

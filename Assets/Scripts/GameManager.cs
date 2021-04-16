@@ -1,5 +1,10 @@
-﻿using UnityEngine;
+﻿using UnityEditorInternal;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using FMODUnity;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,16 +23,28 @@ public class GameManager : MonoBehaviour
     float restoreTime = 0;
     bool hasToRestore = false;
     bool FOVRestoration = false;
+
+    //DISTANCIA QUE LLEVA EL PEZ RECORRIDA
     float distance = 0;
+    public float getDistance() { return distance; }
 
     int velChain = 0;
 
+    public enum States { Playing, Menu };
+    States GameStates;
+
+    ////##! SONIDOS
+    private FMOD.Studio.EventInstance instanceMusic;
+    [FMODUnity.EventRef]
+    [SerializeField] string fmodEvent;
 
     // En el método Awake comprueba si hay otro GameManger
     // y si no lo hay se inicializa como GameManager. En el caso
     // que hubiera otro se autodestruye
     void Awake()
     {
+        GameStates = States.Menu;
+
         if (instance == null)
         {
             instance = this;
@@ -53,72 +70,122 @@ public class GameManager : MonoBehaviour
 
         //playerTR
         originalScaleY = playerTr.localScale.y;
+
+        //##! SONIDOS
+        instanceMusic = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        instanceMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+        instanceMusic.start();
+        instanceMusic.release();
     }
     public void parallaxMultiplier(float val)
+{
+    if (GameStates == States.Playing)
     {
         for (int i = 0; i < bg.transform.childCount; ++i)
         {
             childrenParallax[i].parallEffectMultiplier(val);
         }
     }
+}
 
-    private void Update()
+public void changePlayState(int n)
+{
+    if (n == 0)
+        GameStates = States.Playing;
+    else if (n == 1)
+        GameStates = States.Menu;
+}
+
+
+private void Update()
+{
+    //LA DISTANCIA SOLO AVANZA SI EL JUGADOR ESTA JUGANDO
+    if (GameStates == States.Playing)
     {
         distance += Time.deltaTime;
-        if (hasToRestore)
-        {
-            restoreTime -= Time.deltaTime;
+       instanceMusic.setParameterByName("Distance", distance);
 
-            if (restoreTime <= 0)
-            {
-                restoreOriginalStats();
-            }
-        }
-        if (FOVRestoration)
-        {
-            if (Camera.main.fieldOfView > originalFOV)
-                Camera.main.fieldOfView -= 0.1f;
-            else
-            {
-                FOVRestoration = false;
-                Camera.main.fieldOfView = originalFOV;
-            }
-        }
+
+
+
+        ////##! SONIDOS
+        //private FMOD.Studio.EventInstance instance;
+        //[FMODUnity.EventRef]
+        //[SerializeField] string fmodEvent;
+
+        //Transform tr;
+        //void Awake()
+        //{
+        //    tr = GetComponent<Transform>();
+
+        //    //##! SONIDOS
+        //    instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        //    instance.set3DAttributes(RuntimeUtils.To3DAttributes(tr));
+        //    instance.start();
+        //    instance.release();
+        //}
+
+        //void FixedUpdate()
+        //{
+        //    //##! SONIDOS
+        //    instance.setParameterByName("HD", tr.position.z);
+        //}
     }
 
-    private void restoreOriginalStats()
+    if (hasToRestore)
     {
-        //Parallax
-        for (int i = 0; i < bg.transform.childCount; ++i)
+        restoreTime -= Time.deltaTime;
+
+        if (restoreTime <= 0)
         {
-            childrenParallax[i].parallaxEffect = originParallaxVel[i];
+            restoreOriginalStats();
         }
-        //Scale
-        playerTr.localScale = new Vector3(playerTr.localScale.x, originalScaleY, playerTr.localScale.z);
-
-        //FOV
-        FOVRestoration = true;
-
-        hasToRestore = false;
-        velChain = 0;
     }
-
-
-    public void addVelChain()
+    if (FOVRestoration)
     {
+        if (Camera.main.fieldOfView > originalFOV)
+            Camera.main.fieldOfView -= 0.1f;
+        else
+        {
+            FOVRestoration = false;
+            Camera.main.fieldOfView = originalFOV;
+        }
+    }
+}
+
+private void restoreOriginalStats()
+{
+    //Parallax
+    for (int i = 0; i < bg.transform.childCount; ++i)
+    {
+        childrenParallax[i].parallaxEffect = originParallaxVel[i];
+    }
+    //Scale
+    playerTr.localScale = new Vector3(playerTr.localScale.x, originalScaleY, playerTr.localScale.z);
+
+    //FOV
+    FOVRestoration = true;
+
+    hasToRestore = false;
+    velChain = 0;
+}
+
+
+public void addVelChain()
+{
+    velChain++;
+}
+public int getVelChain()
+{
+    return velChain;
+}
+public void setHasToRestore(bool b)
+{
+    hasToRestore = b;
+    if (hasToRestore)
+    {
+        restoreTime = 5;
         velChain++;
     }
-    public int getVelChain()
-    {
-        return velChain;
-    }
-    public void setHasToRestore(bool b)
-    {
-        hasToRestore = b;
-        if (hasToRestore)
-        {
-            restoreTime = 5;
-            velChain++;
-        }
-    }
+}
 }

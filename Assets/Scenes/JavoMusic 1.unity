@@ -463,6 +463,7 @@ GameObject:
   - component: {fileID: 378649426}
   - component: {fileID: 378649428}
   - component: {fileID: 378649427}
+  - component: {fileID: 378649429}
   m_Layer: 5
   m_Name: VolumeButton
   m_TagString: Untagged
@@ -568,6 +569,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySlider: {fileID: 378649427}
+--- !u!114 &378649429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378649425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da53eb91b48d3b144b96a77b89f7ebaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenTime: 4
 --- !u!1 &625332255
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da53eb91b48d3b144b96a77b89f7ebaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTime: 2
+  tweenTime: 4
 --- !u!1 &629632242
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +937,46 @@ MonoBehaviour:
   actualScene: 1
   bg: {fileID: 9624062}
   playerTr: {fileID: 1487589363}
+  fmodEvent: event:/MusicMaster
+--- !u!114 &712395108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712395105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/MusicMaster
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Distance
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &712395109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712395105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!1 &906745403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,7 +1170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -92.2, y: 89.3}
+  m_AnchoredPosition: {x: -92.2, y: 87}
   m_SizeDelta: {x: 230, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989841254
@@ -1187,6 +1241,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 712395106}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: changePlayState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &989841255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1237,7 +1303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da53eb91b48d3b144b96a77b89f7ebaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTime: 3
+  tweenTime: 4
 --- !u!1001 &1038408975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1245,9 +1311,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 766667885931881432, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 766667885931881432, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: corriente
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 766667885931881432, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: RotationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 766667885931881432, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2909367617247083640, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2909367617247083640, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1293,6 +1375,70 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoolCarpa
       objectReference: {fileID: 0}
+    - target: {fileID: 6237571223624116667, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237571223624116667, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: corriente
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237571223624116667, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: RotationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237571223624116667, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249315099206476218, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249315099206476218, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: corriente
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249315099206476218, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: RotationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249315099206476218, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000786476615812506, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000786476615812506, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: corriente
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000786476615812506, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: RotationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000786476615812506, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285583015553310206, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285583015553310206, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: corriente
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285583015553310206, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: RotationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285583015553310206, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
 --- !u!1 &1038408976 stripped
@@ -1313,43 +1459,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   route: event:/WaterEnterExit
---- !u!114 &1038408978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038408976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
-  ListenerNumber: -1
---- !u!114 &1038408979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038408976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/MusicMaster
-  PlayEvent: 11
-  StopEvent: 12
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1076687367
 GameObject:
   m_ObjectHideFlags: 0

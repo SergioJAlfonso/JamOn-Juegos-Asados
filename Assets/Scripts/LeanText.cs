@@ -17,7 +17,7 @@ public class LeanText : MonoBehaviour
     {
         LeanTween.cancel(gameObject);
         transform.localScale = Vector3.one;
-        LeanTween.scale(gameObject, Vector3.one * 2, tweenTime)
+        LeanTween.scale(gameObject, Vector3.one * 1.3f, tweenTime)
             .setEasePunch();
 
         LeanTween.value(gameObject, 0, 1, tweenTime)
