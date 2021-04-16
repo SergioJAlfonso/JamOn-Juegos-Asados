@@ -11,8 +11,7 @@ public class PlayerController : MonoBehaviour
     float depth = 15;
     [SerializeField]
     float maxDif = 1.2f;
-    [SerializeField]
-    Transform nextPiece;
+    public Transform nextPiece;
     //Animator[] anim;
     Transform tr;
     Rigidbody2D rb;
