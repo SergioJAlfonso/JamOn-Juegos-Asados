@@ -3,6 +3,11 @@ using UnityEngine;
 //Tambien acciona las animaciones correspondiente a cada direccion
 public class CoolBotController : MonoBehaviour
 {
+    [SerializeField]
+    bool corriente = false;
+    [SerializeField]
+    float fuerzaCorriente = 1.0f;
+
     public bool isHead = false;
     [SerializeField]
     float speed = 10;
@@ -141,6 +146,8 @@ public class CoolBotController : MonoBehaviour
             {
                 rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
             }
+            if (corriente)
+                rb.velocity = rb.velocity + (Vector2.down * fuerzaCorriente);
 
 
         }
