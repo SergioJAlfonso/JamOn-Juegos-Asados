@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 //Maneja el movimiento en las 4 direcciones
 //Tambien acciona las animaciones correspondiente a cada direccion
@@ -12,6 +10,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float maxDif = 1.2f;
     public Transform nextPiece;
+    [SerializeField]
+    float amplitude = 0.5f;
+    [SerializeField]
+    float coleteo = 2.0f;
     //Animator[] anim;
     Transform tr;
     Rigidbody2D rb;
@@ -40,8 +42,12 @@ public class PlayerController : MonoBehaviour
         {
             mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
             mousePos.y = 3;
+            mousePos.x = mousePos.x + Mathf.Sin((Time.time * coleteo)) * amplitude;
+
         }
-        else mousePos = nextPiece.position;
+        else {
+            mousePos = nextPiece.position; 
+        }
         direction = (mousePos - tr.position);
 
         if (direction.x >= maxDif) direction.x = maxDif;

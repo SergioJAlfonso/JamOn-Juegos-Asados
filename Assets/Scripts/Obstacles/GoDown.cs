@@ -14,7 +14,7 @@ public class GoDown : MonoBehaviour
             Destroy(this.gameObject);
     }
 
-    public void initialize(int speed, float size)
+    public void initialize(int speed)
     {
         speed_ = speed;
 
@@ -23,8 +23,5 @@ public class GoDown : MonoBehaviour
 
         if(rb != null)
             rb.velocity = new Vector2(0, -speed_);
-        
-
-        transform.localScale.Set(size, size, 0);
     }
 }
