@@ -50,4 +50,4 @@ MonoBehaviour:
   - {x: -5, y: 0}
   - {x: 5, y: 5}
   - {x: 0, y: 10}
-  aleatorio: 0
+  aleatorio: 1

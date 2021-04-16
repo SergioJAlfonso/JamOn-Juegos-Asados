@@ -170,6 +170,10 @@ PrefabInstance:
       propertyPath: speed
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 395725200243494373, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 395725200396624845, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
       propertyPath: speed
       value: 30
@@ -178,9 +182,21 @@ PrefabInstance:
       propertyPath: speed
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 395725200498461906, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 395725200767601669, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
       propertyPath: speed
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 395725200767601671, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395725200891226536, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 395725200891226710, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
       propertyPath: speed
@@ -232,6 +248,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 395725201717657275, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556937480304477862, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633589762553509228, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1948802387836819534, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482503410043834591, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084699860472060959, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -547,6 +583,7 @@ MonoBehaviour:
   actualScene: 1
   bg: {fileID: 9624062}
   playerTr: {fileID: 1487589363}
+  fmodEvent: 
 --- !u!1 &986898828
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,62 +666,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1162014972
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1162014974}
-  - component: {fileID: 1162014973}
-  m_Layer: 0
-  m_Name: WwiseGlobal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1162014973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162014972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30c9d0d40e0181c40b91400b6bec5747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: e5955fa7249a1c444b04207437f3d1e2, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
---- !u!4 &1162014974
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162014972}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1324946754
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,42 +696,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WAVES:
-  - obstacles:
-    - speed: 6
-      size: 1
-      pos: {x: 4, y: 0}
-      type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
+  - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
+    speed: 7
     duration: 0
-  - obstacles:
-    - speed: 6
-      size: 1
-      pos: {x: -4, y: 0}
-      type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
-    duration: 1
-  - obstacles:
-    - speed: 6
-      size: 1
-      pos: {x: 0, y: 0}
-      type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
-    duration: 2
-  - obstacles:
-    - speed: 6
-      size: 1
-      pos: {x: 5, y: 0}
-      type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
-    duration: 3
-  - obstacles:
-    - speed: 6
-      size: 1
-      pos: {x: -3, y: 0}
-      type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
+  - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
+    speed: 7
     duration: 4
-  - obstacles:
-    - speed: 6
-      size: 1
-      pos: {x: -10, y: 0}
-      type: {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
-    duration: 5
+  - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
+    speed: 7
+    duration: 4
+  - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
+    speed: 7
+    duration: 4
+  - type: {fileID: 0}
+    speed: 7
+    duration: 4
+  - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
+    speed: 7
+    duration: 4
   actualWave: 0
 --- !u!4 &1324946756
 Transform:
@@ -1332,8 +1295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849dc0560879b364bac1fcac83bd7401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!20 &1782610483
 Camera:
   m_ObjectHideFlags: 0
@@ -1446,16 +1407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5d2c86289098e40960470bebd29a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &1798885944
 GameObject:
   m_ObjectHideFlags: 0

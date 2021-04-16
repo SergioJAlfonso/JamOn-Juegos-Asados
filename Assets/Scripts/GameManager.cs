@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public enum States { Playing, Menu };
     States GameStates;
 
-    ////##! SONIDOS
+    //////##! SONIDOS
     private FMOD.Studio.EventInstance instanceMusic;
     [FMODUnity.EventRef]
     [SerializeField] string fmodEvent;
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     // que hubiera otro se autodestruye
     void Awake()
     {
-        GameStates = States.Menu;
+        //GameStates = States.Menu;
 
         if (instance == null)
         {
@@ -72,120 +72,120 @@ public class GameManager : MonoBehaviour
         originalScaleY = playerTr.localScale.y;
 
         //##! SONIDOS
-        instanceMusic = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-        instanceMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
-        instanceMusic.start();
-        instanceMusic.release();
+        //instanceMusic = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        //instanceMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+        //instanceMusic.start();
+        //instanceMusic.release();
     }
     public void parallaxMultiplier(float val)
-{
-    if (GameStates == States.Playing)
     {
+        if (GameStates == States.Playing)
+        {
+            for (int i = 0; i < bg.transform.childCount; ++i)
+            {
+                childrenParallax[i].parallEffectMultiplier(val);
+            }
+        }
+    }
+
+    public void changePlayState(int n)
+    {
+        if (n == 0)
+            GameStates = States.Playing;
+        else if (n == 1)
+            GameStates = States.Menu;
+    }
+
+
+    private void Update()
+    {
+        //LA DISTANCIA SOLO AVANZA SI EL JUGADOR ESTA JUGANDO
+        if (GameStates == States.Playing)
+        {
+            distance += Time.deltaTime;
+            instanceMusic.setParameterByName("Distance", distance);
+
+
+
+
+            ////##! SONIDOS
+            //private FMOD.Studio.EventInstance instance;
+            //[FMODUnity.EventRef]
+            //[SerializeField] string fmodEvent;
+
+            //Transform tr;
+            //void Awake()
+            //{
+            //    tr = GetComponent<Transform>();
+
+            //    //##! SONIDOS
+            //    instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+            //    instance.set3DAttributes(RuntimeUtils.To3DAttributes(tr));
+            //    instance.start();
+            //    instance.release();
+            //}
+
+            //void FixedUpdate()
+            //{
+            //    //##! SONIDOS
+            //    instance.setParameterByName("HD", tr.position.z);
+            //}
+        }
+
+        if (hasToRestore)
+        {
+            restoreTime -= Time.deltaTime;
+
+            if (restoreTime <= 0)
+            {
+                restoreOriginalStats();
+            }
+        }
+        if (FOVRestoration)
+        {
+            if (Camera.main.fieldOfView > originalFOV)
+                Camera.main.fieldOfView -= 0.1f;
+            else
+            {
+                FOVRestoration = false;
+                Camera.main.fieldOfView = originalFOV;
+            }
+        }
+    }
+
+    private void restoreOriginalStats()
+    {
+        //Parallax
         for (int i = 0; i < bg.transform.childCount; ++i)
         {
-            childrenParallax[i].parallEffectMultiplier(val);
+            childrenParallax[i].parallaxEffect = originParallaxVel[i];
         }
-    }
-}
+        //Scale
+        playerTr.localScale = new Vector3(playerTr.localScale.x, originalScaleY, playerTr.localScale.z);
 
-public void changePlayState(int n)
-{
-    if (n == 0)
-        GameStates = States.Playing;
-    else if (n == 1)
-        GameStates = States.Menu;
-}
+        //FOV
+        FOVRestoration = true;
 
-
-private void Update()
-{
-    //LA DISTANCIA SOLO AVANZA SI EL JUGADOR ESTA JUGANDO
-    if (GameStates == States.Playing)
-    {
-        distance += Time.deltaTime;
-       instanceMusic.setParameterByName("Distance", distance);
-
-
-
-
-        ////##! SONIDOS
-        //private FMOD.Studio.EventInstance instance;
-        //[FMODUnity.EventRef]
-        //[SerializeField] string fmodEvent;
-
-        //Transform tr;
-        //void Awake()
-        //{
-        //    tr = GetComponent<Transform>();
-
-        //    //##! SONIDOS
-        //    instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-        //    instance.set3DAttributes(RuntimeUtils.To3DAttributes(tr));
-        //    instance.start();
-        //    instance.release();
-        //}
-
-        //void FixedUpdate()
-        //{
-        //    //##! SONIDOS
-        //    instance.setParameterByName("HD", tr.position.z);
-        //}
+        hasToRestore = false;
+        velChain = 0;
     }
 
-    if (hasToRestore)
+
+    public void addVelChain()
     {
-        restoreTime -= Time.deltaTime;
-
-        if (restoreTime <= 0)
-        {
-            restoreOriginalStats();
-        }
-    }
-    if (FOVRestoration)
-    {
-        if (Camera.main.fieldOfView > originalFOV)
-            Camera.main.fieldOfView -= 0.1f;
-        else
-        {
-            FOVRestoration = false;
-            Camera.main.fieldOfView = originalFOV;
-        }
-    }
-}
-
-private void restoreOriginalStats()
-{
-    //Parallax
-    for (int i = 0; i < bg.transform.childCount; ++i)
-    {
-        childrenParallax[i].parallaxEffect = originParallaxVel[i];
-    }
-    //Scale
-    playerTr.localScale = new Vector3(playerTr.localScale.x, originalScaleY, playerTr.localScale.z);
-
-    //FOV
-    FOVRestoration = true;
-
-    hasToRestore = false;
-    velChain = 0;
-}
-
-
-public void addVelChain()
-{
-    velChain++;
-}
-public int getVelChain()
-{
-    return velChain;
-}
-public void setHasToRestore(bool b)
-{
-    hasToRestore = b;
-    if (hasToRestore)
-    {
-        restoreTime = 5;
         velChain++;
     }
-}
+    public int getVelChain()
+    {
+        return velChain;
+    }
+    public void setHasToRestore(bool b)
+    {
+        hasToRestore = b;
+        if (hasToRestore)
+        {
+            restoreTime = 5;
+            velChain++;
+        }
+    }
 }
