@@ -65,7 +65,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.4, y: 5.6}
+    oldSize: {x: 1.28, y: 1.56}
     newSize: {x: 8.4, y: 5.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -73,14 +73,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.2132375, y: 2.8099117}
-      - {x: -1.1625923, y: 1.2142516}
-      - {x: -2.3631856, y: 0.26923868}
-      - {x: -1.7960987, y: -1.0046308}
-      - {x: -1.8878225, y: -2.4742303}
-      - {x: 0.01837051, y: -4.079364}
-      - {x: -0.017133713, y: -2.2758138}
-      - {x: -0.041350603, y: 0.54688}
+    - - {x: 0.4654001, y: 0.50041366}
+      - {x: -0.19480264, y: 0.66437113}
+      - {x: -0.3176303, y: 0.4671956}
+      - {x: -0.4291488, y: 0.095130086}
+      - {x: -0.26410893, y: -0.25428975}
+      - {x: -0.25476572, y: -0.28624701}
+      - {x: -0.17813964, y: -0.40183342}
+      - {x: 0.13523617, y: -0.25610265}
+      - {x: 0.5558241, y: 0.19810772}
+      - {x: 0.50852984, y: 0.48089433}
 --- !u!50 &6558476095424974811
 Rigidbody2D:
   serializedVersion: 4
@@ -140,9 +142,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1266160429
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 39681ef324af7dc4fb7c8af7b4a6f8eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a8fc14231f225b8468e4f651d4912162, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
