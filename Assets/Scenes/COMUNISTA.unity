@@ -272,7 +272,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2601408059664085789, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
       propertyPath: corriente
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2601408059664085789, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3443074328858250825, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
       propertyPath: target
@@ -284,7 +288,11 @@ PrefabInstance:
       objectReference: {fileID: 696852555}
     - target: {fileID: 5732654942230735731, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
       propertyPath: corriente
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732654942230735731, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6118918246090993432, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
       propertyPath: m_RootOrder
@@ -336,7 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6232201403209238401, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
       propertyPath: corriente
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6232201403209238401, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
       propertyPath: m_Enabled
@@ -346,13 +354,25 @@ PrefabInstance:
       propertyPath: nextPiece
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6232201403209238401, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6837830612466754922, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
       propertyPath: corriente
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837830612466754922, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 9193051991751563680, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
       propertyPath: corriente
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193051991751563680, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
@@ -451,12 +471,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 766667885931881432, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 766667885931881432, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: corriente
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 766667885931881432, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 766667885931881432, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 2909367617247083640, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_RootOrder
@@ -507,20 +535,52 @@ PrefabInstance:
       value: CoolCarpa
       objectReference: {fileID: 0}
     - target: {fileID: 6237571223624116667, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237571223624116667, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: corriente
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237571223624116667, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249315099206476218, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: speed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6249315099206476218, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: corriente
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249315099206476218, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000786476615812506, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: speed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7000786476615812506, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: corriente
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000786476615812506, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285583015553310206, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: speed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7285583015553310206, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: corriente
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285583015553310206, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+      propertyPath: fuerzaCorriente
+      value: 1.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
@@ -730,10 +790,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849dc0560879b364bac1fcac83bd7401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EmittersToStartListeningTo: []
-  EmittersToStopListeningTo: []
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!20 &1782610483
 Camera:
   m_ObjectHideFlags: 0
@@ -803,18 +859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5d2c86289098e40960470bebd29a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_Collider: {fileID: 0}
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  isRegistered: 1
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &1785795251
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,19 +888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c9d0d40e0181c40b91400b6bec5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: e5955fa7249a1c444b04207437f3d1e2, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
 --- !u!4 &1785795253
 Transform:
   m_ObjectHideFlags: 0
