@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     float depth = 10;
     [SerializeField]
     float maxDif = 1.2f;
+    [SerializeField]
+    GameObject sombra;
     public Transform nextPiece;
     [SerializeField]
     float amplitude = 0.5f;
@@ -18,11 +20,12 @@ public class PlayerController : MonoBehaviour
     Transform tr;
     Rigidbody2D rb;
     SpriteRenderer sp;
+    Transform sTr;
+    Rigidbody2D sRb;
+    SpriteRenderer sSp;
     Vector3 mousePos;
     Vector2 direction;
-    float posZ = 0; // Posición z
     float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
-    float alphaValue;
     float timeAtTop;
 
     const float maxAngle = 30;
@@ -33,7 +36,10 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<Transform>();
         sp = GetComponent<SpriteRenderer>();
-        alphaValue = sp.color.a;
+
+        sTr = sombra.GetComponent<Transform>();
+        sRb = sombra.GetComponent<Rigidbody2D>();
+        sSp = sombra.GetComponent<SpriteRenderer>();
 
         Cursor.visible = true;
     }
@@ -47,8 +53,9 @@ public class PlayerController : MonoBehaviour
             mousePos.x = mousePos.x + Mathf.Sin((Time.time * coleteo)) * amplitude;
 
         }
-        else {
-            mousePos = nextPiece.position; 
+        else
+        {
+            mousePos = nextPiece.position;
         }
         direction = (mousePos - tr.position);
 
@@ -57,78 +64,48 @@ public class PlayerController : MonoBehaviour
 
         float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90);
         if (angle < maxAngle && angle > -maxAngle)
+        {
             tr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            sTr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        }
         direction.Normalize();
 
-        //propongo hacer un lerpeo ajajaja
-
         if (Input.GetMouseButton(0) && tr.position.z >= 0) //profundidad maxima
-        {            
-            if(tr.position.z + 0.25f <= depth) tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.25f);
-            /*if (tr.localScale.x + (posZ / 2000) > 0.8 && tr.localScale.x + (posZ / 2000) < 1.3)
+        {
+            if (tr.position.z + 0.25f <= depth)
             {
-                tr.position = new Vector3(tr.position.x, tr.position.y * 0.989f, tr.position.z);
-                tr.localScale = new Vector3(tr.localScale.x + (posZ / 2000), tr.localScale.y + (posZ / 1000), tr.localScale.z);
-            }*/
+                tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.25f);
+                sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + 0.2f);
+            }
             if (sp.color.a - 0.02 > 0.6) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
+            if (sSp.color.a + 0.02 < 0.4) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a + 0.01f);
             diveReach = -tr.position.z;
         }
         else if (tr.position.z > diveReach / 4)
         {
             tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z - 0.25f);
+            sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z - 0.2f);
             if (tr.position.z <= diveReach / 4)
             {
                 diveReach = 0;
                 timeAtTop = Time.time;
             }
             if (sp.color.a + 0.02 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.02f);
+            if (sSp.color.a - 0.04 > 0.1) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a - 0.005f);
         }
-
-
-        else if(tr.position.z < 0 && Time.time - timeAtTop >= timeToDrop)
+        else if (tr.position.z < 0 && Time.time - timeAtTop >= timeToDrop)
         {
             tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.15f);
+            sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + 0.12f);
             if (tr.position.z >= 0)
                 tr.position = new Vector3(tr.position.x, tr.position.y, 0);
             if (sp.color.a - 0.02 > 0.85) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
             else sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 0.85f);
+            if (sSp.color.a + 0.04 < 0.25) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a + 0.01f);            
         }
-            //if (posZ < diveReach) //subida y bajada
-            //{
-            //    posZ += 1.0f;
-            //    if (tr.localScale.x + (posZ / 2000) > 0.8 && tr.localScale.x + (posZ / 2000) < 1.3)
-            //    {
-            //        tr.position = new Vector3(tr.position.x, tr.position.y / 0.989f, tr.position.z);
-            //        tr.localScale = new Vector3(tr.localScale.x + (posZ / 2000), tr.localScale.y + (posZ / 1000), tr.localScale.z);
-            //        if (sp.color.a + 0.015 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.015f);
-            //    }
-            //}
-            //else if (posZ >= diveReach) //cuando llega al maximo de arriba
-            //{
-            //    diveReach = 0; //reseteo de la profundidad
-            //    if (posZ > 0)
-            //    {
-            //        posZ -= 1.0f;
-            //        if (posZ < 75 && tr.localScale.x - (posZ / 2000) >= 1)
-            //        {
-            //            tr.position = new Vector3(tr.position.x, tr.position.y * 0.989f, tr.position.z);
-            //            tr.localScale = new Vector3(tr.localScale.x - (posZ / 2000), tr.localScale.y - (posZ / 1000), tr.localScale.z);
-            //            if (sp.color.a - 0.03 > alphaValue) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.03f);
-            //        }
-            //    }
-            //    else
-            //    {
-            //        posZ = 0;
-            //        sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, alphaValue);
-            //    }
-            //}
+
         rb.velocity = new Vector2(direction.x * speed, 0);
-
-
-        if (Input.GetMouseButton(1) && posZ > -depth)
-        {
-
-        }
+        sRb.velocity = new Vector2(direction.x * speed, 0);
     }
 
     public Vector3 GetWorldPositionOnPlane(Vector3 screenPosition, float z)

@@ -65,7 +65,6 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         distance += Time.deltaTime;
-        Debug.Log(distance);
         if (hasToRestore)
         {
             restoreTime -= Time.deltaTime;
