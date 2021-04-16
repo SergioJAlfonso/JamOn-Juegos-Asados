@@ -13,11 +13,6 @@ public class Waves : MonoBehaviour
     [SerializeField]
     bool aleatorio;
 
-
-
-
-    int speed_ = 0;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -39,14 +34,6 @@ public class Waves : MonoBehaviour
                  j = i;
             else j = Random.Range(0, gObj.Length);
             GameObject obstacle = Instantiate(gObj[j], pos[i]+ new Vector2(0, topY), Quaternion.identity);
-
-            //Y actualizamos sus parámetros
-            obstacle.GetComponent<GoDown>().initialize(speed_);
         }
-    }
-
-    public void initialize(int speed)
-    {
-        speed_ = speed;
     }
 }

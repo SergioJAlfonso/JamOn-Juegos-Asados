@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
 
     int velChain = 0;
 
+    [SerializeField] float minObstSpeed = 7;
+    float obstSpeed;
+
     public enum States { Playing, Menu };
     States GameStates;
 
@@ -70,6 +73,8 @@ public class GameManager : MonoBehaviour
 
         //playerTR
         originalScaleY = playerTr.localScale.y;
+
+        obstSpeed = minObstSpeed;
 
         //##! SONIDOS
         //instanceMusic = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
@@ -166,6 +171,9 @@ public class GameManager : MonoBehaviour
         //FOV
         FOVRestoration = true;
 
+        //Speed
+        obstSpeed = minObstSpeed;
+
         hasToRestore = false;
         velChain = 0;
     }
@@ -178,6 +186,18 @@ public class GameManager : MonoBehaviour
     public int getVelChain()
     {
         return velChain;
+    }
+    public float getSpeed()
+    {
+        return obstSpeed;
+    }
+    public void setSpeed(float s)
+    {
+        obstSpeed = s;
+    }
+    public void speedMultiplier(float m)
+    {
+        obstSpeed *= m;
     }
     public void setHasToRestore(bool b)
     {

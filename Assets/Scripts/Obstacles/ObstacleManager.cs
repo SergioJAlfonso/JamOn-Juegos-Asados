@@ -9,7 +9,6 @@ public class ObstacleManager : MonoBehaviour
     private struct ObstacleWave
     {
         public GameObject type;
-        public int speed;
         public int duration;
     }
 
@@ -35,11 +34,16 @@ public class ObstacleManager : MonoBehaviour
 
     void spawnWave()
     {
+
+        //speed = GameManager.instance.getSpeed();
         //Instanciamos la roca
         GameObject obstacle = Instantiate(WAVES[actualWave].type, new Vector3(0 ,0 ,0), Quaternion.identity);
 
-        //Y actualizamos sus parámetros
-        obstacle.GetComponent<Waves>().initialize(WAVES[actualWave].speed);
     }
+
+    public int getActWave()
+    {
+        return actualWave;
+    } 
 }
 

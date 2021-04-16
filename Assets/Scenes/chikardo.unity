@@ -968,6 +968,7 @@ MonoBehaviour:
   actualScene: 1
   bg: {fileID: 9624062}
   playerTr: {fileID: 1630713621}
+  speed: 7
   fmodEvent: 
 --- !u!1001 &1230596472
 PrefabInstance:
@@ -1151,22 +1152,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WAVES:
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 0
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   actualWave: 0
 --- !u!4 &1336914797
