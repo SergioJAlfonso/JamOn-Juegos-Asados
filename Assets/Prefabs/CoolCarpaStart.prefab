@@ -25,11 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2909367617247083640, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.159797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2909367617247083640, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1043813
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2909367617247083640, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2909367617247083641, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_Name
-      value: CoolCarpa
+      value: CoolCarpaStart
       objectReference: {fileID: 0}
     - target: {fileID: 6237571223624116667, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: speed

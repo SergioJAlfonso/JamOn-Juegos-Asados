@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6118918246090993433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.74, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6118918246305084011}
@@ -141,7 +141,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &6118918246305084009
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -170,6 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corriente: 0
+  fuerzaCorriente: 1
   isHead: 1
   speed: 1
   depth: 15
@@ -192,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  puntito: {fileID: 0}
   factorX: 1
   amplitudeX: 1
   factorY: 1
@@ -306,7 +309,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &6118918246491692102
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -335,6 +338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corriente: 0
+  fuerzaCorriente: 1
   isHead: 0
   speed: 1
   depth: 15
@@ -449,7 +454,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &6118918246917650443
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -478,6 +483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corriente: 0
+  fuerzaCorriente: 1
   isHead: 0
   speed: 1
   depth: 15
@@ -592,7 +599,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &6118918247007411620
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -621,6 +628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corriente: 0
+  fuerzaCorriente: 1
   isHead: 0
   speed: 1
   depth: 15
@@ -735,7 +744,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &6118918247275666801
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -764,6 +773,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corriente: 0
+  fuerzaCorriente: 1
   isHead: 0
   speed: 1
   depth: 15
