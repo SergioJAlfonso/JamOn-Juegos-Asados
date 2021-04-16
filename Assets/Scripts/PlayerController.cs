@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     Vector2 direction;
     float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
     float timeAtTop;
-
+    float initY;
     const float maxAngle = 30;
     const float timeToDrop = 0.35f;
 
@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour
         sSp = sombra.GetComponent<SpriteRenderer>();
 
         Cursor.visible = true;
+
+        initY = tr.position.y;
     }
 
     void FixedUpdate()
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
         if (nextPiece == null)
         {
             mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
-            mousePos.y = 3;
+            mousePos.y = initY+4;
             mousePos.x = mousePos.x + Mathf.Sin((Time.time * coleteo)) * amplitude;
 
         }
