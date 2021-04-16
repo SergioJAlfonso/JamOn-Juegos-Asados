@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float speed = 10;
     [SerializeField]
-    float depth = 15;
+    float depth = 10;
     [SerializeField]
     float maxDif = 1.2f;
     public Transform nextPiece;
@@ -23,8 +23,10 @@ public class PlayerController : MonoBehaviour
     float posZ = 0; // Posición z
     float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
     float alphaValue;
+    float timeAtTop;
 
     const float maxAngle = 30;
+    const float timeToDrop = 0.35f;
 
     void Awake()
     {
@@ -71,18 +73,21 @@ public class PlayerController : MonoBehaviour
             if (sp.color.a - 0.02 > 0.6) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
             diveReach = -tr.position.z;
         }
-        else if (tr.position.z > diveReach / 3)
+        else if (tr.position.z > diveReach / 4)
         {
-            tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z - 0.5f);
-            if (tr.position.z <= diveReach / 3)
+            tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z - 0.25f);
+            if (tr.position.z <= diveReach / 4)
+            {
                 diveReach = 0;
+                timeAtTop = Time.time;
+            }
             if (sp.color.a + 0.02 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.02f);
         }
 
 
-        else if(tr.position.z < 0)
+        else if(tr.position.z < 0 && Time.time - timeAtTop >= timeToDrop)
         {
-            tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.25f);
+            tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.15f);
             if (tr.position.z >= 0)
                 tr.position = new Vector3(tr.position.x, tr.position.y, 0);
             if (sp.color.a - 0.02 > 0.85) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
