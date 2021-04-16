@@ -1,9 +1,9 @@
 using UnityEngine;
 //Maneja el movimiento en las 4 direcciones
 //Tambien acciona las animaciones correspondiente a cada direccion
-public class CoolPlayerController : MonoBehaviour
+public class CoolBotController : MonoBehaviour
 {
-
+    public bool isHead = false;
     [SerializeField]
     float speed = 10;
     [SerializeField]
@@ -45,9 +45,9 @@ public class CoolPlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (nextPiece == null)
+        if (isHead)
         {
-            mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
+            mousePos = GetComponent<CoolCarpaBotFollow>().destino;
             //mousePos.y = 3;
             //mousePos.x = mousePos.x + Mathf.Sin((Time.time * coleteo)) * amplitude;
 
