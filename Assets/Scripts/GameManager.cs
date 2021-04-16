@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     float restoreTime = 0;
     bool hasToRestore = false;
     bool FOVRestoration = false;
+    float distance = 0;
 
     int velChain = 0;
 
@@ -63,6 +64,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        distance += Time.deltaTime;
+        Debug.Log(distance);
         if (hasToRestore)
         {
             restoreTime -= Time.deltaTime;
