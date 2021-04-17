@@ -38,7 +38,6 @@ public class ObstacleManager : MonoBehaviour
         //speed = GameManager.instance.getSpeed();
         //Instanciamos la roca
         GameObject obstacle = Instantiate(WAVES[actualWave].type, new Vector3(0 ,0 ,0), Quaternion.identity);
-
     }
 
     public int getActWave()
