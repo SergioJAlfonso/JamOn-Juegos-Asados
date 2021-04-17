@@ -9,7 +9,7 @@ public class BancoDePeces : MonoBehaviour
 
     private void Start()
     {
-
+        for (int i = 0; i < Random.Range(1, 6); i++) instanciarCarpa();
     }
 
     void instanciarCarpa()
@@ -20,11 +20,13 @@ public class BancoDePeces : MonoBehaviour
         carpas.Add(nuevo);
     }
 
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Q))
-            instanciarCarpa();
-    }
+    /*
+        private void Update()
+        {
+            if (Input.GetKey(KeyCode.Q))
+                instanciarCarpa();
+        }
+    */
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -18,11 +18,17 @@ public class ObstacleManager : MonoBehaviour
     [SerializeField]
     short actualWave = 0;
 
-    float timer = 0f;
+    double timer = 0f;
 
     void Update()
     {
-        timer += Time.deltaTime;
+        int velChain = 1;
+        if (GameManager.instance != null)
+        {
+            velChain = GameManager.instance.getVelChain();
+            velChain++;
+        }
+        timer += (Time.deltaTime* (1.5 * velChain));
 
         if (actualWave < WAVES.Length && timer >= WAVES[actualWave].duration)
         {
@@ -38,7 +44,6 @@ public class ObstacleManager : MonoBehaviour
         //speed = GameManager.instance.getSpeed();
         //Instanciamos la roca
         GameObject obstacle = Instantiate(WAVES[actualWave].type, new Vector3(0 ,0 ,0), Quaternion.identity);
-
     }
 
     public int getActWave()

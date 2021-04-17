@@ -39,9 +39,6 @@ public class CoolCarpaBotFollow : MonoBehaviour
         speedX = Random.Range(1.0f, 2.0f);
         speedY = Random.Range(1.0f, 2.0f);
          */
-
-
-
     }
 
     // Update is called once per frame
@@ -53,7 +50,10 @@ public class CoolCarpaBotFollow : MonoBehaviour
         destino.z = target.position.z;
 
         destino = target.transform.position + target.transform.InverseTransformPoint(destino);
-        puntito.transform.position = destino;
+        if (puntito != null)
+        {
+            puntito.transform.position = destino;
+        }
         //destino.y = -destino.y;
 
 

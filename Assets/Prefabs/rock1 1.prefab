@@ -490,6 +490,19 @@ MonoBehaviour:
   player: {fileID: 0}
   mi_Puta_Madre: 0
   mi_Puta_Madre_2: 0
+--- !u!114 &2222043727849888476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3281238554446745121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9567544391e3e50469c9f02911f642c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed_: 5
 --- !u!1001 &8542535015944094200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -543,11 +556,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6558476095424974809, guid: 63e056cdbb33f824eb51f32d04f9672b, type: 3}
       propertyPath: m_Name
-      value: rock1
+      value: rock1 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6558476095424974808, guid: 63e056cdbb33f824eb51f32d04f9672b, type: 3}
+    - {fileID: 6558476095424974805, guid: 63e056cdbb33f824eb51f32d04f9672b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 63e056cdbb33f824eb51f32d04f9672b, type: 3}
+--- !u!1 &3281238554446745121 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6558476095424974809, guid: 63e056cdbb33f824eb51f32d04f9672b, type: 3}
+  m_PrefabInstance: {fileID: 8542535015944094200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3281238554446745132 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6558476095424974804, guid: 63e056cdbb33f824eb51f32d04f9672b, type: 3}
