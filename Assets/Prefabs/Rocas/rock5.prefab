@@ -290,6 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5800310303912435156}
   - component: {fileID: 5800310303912435159}
+  - component: {fileID: 3269588393031290370}
   m_Layer: 0
   m_Name: rock5
   m_TagString: Untagged
@@ -323,5 +324,17 @@ SortingGroup:
   m_GameObject: {fileID: 5800310303912435158}
   m_Enabled: 1
   m_SortingLayerID: -810563751
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
+--- !u!114 &3269588393031290370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800310303912435158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b0b2d0f9f5c1c4cb023e55f169c3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

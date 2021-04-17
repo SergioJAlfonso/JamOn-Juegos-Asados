@@ -208,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4052886876394496374}
   - component: {fileID: 4052886876394496369}
+  - component: {fileID: 9021222138520001219}
   m_Layer: 0
   m_Name: rock3
   m_TagString: Untagged
@@ -243,8 +244,20 @@ SortingGroup:
   m_GameObject: {fileID: 4052886876394496368}
   m_Enabled: 1
   m_SortingLayerID: -810563751
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
+--- !u!114 &9021222138520001219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052886876394496368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b0b2d0f9f5c1c4cb023e55f169c3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4052886876561195545
 GameObject:
   m_ObjectHideFlags: 0

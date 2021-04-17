@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject bg;
     public Transform playerTr;
+    public Transform dumpingObjectTr;
+
     Parallax[] childrenParallax;
     float[] originParallaxVel;
 
