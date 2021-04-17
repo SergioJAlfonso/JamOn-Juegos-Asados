@@ -6,12 +6,13 @@ public class GoDown : MonoBehaviour
 {
     //ROCK_TYPE type_;
     [SerializeField]
-    float speed_ = GameManager.instance.getSpeed();
-    float limit_ = -40;
+    float speed_;
+    float limit_ = -60;
     Rigidbody2D rb;
 
     private void Start()
     {
+        speed_ = GameManager.instance.getSpeed();
         rb = GetComponent<Rigidbody2D>();
 
         if (rb != null)
@@ -30,7 +31,6 @@ public class GoDown : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
     }
 
     //public void initialize(int speed)
