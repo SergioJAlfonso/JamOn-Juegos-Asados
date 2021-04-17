@@ -9,7 +9,7 @@ public class BancoDePecesCool : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < Random.Range(1, 6); i++) instanciarCarpa();
+        for (int i = 0; i < Random.Range(1, 4); i++) instanciarCarpa();
     }
 
     void instanciarCarpa()
