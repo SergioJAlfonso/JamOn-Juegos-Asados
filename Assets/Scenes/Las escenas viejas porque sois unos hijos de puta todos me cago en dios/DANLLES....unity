@@ -153,8 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WAVES:
-  - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 5
+  - type: {fileID: 4034594725033149886, guid: 42a4c8f5d2ba7a749aa1985045f64bdf, type: 3}
     duration: 5
   actualWave: 0
 --- !u!4 &137982636
@@ -299,7 +298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0
-  parallaxMinEffect: 0
 --- !u!114 &269961577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +311,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0
-  parallaxMinEffect: 0
 --- !u!212 &269961578
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -365,6 +362,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &733898659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 733898660}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &733898660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733898659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.95, y: 3.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1311298503
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +439,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 2
-  parallaxMinEffect: 0
 --- !u!114 &1311298506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0
-  parallaxMinEffect: 0
 --- !u!212 &1311298507
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -705,19 +730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c9d0d40e0181c40b91400b6bec5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: e5955fa7249a1c444b04207437f3d1e2, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
 --- !u!4 &1779625291
 Transform:
   m_ObjectHideFlags: 0
@@ -763,8 +775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849dc0560879b364bac1fcac83bd7401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!20 &1782610483
 Camera:
   m_ObjectHideFlags: 0
@@ -834,16 +844,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5d2c86289098e40960470bebd29a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &1914513165
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,7 +891,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 1.5
-  parallaxMinEffect: 0
 --- !u!114 &1914513168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,7 +904,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0
-  parallaxMinEffect: 0
 --- !u!212 &1914513169
 SpriteRenderer:
   m_ObjectHideFlags: 0
