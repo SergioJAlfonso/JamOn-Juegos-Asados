@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8117139551537918262}
   - component: {fileID: 5635977919193571523}
   m_Layer: 0
-  m_Name: TriangleWave
+  m_Name: Sakuras
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -44,12 +44,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gObj:
-  - {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
-  - {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
-  pos:
-  - {x: -5, y: 0}
-  - {x: 5, y: 5}
-  - {x: 0, y: 10}
-  randObstacle: 0
-  randRangeY: 0
-  randRangeX: 0
+  - {fileID: 6558476095424974809, guid: 99846ab091fc04b4fbf55d8c1d2d820c, type: 3}
+  - {fileID: 6558476095424974809, guid: 30270233be26ea941b82508472f7e332, type: 3}
+  position:
+  - pos: {x: -4, y: 5}
+    randRangeX: 7.5
+    randRangeY: 2.5
+  - pos: {x: 2, y: 8}
+    randRangeX: 7.5
+    randRangeY: 2.5
+  - pos: {x: -5, y: 5}
+    randRangeX: 5.5
+    randRangeY: 2
+  - pos: {x: -5, y: 1}
+    randRangeX: 5.5
+    randRangeY: 2
+  - pos: {x: 4.25, y: 1}
+    randRangeX: 4.5
+    randRangeY: 3
+  - pos: {x: 6.75, y: -2}
+    randRangeX: 4.5
+    randRangeY: 3
+  - pos: {x: 3, y: -5}
+    randRangeX: 9.5
+    randRangeY: 1
+  randObstacle: 1

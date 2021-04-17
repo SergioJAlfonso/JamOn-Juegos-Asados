@@ -153,8 +153,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WAVES:
+  - type: {fileID: 4034594725033149886, guid: 16383f5a06681db4c919646f34168129, type: 3}
+    duration: 2
+  - type: {fileID: 4034594725033149886, guid: 301362cfcaec78d48809a311e32401cc, type: 3}
+    duration: 0
+  - type: {fileID: 4034594725033149886, guid: 7613de00e9c12724cb98a47f75b25055, type: 3}
+    duration: 7
   - type: {fileID: 4034594725033149886, guid: 42a4c8f5d2ba7a749aa1985045f64bdf, type: 3}
-    duration: 5
+    duration: 1
   actualWave: 0
 --- !u!4 &137982636
 Transform:
@@ -386,7 +392,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733898659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.95, y: 3.47, z: 0}
+  m_LocalPosition: {x: -0.21, y: 4.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
