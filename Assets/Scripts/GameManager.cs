@@ -88,10 +88,10 @@ public class GameManager : MonoBehaviour
         obstSpeed = minObstSpeed;
 
         //##! SONIDOS
-        //instanceMusic = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-        //instanceMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
-        //instanceMusic.start();
-        //instanceMusic.release();
+        instanceMusic = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        instanceMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+        instanceMusic.start();
+        instanceMusic.release();
     }
     public void parallaxMultiplier(float val)
     {
@@ -119,30 +119,7 @@ public class GameManager : MonoBehaviour
         if (GameStates == States.Playing)
         {
             distance += Time.deltaTime;
-            instanceMusic.setParameterByName("Distance", distance);
-
-            ////##! SONIDOS
-            //private FMOD.Studio.EventInstance instance;
-            //[FMODUnity.EventRef]
-            //[SerializeField] string fmodEvent;
-
-            //Transform tr;
-            //void Awake()
-            //{
-            //    tr = GetComponent<Transform>();
-
-            //    //##! SONIDOS
-            //    instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-            //    instance.set3DAttributes(RuntimeUtils.To3DAttributes(tr));
-            //    instance.start();
-            //    instance.release();
-            //}
-
-            //void FixedUpdate()
-            //{
-            //    //##! SONIDOS
-            //    instance.setParameterByName("HD", tr.position.z);
-            //}
+            //instanceMusic.setParameterByName("Distance", distance);
         }
 
         gameTime += Time.deltaTime;
@@ -244,3 +221,27 @@ public class GameManager : MonoBehaviour
         }
     }
 }
+
+
+////##! SONIDOS
+//private FMOD.Studio.EventInstance instance;
+//[FMODUnity.EventRef]
+//[SerializeField] string fmodEvent;
+
+//Transform tr;
+//void Awake()
+//{
+//    tr = GetComponent<Transform>();
+
+//    //##! SONIDOS
+//    instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+//    instance.set3DAttributes(RuntimeUtils.To3DAttributes(tr));
+//    instance.start();
+//    instance.release();
+//}
+
+//void FixedUpdate()
+//{
+//    //##! SONIDOS
+//    instance.setParameterByName("HD", tr.position.z);
+//}

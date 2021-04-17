@@ -393,8 +393,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../FMOD Studio/jam0n/jam0n.fspro
-  sourceBankPath: ..\..\FMOD Studio\jam0n\Build
+  sourceProjectPath: MusikitaTodo/FmodTodo/FmodTodo.fspro
+  sourceBankPath: MusikitaTodo\FmodTodo\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0

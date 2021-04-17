@@ -968,7 +968,16 @@ MonoBehaviour:
   actualScene: 1
   bg: {fileID: 9624062}
   playerTr: {fileID: 1630713621}
-  fmodEvent: 
+  minObstSpeed: 7
+  sectionTimeStamps:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  smoothDelay: 0.125
+  fmodEvent: event:/MusicManager
+  cascada: {fileID: 0}
 --- !u!1001 &1230596472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1151,22 +1160,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WAVES:
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 0
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   actualWave: 0
 --- !u!4 &1336914797
@@ -2022,6 +2025,8 @@ MonoBehaviour:
   smoothDelay: 2.5
   minBound: {x: -20, y: -4.7, z: -10}
   maxBound: {x: 20, y: -4.7, z: -10}
+  panel: {fileID: 0}
+  maxReductionTime: 4
 --- !u!65 &1782610487
 BoxCollider:
   m_ObjectHideFlags: 0
