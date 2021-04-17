@@ -33,7 +33,7 @@ public class Boost : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        CoolPlayerController plC = other.gameObject.GetComponent<CoolPlayerController>();
+        PlayerController plC = other.gameObject.GetComponent<PlayerController>();
         if (plC != null && plC.nextPiece == null)
         {
             Transform tr = other.GetComponent<Transform>();

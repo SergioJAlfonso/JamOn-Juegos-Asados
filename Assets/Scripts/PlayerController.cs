@@ -37,9 +37,12 @@ public class PlayerController : MonoBehaviour
         tr = GetComponent<Transform>();
         sp = GetComponent<SpriteRenderer>();
 
-        sTr = sombra.GetComponent<Transform>();
-        sRb = sombra.GetComponent<Rigidbody2D>();
-        sSp = sombra.GetComponent<SpriteRenderer>();
+        if (sombra != null)
+        {
+            sTr = sombra.GetComponent<Transform>();
+            sRb = sombra.GetComponent<Rigidbody2D>();
+            sSp = sombra.GetComponent<SpriteRenderer>();
+        }
 
         Cursor.visible = true;
 
@@ -68,7 +71,8 @@ public class PlayerController : MonoBehaviour
         if (angle < maxAngle && angle > -maxAngle)
         {
             tr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            sTr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            if (sombra != null)
+                sTr.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         }
         direction.Normalize();
 
@@ -77,37 +81,48 @@ public class PlayerController : MonoBehaviour
             if (tr.position.z + 0.25f <= depth)
             {
                 tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.25f);
-                sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + 0.2f);
+                if (sombra != null)
+                    sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + 0.2f);
             }
-            if (sp.color.a - 0.02 > 0.6) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
-            if (sSp.color.a + 0.02 < 0.4) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a + 0.01f);
+            if (sombra != null)
+            {
+                if (sp.color.a - 0.02 > 0.6) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
+                if (sSp.color.a + 0.02 < 0.4) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a + 0.01f);
+            }
             diveReach = -tr.position.z;
         }
         else if (tr.position.z > diveReach / 4)
         {
             tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z - 0.25f);
-            sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z - 0.2f);
             if (tr.position.z <= diveReach / 4)
             {
                 diveReach = 0;
                 timeAtTop = Time.time;
             }
-            if (sp.color.a + 0.02 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.02f);
-            if (sSp.color.a - 0.04 > 0.1) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a - 0.005f);
+            if (sombra != null)
+            {
+                sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z - 0.2f);
+                if (sp.color.a + 0.02 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.02f);
+                if (sSp.color.a - 0.04 > 0.1) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a - 0.005f);
+            }
         }
         else if (tr.position.z < 0 && Time.time - timeAtTop >= timeToDrop)
         {
             tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.15f);
-            sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + 0.12f);
             if (tr.position.z >= 0)
                 tr.position = new Vector3(tr.position.x, tr.position.y, 0);
-            if (sp.color.a - 0.02 > 0.85) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
-            else sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 0.85f);
-            if (sSp.color.a + 0.04 < 0.25) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a + 0.01f);            
+            if (sombra != null)
+            {
+                sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + 0.12f);
+                if (sp.color.a - 0.02 > 0.85) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
+                else sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 0.85f);
+                if (sSp.color.a + 0.04 < 0.25) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a + 0.01f);
+            }
         }
 
         rb.velocity = new Vector2(direction.x * speed, 0);
-        sRb.velocity = new Vector2(direction.x * speed, 0);
+        if (sombra != null)
+            sRb.velocity = new Vector2(direction.x * speed, 0);
     }
 
     public Vector3 GetWorldPositionOnPlane(Vector3 screenPosition, float z)
