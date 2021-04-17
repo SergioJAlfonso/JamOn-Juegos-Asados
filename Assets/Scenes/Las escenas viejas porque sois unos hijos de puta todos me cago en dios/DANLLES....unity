@@ -324,6 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 513983645}
+  - component: {fileID: 513983646}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -345,6 +346,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &513983646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513983644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd886dd5282199f4fb9ad2cb2eb40cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rockManagers: []
+  actualManager: {fileID: 0}
+  actual: 0
+  done: 0
 --- !u!1 &733898659
 GameObject:
   m_ObjectHideFlags: 0
