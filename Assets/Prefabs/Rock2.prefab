@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6558476095424974805}
   - component: {fileID: 6558476095424974810}
   - component: {fileID: 6558476095424974811}
+  - component: {fileID: 7973014854621680809}
   - component: {fileID: 6558476095424974808}
   m_Layer: 7
   m_Name: Rock2
@@ -47,7 +48,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_: 7
-  limit_: -10
 --- !u!60 &6558476095424974810
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -58,7 +58,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -74,13 +74,17 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.4654001, y: 0.50041366}
+      - {x: 0.01861427, y: 0.6656121}
       - {x: -0.19480264, y: 0.66437113}
-      - {x: -0.3176303, y: 0.4671956}
+      - {x: -0.29350305, y: 0.61948335}
+      - {x: -0.46178716, y: 0.37589625}
       - {x: -0.4291488, y: 0.095130086}
-      - {x: -0.26410893, y: -0.25428975}
-      - {x: -0.25476572, y: -0.28624701}
-      - {x: -0.17813964, y: -0.40183342}
-      - {x: 0.13523617, y: -0.25610265}
+      - {x: -0.43973354, y: -0.1648046}
+      - {x: -0.34579778, y: -0.34558907}
+      - {x: -0.32203895, y: -0.42559868}
+      - {x: -0.1396978, y: -0.44027525}
+      - {x: 0.14965187, y: -0.3618177}
+      - {x: 0.56756914, y: 0.06376094}
       - {x: 0.5558241, y: 0.19810772}
       - {x: 0.50852984, y: 0.48089433}
 --- !u!50 &6558476095424974811
@@ -104,6 +108,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7973014854621680809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6558476095424974809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd16703c744ce43a5eabacf93fde63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &6558476095424974808
 SpriteRenderer:
   m_ObjectHideFlags: 0

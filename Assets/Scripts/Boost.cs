@@ -24,16 +24,16 @@ public class Boost : MonoBehaviour
         {
             reductionTime -= Time.deltaTime;
             if (!lesserBoost)
-                Camera.main.fieldOfView -= 0.005f;
+                Camera.main.fieldOfView -= 0.01f;
             else
-                Camera.main.fieldOfView -= 0.002f;
+                Camera.main.fieldOfView -= 0.005f;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        CoolPlayerController plC = other.gameObject.GetComponent<CoolPlayerController>();
+        PlayerController plC = other.gameObject.GetComponent<PlayerController>();
         if (plC != null && plC.nextPiece == null)
         {
             Transform tr = other.GetComponent<Transform>();
@@ -45,6 +45,7 @@ public class Boost : MonoBehaviour
                 tr.localScale = Vector3.Lerp(transform.localScale, newScale, smoothDelay);
 
                 GameManager.instance.parallaxMultiplier(1.75f);
+                GameManager.instance.speedMultiplier(1.5f);
 
                 reductionTime = maxReductionTime;
 
@@ -58,6 +59,7 @@ public class Boost : MonoBehaviour
                 tr.localScale = Vector3.Lerp(transform.localScale, newScale, smoothDelay);
 
                 GameManager.instance.parallaxMultiplier(1.2f);
+                GameManager.instance.speedMultiplier(1.2f);
 
                 reductionTime = maxReductionTime;
 
