@@ -18,7 +18,7 @@ public class nenufar : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.GetComponent<ArrayDePecesQueTeSiguen>())
+        if (collision.GetComponent<ArrayDePecesQueTeSiguen>() || collision.GetComponent<CarpaBotFollow>() || collision.GetComponent<CoolCarpaBotFollow>()) //todos los posibles elementos que tienen las cabezas de los peces
         {//es la cabeza del jugador
             Vector2 direction = (collision.gameObject.transform.position - transform.position) * GameManager.instance.getSpeed() * 15; ;
             //direction.Normalize();
