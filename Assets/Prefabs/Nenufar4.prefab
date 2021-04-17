@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6558476095424974811}
   - component: {fileID: 6558476095424974808}
   - component: {fileID: 3082556346966413056}
+  - component: {fileID: 7796350140345789294}
   m_Layer: 7
   m_Name: Nenufar4
   m_TagString: Untagged
@@ -47,7 +48,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_: 7
-  limit_: -10
 --- !u!50 &6558476095424974811
 Rigidbody2D:
   serializedVersion: 4
@@ -136,3 +136,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.325
+--- !u!114 &7796350140345789294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6558476095424974809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a6aaa2875a2c74a96ed9c111212aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
