@@ -50,7 +50,10 @@ public class CoolCarpaBotFollow : MonoBehaviour
         destino.z = target.position.z;
 
         destino = target.transform.position + target.transform.InverseTransformPoint(destino);
-        puntito.transform.position = destino;
+        if (puntito != null)
+        {
+            puntito.transform.position = destino;
+        }
         //destino.y = -destino.y;
 
 
