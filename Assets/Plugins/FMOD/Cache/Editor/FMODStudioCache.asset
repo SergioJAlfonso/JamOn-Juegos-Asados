@@ -35,7 +35,7 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637542976456766829
+  lastModified: 637542989646402604
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -883,7 +883,7 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637542976456856585
+  lastModified: 637542989641049255
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1053,8 +1053,8 @@ MonoBehaviour:
   MasterBanks:
   - {fileID: -6452665086549362923}
   StringsBanks:
-  - {fileID: 1461312231799857334}
-  stringsBankWriteTime: 637543000312335030
+  - {fileID: -1518573343808721121}
+  stringsBankWriteTime: 637542989641049255
   cacheVersion: 6
 --- !u!114 &857171454535227702
 MonoBehaviour:
