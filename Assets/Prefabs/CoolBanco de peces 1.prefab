@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6334428372237241409}
   - component: {fileID: 1827687254621495794}
   - component: {fileID: -4234911230752447194}
+  - component: {fileID: 6252755501637157456}
   m_Layer: 0
   m_Name: CoolBanco de peces 1
   m_TagString: Untagged
@@ -136,3 +137,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carpas: []
   CarpaBotPrefab: {fileID: 6118918246090993433, guid: 94c45960116e4374db7aefbb820d8818, type: 3}
+--- !u!114 &6252755501637157456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238363537622846689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9567544391e3e50469c9f02911f642c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed_: 0
