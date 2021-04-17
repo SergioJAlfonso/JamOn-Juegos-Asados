@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3397560533329837880}
   - component: {fileID: 3397560533329837887}
   m_Layer: 0
-  m_Name: RockManager
+  m_Name: RockManager2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,11 +45,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WAVES:
   - type: {fileID: 4034594725033149886, guid: 16383f5a06681db4c919646f34168129, type: 3}
-    duration: 2
+    duration: 8
   - type: {fileID: 4034594725033149886, guid: 301362cfcaec78d48809a311e32401cc, type: 3}
-    duration: 0
+    duration: 8
   - type: {fileID: 4034594725033149886, guid: 7613de00e9c12724cb98a47f75b25055, type: 3}
-    duration: 7
+    duration: 8
   - type: {fileID: 4034594725033149886, guid: 42a4c8f5d2ba7a749aa1985045f64bdf, type: 3}
-    duration: 1
+    duration: 8
   actualWave: 0

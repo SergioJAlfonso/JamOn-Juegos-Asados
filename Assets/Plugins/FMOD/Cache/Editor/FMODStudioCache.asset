@@ -254,7 +254,7 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637543000325390455
+  lastModified: 637543004349410458
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -883,7 +883,7 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637542976456856585
+  lastModified: 637543004313359731
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1045,7 +1045,6 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 1461312231799857334}
   - {fileID: -6452665086549362923}
   EditorEvents:
   - {fileID: -1435683053923743321}
@@ -1054,7 +1053,7 @@ MonoBehaviour:
   - {fileID: -6452665086549362923}
   StringsBanks:
   - {fileID: -1518573343808721121}
-  stringsBankWriteTime: 637542976456856585
+  stringsBankWriteTime: 637543004313359731
   cacheVersion: 6
 --- !u!114 &857171454535227702
 MonoBehaviour:
@@ -1159,7 +1158,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 750
-  Exists: 1
+  Exists: 0
 --- !u!114 &1601618765800030906
 MonoBehaviour:
   m_ObjectHideFlags: 0
