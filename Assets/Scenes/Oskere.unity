@@ -968,6 +968,14 @@ MonoBehaviour:
   actualScene: 1
   bg: {fileID: 9624062}
   playerTr: {fileID: 0}
+  minObstSpeed: 7
+  sectionTimeStamps:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  smoothDelay: 0.125
   fmodEvent: 
 --- !u!1001 &1230596472
 PrefabInstance:
@@ -1151,22 +1159,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WAVES:
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 0
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 9ab4f96293024064aaaf23e232cd8c0c, type: 3}
-    speed: 7
     duration: 4
   actualWave: 0
 --- !u!4 &1336914797
@@ -1634,6 +1636,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 395725200243494368, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 395725200396624843, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 395725200498461905, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 395725200767601666, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 395725200891226711, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 395725201717657274, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
       propertyPath: m_Name
       value: CarpaBody
@@ -2202,6 +2224,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6787387095580154962, guid: 617d0623595cd814a96f78ad1c5db6c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079464017435503157, guid: 617d0623595cd814a96f78ad1c5db6c8, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
