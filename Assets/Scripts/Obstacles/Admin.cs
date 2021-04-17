@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManagerOfRockManager : MonoBehaviour
+public class Admin : MonoBehaviour
 {
     [SerializeField]
     GameObject[] rockManagers;
 
     GameObject actualManager;
     int actual = 0;
+
+    bool done = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,16 @@ public class ManagerOfRockManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.instance.getRecovery())
+        {
+            if (!done)
+            {
+                actual++;
+            }
+            done = true;
+        }
+        else done = false;
+
         if (actualManager != rockManagers[actual])
         {
             Destroy(actualManager);

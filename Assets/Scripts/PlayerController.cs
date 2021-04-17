@@ -5,30 +5,40 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     float speed = 10;
+    
     [SerializeField]
     float depth = 10;
+   
     [SerializeField]
     float maxDif = 1.2f;
+
     public GameObject sombra;
     public Transform nextPiece;
+    
     [SerializeField]
     Transform nextSombra;
+    
     [SerializeField]
     float amplitude = 0.5f;
+    
     [SerializeField]
     float coleteo = 2.0f;
     //Animator[] anim;
     Transform tr;
     Rigidbody2D rb;
     SpriteRenderer sp;
+    
     Transform sTr;
     Rigidbody2D sRb;
     SpriteRenderer sSp;
+
     Vector3 mousePos;
     Vector2 direction;
+
     float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
     float timeAtTop;
     float initY;
+
     const float maxAngle = 30;
     const float timeToDrop = 0.1f;
     public float timeToActive = 0f;
