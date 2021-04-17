@@ -7,7 +7,7 @@ public class GoDown : MonoBehaviour
     //ROCK_TYPE type_;
     [SerializeField]
     float speed_ = GameManager.instance.getSpeed();
-    float limit_ = -20;
+    float limit_ = -40;
     Rigidbody2D rb;
 
     private void Start()
