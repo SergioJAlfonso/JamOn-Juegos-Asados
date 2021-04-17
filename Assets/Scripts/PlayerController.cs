@@ -9,8 +9,7 @@ public class PlayerController : MonoBehaviour
     float depth = 10;
     [SerializeField]
     float maxDif = 1.2f;
-    [SerializeField]
-    GameObject sombra;
+    public GameObject sombra;
     public Transform nextPiece;
     [SerializeField]
     Transform nextSombra;
@@ -31,7 +30,7 @@ public class PlayerController : MonoBehaviour
     float timeAtTop;
     float initY;
     const float maxAngle = 30;
-    const float timeToDrop = 0.35f;
+    const float timeToDrop = 0.7f;
 
     void Awake()
     {

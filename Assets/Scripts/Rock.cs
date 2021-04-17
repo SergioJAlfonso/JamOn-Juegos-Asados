@@ -19,14 +19,30 @@ public class Rock : MonoBehaviour
         {
             Transform oTr = other.GetComponent<Transform>();
 
-            if (oTr.position.z == tr.position.z)
+            if (oTr.position.z >= 0)
             {
-                if (oTr.position.x > tr.position.x)
+                plC.enabled = false;
+                Rigidbody2D oRb = other.GetComponent<Rigidbody2D>();
+                float distToCenter = oTr.position.x - tr.position.x;
+                if (distToCenter > 0)
                 {
-                    oTr.position = new Vector3(oTr.position.x + 0.1f, oTr.position.y, oTr.position.y);
+                    //oTr.position = new Vector3(oTr.position.x + 0.1f, oTr.position.y, oTr.position.y);
+                    oRb.velocity = new Vector2(5.0f - distToCenter, 0);
+                    if (plC.sombra != null)
+                    {
+                        Rigidbody2D sRb = plC.sombra.GetComponent<Rigidbody2D>();
+                        sRb.velocity = new Vector2(5.0f - distToCenter, 0);
+                    }
                 }
                 else
-                    oTr.position = new Vector3(oTr.position.x - 0.1f, oTr.position.y, oTr.position.y);
+                {
+                    oRb.velocity = new Vector2(-5.0f - distToCenter, 0);
+                    if (plC.sombra != null)
+                    {
+                        Rigidbody2D sRb = plC.sombra.GetComponent<Rigidbody2D>();
+                        sRb.velocity = new Vector2(-5.0f - distToCenter, 0);
+                    }
+                }
             }
         }
     }
@@ -39,12 +55,38 @@ public class Rock : MonoBehaviour
         {
             Transform oTr = other.GetComponent<Transform>();
 
-            if (oTr.position.x > tr.position.x)
+            if (oTr.position.z >= 0)
             {
-                oTr.position = new Vector3(oTr.position.x + 0.1f, oTr.position.y, oTr.position.y);
+                plC.enabled = false;
+                Rigidbody2D oRb = other.GetComponent<Rigidbody2D>();
+                if (oTr.position.x > tr.position.x)
+                {
+                    //oTr.position = new Vector3(oTr.position.x + 0.1f, oTr.position.y, oTr.position.y);
+                    oRb.velocity += new Vector2(2.0f, 0);
+                    if (plC.sombra != null)
+                    {
+                        Rigidbody2D sRb = plC.sombra.GetComponent<Rigidbody2D>();
+                        sRb.velocity += new Vector2(2.0f, 0);
+                    }
+                }
+                else
+                {
+                    oRb.velocity -= new Vector2(2.0f, 0);
+                    if (plC.sombra != null)
+                    {
+                        Rigidbody2D sRb = plC.sombra.GetComponent<Rigidbody2D>();
+                        sRb.velocity -= new Vector2(2.0f, 0);
+                    }
+                }
             }
-            else
-                oTr.position = new Vector3(oTr.position.x - 0.1f, oTr.position.y, oTr.position.y);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        PlayerController plC = other.GetComponent<PlayerController>();
+
+        if(plC != null)
+            plC.enabled = true;
     }
 }

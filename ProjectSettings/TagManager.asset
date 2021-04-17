@@ -44,12 +44,12 @@ TagManager:
   - name: boost
     uniqueID: 1225994517
     locked: 0
-  - name: Carpa
-    uniqueID: 2635689805
-    locked: 0
   - name: Obstaculos
     uniqueID: 1266160429
     locked: 0
   - name: Rock
     uniqueID: 3484403545
+    locked: 0
+  - name: Carpa
+    uniqueID: 2635689805
     locked: 0
