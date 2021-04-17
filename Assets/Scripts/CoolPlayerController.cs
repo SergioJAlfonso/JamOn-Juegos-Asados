@@ -7,6 +7,27 @@ public class CoolPlayerController : MonoBehaviour
     bool corriente = false;
     [SerializeField]
     float fuerzaCorriente = 1.0f;
+    [SerializeField]
+    float fuerzaCorrienteMax = 1.0f;
+    [SerializeField]
+    float fuerzaCorrienteMin = 1.0f;
+    [SerializeField]
+    float fuerzaCorrienteObjetivo = 1.0f;
+
+    [SerializeField]
+    float subtractSpeed = 0.5f;
+
+    [SerializeField]
+    float posYFija = 2.0f;
+
+    [SerializeField]
+    float TopY = 1.0f; //
+    [SerializeField]
+    float BotY = -2.0f; //
+
+    public Transform indicator;
+
+    //oskar tus ultima voluntad va aki
 
     [SerializeField]
     float speed = 10;
@@ -25,6 +46,7 @@ public class CoolPlayerController : MonoBehaviour
     SpriteRenderer sp;
     Vector3 mousePos;
     Vector2 direction;
+    Vector2 direction2;
     float posZ = 0; // Posición z
     float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
     float alphaValue;
@@ -54,10 +76,68 @@ public class CoolPlayerController : MonoBehaviour
             mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
             //mousePos.y = 3;
             //mousePos.x = mousePos.x + Mathf.Sin((Time.time * coleteo)) * amplitude;
+            if (corriente)
+            {
+
+
+
+                if (transform.position.y > TopY)
+                {
+                    fuerzaCorriente = (float)Mathf.Lerp(fuerzaCorriente, fuerzaCorrienteMax, subtractSpeed * Time.deltaTime);
+                }
+                if (transform.position.y < BotY)
+                {
+                    fuerzaCorriente = (float)Mathf.Lerp(fuerzaCorriente, fuerzaCorrienteMin, subtractSpeed * Time.deltaTime);
+                }
+                /*
+                if (transform.position.y < BotY)
+                {
+                    fuerzaCorriente = fuerzaCorrienteMin; //supera la fuerza de la corriente dos veces listillo
+
+                }
+                 */
+                /*
+                if (transform.position.y > BotY + 1 || transform.position.y < TopY - 1)
+                {
+                    fuerzaCorriente = fuerzaCorrienteObjetivo;
+                }
+                 */
+
+
+                Vector3 destino = transform.position;
+                destino.y = posYFija;
+
+                //no queremos anclar la cabeza
+                //transform.position = Vector3.Slerp(transform.position, destino, 0.9f); //va a ir to follao si se choca, no regrets
+
+
+                //mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
+                mousePos.y = posYFija;
+                //mousePos.x = mousePos.x + Mathf.Sin((Time.time * coleteo)) * amplitude;
+
+                //indicator.position = mousePos; 
+                //mousePos.y = 3;
+
+                rb.velocity = rb.velocity + (Vector2.down * fuerzaCorriente);
+
+
+                direction2 = (mousePos - tr.position);
+                direction2.Normalize();
+            }
+
 
         }
-        else {
-            mousePos = nextPiece.position; 
+        else //piezas anteriores
+        {
+
+            mousePos = GetWorldPositionOnPlane(Input.mousePosition, 0);
+            mousePos.y = posYFija;
+
+            direction2 = (mousePos - tr.position);
+            direction2.Normalize();
+
+            mousePos = nextPiece.position;
+            fuerzaCorriente = nextPiece.GetComponent<CoolPlayerController>().fuerzaCorriente;
         }
         distance = Vector3.Distance(mousePos, transform.position);
         direction = (mousePos - tr.position);
@@ -78,34 +158,36 @@ public class CoolPlayerController : MonoBehaviour
 
         //propongo hacer un lerpeo ajajaja
 
-        if (Input.GetMouseButton(0) && tr.position.z >= 0) //profundidad maxima
-        {            
-            if(tr.position.z + 0.25f <= depth) tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.25f);
-            /*if (tr.localScale.x + (posZ / 2000) > 0.8 && tr.localScale.x + (posZ / 2000) < 1.3)
+
+                if (Input.GetMouseButton(0) && tr.position.z >= 0) //profundidad maxima
+            {            
+                if(tr.position.z + 0.25f <= depth) tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.25f);
+                /*if (tr.localScale.x + (posZ / 2000) > 0.8 && tr.localScale.x + (posZ / 2000) < 1.3)
+                {
+                    tr.position = new Vector3(tr.position.x, tr.position.y * 0.989f, tr.position.z);
+                    tr.localScale = new Vector3(tr.localScale.x + (posZ / 2000), tr.localScale.y + (posZ / 1000), tr.localScale.z);
+                }*/
+                if (sp.color.a - 0.02 > 0.6) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
+                diveReach = -tr.position.z;
+            }
+            else if (tr.position.z > diveReach / 3)
             {
-                tr.position = new Vector3(tr.position.x, tr.position.y * 0.989f, tr.position.z);
-                tr.localScale = new Vector3(tr.localScale.x + (posZ / 2000), tr.localScale.y + (posZ / 1000), tr.localScale.z);
-            }*/
-            if (sp.color.a - 0.02 > 0.6) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
-            diveReach = -tr.position.z;
-        }
-        else if (tr.position.z > diveReach / 3)
-        {
-            tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z - 0.5f);
-            if (tr.position.z <= diveReach / 3)
-                diveReach = 0;
-            if (sp.color.a + 0.02 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.02f);
-        }
+                tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z - 0.5f);
+                if (tr.position.z <= diveReach / 3)
+                    diveReach = 0;
+                if (sp.color.a + 0.02 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.02f);
+            }
 
 
-        else if(tr.position.z < 0)
-        {
-            tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.25f);
-            if (tr.position.z >= 0)
-                tr.position = new Vector3(tr.position.x, tr.position.y, 0);
-            if (sp.color.a - 0.02 > 0.85) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
-            else sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 0.85f);
-        }
+            else if(tr.position.z < 0)
+            {
+                tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.25f);
+                if (tr.position.z >= 0)
+                    tr.position = new Vector3(tr.position.x, tr.position.y, 0);
+                if (sp.color.a - 0.02 > 0.85) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
+                else sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 0.85f);
+            }
+        
         //if (posZ < diveReach) //subida y bajada
         //{
         //    posZ += 1.0f;
@@ -147,7 +229,9 @@ public class CoolPlayerController : MonoBehaviour
                 
             }
             if (corriente)
-                rb.velocity = rb.velocity + (Vector2.down * fuerzaCorriente);
+            {
+                rb.velocity = rb.velocity + (Vector2.down * fuerzaCorriente) +(new Vector2(direction2.x * speed , 0));
+            }
 
         }
         else
