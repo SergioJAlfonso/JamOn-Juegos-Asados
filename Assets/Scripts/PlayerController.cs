@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     float timeAtTop;
     float initY;
     const float maxAngle = 30;
-    const float timeToDrop = 0.7f;
+    const float timeToDrop = 0.1f;
     public float timeToActive = 0f;
 
     void Awake()
@@ -78,6 +78,13 @@ public class PlayerController : MonoBehaviour
             }
             direction.Normalize();
 
+            float diff = 0;
+            if (nextPiece != null) 
+                diff = nextPiece.position.z - tr.position.z;
+            float sDiff = 0;
+            if (nextSombra != null)
+                sDiff = nextSombra.position.z - sTr.position.z;
+
             if (Input.GetMouseButton(0) && tr.position.z >= 0) //profundidad maxima
             {
                 if (nextPiece == null)
@@ -90,8 +97,8 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (nextPiece.position.z != 0)
                 {
-                    tr.position = new Vector3(tr.position.x, tr.position.y, nextPiece.position.z - 0.25f);
-                    sTr.position = new Vector3(sTr.position.x, sTr.position.y, nextSombra.position.z - 0.2f);
+                    tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + (diff * 0.3f)/*nextPiece.position.z - 0.25f*/);
+                    sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + (sDiff * 0.3f)/*/nextSombra.position.z - 0.2f*/);
                 }
                 if (sp.color.a - 0.02 > 0.6) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a - 0.02f);
                 if (sSp.color.a + 0.02 < 0.4) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a + 0.01f);
@@ -105,10 +112,10 @@ public class PlayerController : MonoBehaviour
                     tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z - 0.25f);
                     sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z - 0.15f);
                 }
-                else if (nextPiece.position.z + 0.25 > diveReach / 1.3)
+                else if (tr.position.z + (diff * 0.4f) > diveReach / 1.3)
                 {
-                    tr.position = new Vector3(tr.position.x, tr.position.y, nextPiece.position.z + 0.25f);
-                    sTr.position = new Vector3(sTr.position.x, sTr.position.y, nextSombra.position.z + 0.15f);
+                    tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + (diff * 0.4f)/*nextPiece.position.z + 0.25f*/);
+                    sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + (sDiff * 0.32f)/*nextSombra.position.z + 0.15f*/);
                 }
                 if (tr.position.z - 0.25 <= diveReach / 1.3)
                 {
@@ -123,13 +130,13 @@ public class PlayerController : MonoBehaviour
             {
                 if (nextPiece == null)
                 {
-                    tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.2f);
-                    sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + 0.12f);
+                    tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.18f);
+                    sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + 0.1f);
                 }
                 else if (nextPiece.position.z > -diveReach / 1.3)
                 {
-                    tr.position = new Vector3(tr.position.x, tr.position.y, nextPiece.position.z - 0.2f);
-                    sTr.position = new Vector3(sTr.position.x, sTr.position.y, nextSombra.position.z - 0.12f);
+                    tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + (diff * 0.35f)/*nextPiece.position.z - 0.2f*/);
+                    sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + (sDiff * 0.25f)/*nextSombra.position.z - 0.12f*/);
                 }
                 if (tr.position.z >= 0 || (nextPiece != null && nextPiece.position.z >= 0))
                 {
@@ -141,19 +148,19 @@ public class PlayerController : MonoBehaviour
                 if (sSp.color.a + 0.04 < 0.25) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a + 0.007f);
                 else sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, 0.25f);
             }
-            else if (tr.position.z < 0)
-            {
-                if (nextPiece == null)
-                {
-                    tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.06f);
-                    sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + 0.048f);
-                }
-                else if (nextPiece.position.z > -diveReach / 1.5)
-                {
-                    tr.position = new Vector3(tr.position.x, tr.position.y, nextPiece.position.z - 0.06f);
-                    sTr.position = new Vector3(sTr.position.x, sTr.position.y, nextSombra.position.z - 0.048f);
-                }
-            }
+            //else if (tr.position.z < 0)
+            //{
+            //    if (nextPiece == null)
+            //    {
+            //        tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.03f);
+            //        sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + 0.048f);
+            //    }
+            //    else if (nextPiece.position.z > -diveReach / 1.5)
+            //    {
+            //        tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + (diff * 0.5f)/*nextPiece.position.z - 0.06f*/);
+            //        sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + (sDiff * 0.4f)/*nextSombra.position.z - 0.048f*/);
+            //    }
+            //}
             rb.velocity = new Vector2(direction.x * speed, 0);
             if (sombra != null)
                 sRb.velocity = new Vector2(direction.x * speed, 0);

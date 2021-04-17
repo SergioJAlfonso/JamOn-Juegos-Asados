@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
     [FMODUnity.EventRef]
     [SerializeField] string fmodEvent;
 
+    public GameObject cascada;
+    bool cascadaEspauneada = false;
     // En el método Awake comprueba si hay otro GameManger
     // y si no lo hay se inicializa como GameManager. En el caso
     // que hubiera otro se autodestruye
@@ -119,9 +121,6 @@ public class GameManager : MonoBehaviour
             distance += Time.deltaTime;
             instanceMusic.setParameterByName("Distance", distance);
 
-
-
-
             ////##! SONIDOS
             //private FMOD.Studio.EventInstance instance;
             //[FMODUnity.EventRef]
@@ -147,11 +146,19 @@ public class GameManager : MonoBehaviour
         }
 
         gameTime += Time.deltaTime;
+
+        if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && gameTime > sectionTimeStamps[sectionId] - 4)
+        {
+            GameObject cascadita = Instantiate(cascada, new Vector3(0, 0, 0), Quaternion.identity);
+            cascadaEspauneada = true;
+        }
+
         if (sectionId < sectionTimeStamps.Length && gameTime > sectionTimeStamps[sectionId])
         {
             sectionId++;
             hasToRecover = true;
             perspectiveRecovery = 5;
+            cascadaEspauneada = false;
         }
 
         if (hasToRecover)
