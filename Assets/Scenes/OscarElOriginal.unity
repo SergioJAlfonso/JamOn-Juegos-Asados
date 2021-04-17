@@ -1055,6 +1055,12 @@ MonoBehaviour:
   bg: {fileID: 9624062}
   playerTr: {fileID: 1630713621}
   minObstSpeed: 7
+  sectionTimeStamps:
+  - 80000000
+  - 8e+9
+  - 8e+11
+  - 8e+9
+  - 8e+12
   fmodEvent: 
 --- !u!1 &1314612263
 GameObject:
