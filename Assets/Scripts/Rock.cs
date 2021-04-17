@@ -15,16 +15,19 @@ public class Rock : MonoBehaviour
     {
         PlayerController plC = other.GetComponent<PlayerController>();
 
-        if(plC != null && plC.nextPiece == null)
+        if (plC != null && plC.nextPiece == null)
         {
             Transform oTr = other.GetComponent<Transform>();
 
-            if(oTr.position.x > tr.position.x)
+            if (oTr.position.z == tr.position.z)
             {
-                oTr.position = new Vector3(oTr.position.x + 0.1f, oTr.position.y, oTr.position.y);
+                if (oTr.position.x > tr.position.x)
+                {
+                    oTr.position = new Vector3(oTr.position.x + 0.1f, oTr.position.y, oTr.position.y);
+                }
+                else
+                    oTr.position = new Vector3(oTr.position.x - 0.1f, oTr.position.y, oTr.position.y);
             }
-            else
-                oTr.position = new Vector3(oTr.position.x - 0.1f, oTr.position.y, oTr.position.y);
         }
     }
 
