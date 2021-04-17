@@ -135,10 +135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corriente: 0
-  fuerzaCorriente: 1
+  corriente: 1
+  fuerzaCorriente: 1.4
   isHead: 1
-  speed: 1
+  speed: 2
   depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 0}
@@ -303,10 +303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corriente: 0
-  fuerzaCorriente: 1
+  corriente: 1
+  fuerzaCorriente: 1.4
   isHead: 0
-  speed: 1
+  speed: 2
   depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 8508443398861190154}
@@ -489,10 +489,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corriente: 0
-  fuerzaCorriente: 1
+  corriente: 1
+  fuerzaCorriente: 1.4
   isHead: 1
-  speed: 1
+  speed: 2
   depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 0}
@@ -657,10 +657,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corriente: 0
-  fuerzaCorriente: 1
+  corriente: 1
+  fuerzaCorriente: 1.4
   isHead: 0
-  speed: 1
+  speed: 2
   depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 6118918247007411616}
@@ -802,10 +802,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corriente: 0
-  fuerzaCorriente: 1
+  corriente: 1
+  fuerzaCorriente: 1.4
   isHead: 0
-  speed: 1
+  speed: 2
   depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 6118918246491692098}
@@ -947,10 +947,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corriente: 0
-  fuerzaCorriente: 1
+  corriente: 1
+  fuerzaCorriente: 1.4
   isHead: 0
-  speed: 1
+  speed: 2
   depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 6118918246305084011}
@@ -1092,10 +1092,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corriente: 0
-  fuerzaCorriente: 1
+  corriente: 1
+  fuerzaCorriente: 1.4
   isHead: 0
-  speed: 1
+  speed: 2
   depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 6118918246917650440}
@@ -1237,10 +1237,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corriente: 0
-  fuerzaCorriente: 1
+  corriente: 1
+  fuerzaCorriente: 1.4
   isHead: 0
-  speed: 1
+  speed: 2
   depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 3616157801034233148}
@@ -1382,10 +1382,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corriente: 0
-  fuerzaCorriente: 1
+  corriente: 1
+  fuerzaCorriente: 1.4
   isHead: 0
-  speed: 1
+  speed: 2
   depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 4504252629480950347}
@@ -1527,10 +1527,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0f896c4502830438b1fecac81031e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corriente: 0
-  fuerzaCorriente: 1
+  corriente: 1
+  fuerzaCorriente: 1.4
   isHead: 0
-  speed: 1
+  speed: 2
   depth: 15
   maxDif: 1.2
   nextPiece: {fileID: 1966237608667165943}
