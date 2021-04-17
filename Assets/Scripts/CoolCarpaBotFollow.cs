@@ -39,9 +39,6 @@ public class CoolCarpaBotFollow : MonoBehaviour
         speedX = Random.Range(1.0f, 2.0f);
         speedY = Random.Range(1.0f, 2.0f);
          */
-
-
-
     }
 
     // Update is called once per frame

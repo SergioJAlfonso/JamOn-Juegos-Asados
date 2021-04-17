@@ -33,6 +33,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] float minObstSpeed = 7;
     float obstSpeed;
 
+    [SerializeField] float[] sectionTimeStamps = new float[5];
+    int sectionId = 0;
+
+    float gameTime = 0;
+
+    float perspectiveRecovery;
+    bool hasToRecover = false;
+
+    [SerializeField] float smoothDelay = 0.125f;
     public enum States { Playing, Menu };
     States GameStates;
 
@@ -137,6 +146,21 @@ public class GameManager : MonoBehaviour
             //}
         }
 
+        gameTime += Time.deltaTime;
+        if (sectionId < sectionTimeStamps.Length && gameTime > sectionTimeStamps[sectionId])
+        {
+            sectionId++;
+            hasToRecover = true;
+            perspectiveRecovery = 5;
+        }
+
+        if (hasToRecover)
+        {           
+            perspectiveRecovery -= Time.deltaTime;
+            if (perspectiveRecovery <= 0)
+                hasToRecover = false;
+        }
+
         if (hasToRestore)
         {
             restoreTime -= Time.deltaTime;
@@ -190,6 +214,10 @@ public class GameManager : MonoBehaviour
     public float getSpeed()
     {
         return obstSpeed;
+    }
+    public bool getRecovery()
+    {
+        return hasToRecover;
     }
     public void setSpeed(float s)
     {
