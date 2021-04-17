@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6558476095424974805}
   - component: {fileID: 6558476095424974810}
   - component: {fileID: 6558476095424974811}
+  - component: {fileID: 1089369477319658092}
   - component: {fileID: 6558476095424974808}
   m_Layer: 7
   m_Name: Rock1
@@ -72,16 +73,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.14798307, y: 0.5576596}
-      - {x: -0.006030321, y: 0.6968424}
-      - {x: -0.3392024, y: 0.604033}
-      - {x: -0.5219883, y: 0.1991241}
-      - {x: -0.4007119, y: -0.17674744}
-      - {x: -0.2557535, y: -0.44910976}
-      - {x: -0.15913053, y: -0.5350547}
-      - {x: -0.09968051, y: -0.46455452}
+    - - {x: 0.26782146, y: 0.28569284}
+      - {x: 0.06260079, y: 0.47634315}
+      - {x: -0.034491062, y: 0.5545386}
+      - {x: -0.3188733, y: 0.48612416}
+      - {x: -0.30925587, y: 0.33125073}
+      - {x: -0.47726423, y: 0.19505826}
+      - {x: -0.4219558, y: -0.2787182}
+      - {x: -0.36974224, y: -0.4550509}
+      - {x: -0.2993906, y: -0.5606269}
+      - {x: -0.1348877, y: -0.55444896}
+      - {x: 0.065170854, y: -0.5275859}
+      - {x: 0.21404244, y: -0.3714074}
       - {x: 0.32647303, y: -0.17973885}
-      - {x: 0.5064434, y: 0.06797516}
+      - {x: 0.54526865, y: -0.12548845}
+      - {x: 0.57556236, y: 0.10050176}
 --- !u!50 &6558476095424974811
 Rigidbody2D:
   serializedVersion: 4
@@ -103,6 +109,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1089369477319658092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6558476095424974809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd16703c744ce43a5eabacf93fde63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &6558476095424974808
 SpriteRenderer:
   m_ObjectHideFlags: 0
