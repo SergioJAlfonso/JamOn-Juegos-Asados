@@ -18,11 +18,17 @@ public class ObstacleManager : MonoBehaviour
     [SerializeField]
     short actualWave = 0;
 
-    float timer = 0f;
+    double timer = 0f;
 
     void Update()
     {
-        timer += Time.deltaTime;
+        int velChain = 1;
+        if (GameManager.instance != null)
+        {
+            velChain = GameManager.instance.getVelChain();
+            velChain++;
+        }
+        timer += (Time.deltaTime* (1.5 * velChain));
 
         if (actualWave < WAVES.Length && timer >= WAVES[actualWave].duration)
         {
