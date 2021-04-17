@@ -52,7 +52,7 @@ ParticleSystem:
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -106,7 +106,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -4814,5 +4814,5 @@ SortingGroup:
   m_GameObject: {fileID: 8471258277181275544}
   m_Enabled: 1
   m_SortingLayerID: 1266160429
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: -1
