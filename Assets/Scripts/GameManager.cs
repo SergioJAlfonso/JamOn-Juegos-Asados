@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
+        //me mama la pinga
         //Pilla movidas del parallax
         int numChildren = bg.transform.childCount;
         childrenParallax = new Parallax[numChildren];
