@@ -72,6 +72,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Admin elAdmin;
 
+    public Image colorPanel;
+    Color newColor;
+
     // En el método Awake comprueba si hay otro GameManger
     // y si no lo hay se inicializa como GameManager. En el caso
     // que hubiera otro se autodestruye
@@ -105,6 +108,9 @@ public class GameManager : MonoBehaviour
         originalScaleY = playerTr.localScale.y;
 
         obstSpeed = minObstSpeed;
+
+        //newColor = new Color(255, 0, 0, 125);
+        //colorPanel.CrossFadeColor(newColor, 5f, true, true);
 
         //##! SONIDOS
         //musicMusic
@@ -217,7 +223,11 @@ public class GameManager : MonoBehaviour
         {
             perspectiveRecovery -= Time.deltaTime;
             if (perspectiveRecovery <= 0)
+            {
                 hasToRecover = false;
+                changeColorPalette();
+            }
+
         }
 
         if (hasToRestore)
@@ -261,6 +271,26 @@ public class GameManager : MonoBehaviour
         velChain = 0;
     }
 
+    private void changeColorPalette()
+    {
+        switch (sectionId)
+        {
+            case 1:
+                newColor = new Color(255, 0, 0, 125);
+                colorPanel.CrossFadeColor(newColor, 7f, true, true);
+                break;
+            case 2:
+                newColor = new Color(255, 0, 0, 125);
+                colorPanel.CrossFadeColor(newColor, 7f, true, true);
+                break;
+            case 3:
+                newColor = new Color(255, 0, 0, 125);
+                colorPanel.CrossFadeColor(newColor, 7f, true, true);
+                break;
+            default:
+                break;
+        }
+    }
 
     public void addVelChain()
     {
