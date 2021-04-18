@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8117139551537918262}
   - component: {fileID: 5635977919193571523}
   m_Layer: 0
-  m_Name: WarObject
+  m_Name: Objetos 7
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -44,17 +44,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gObj:
-  - {fileID: 6558476095424974809, guid: b2738d2ddee00104199cc8e8ae070e84, type: 3}
   - {fileID: 3402940811915138002, guid: 155b8be70df31444a82505bededdd256, type: 3}
-  - {fileID: 6558476095424974809, guid: 471de225fd94fde4ead199a9e690aa8e, type: 3}
+  - {fileID: 3633360751026232090, guid: 32d335262707b7e4abb694cb3fdc68f8, type: 3}
+  - {fileID: 6558476095424974809, guid: 6508fcc6dc0fbc8489798a77f51f3b11, type: 3}
   position:
-  - pos: {x: 5, y: 2}
-    randRangeX: 15
-    randRangeY: 8
-  - pos: {x: 3, y: 7}
-    randRangeX: 15
-    randRangeY: 8
-  - pos: {x: 0, y: 9}
-    randRangeX: 15
-    randRangeY: 8
+  - pos: {x: 7, y: 6}
+    randRangeX: 5
+    randRangeY: 0
+  - pos: {x: -15, y: 0}
+    randRangeX: 2
+    randRangeY: 4
+  - pos: {x: 8, y: -3}
+    randRangeX: 0
+    randRangeY: 4
   randObstacle: 1
