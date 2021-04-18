@@ -181,7 +181,7 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637543595276367657
+  lastModified: 637543795584205646
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -245,6 +245,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-2234553079642355386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/corrientes
+  m_EditorClassIdentifier: 
+  Path: event:/corrientes
+  guid: 808b7aca74d6c549bfbbd290a2618e33
+  Banks:
+  - {fileID: -3714017884759916723}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12399
 --- !u!114 &-1971295251935214525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +292,26 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 49313
 --- !u!114 &-1881908996514941542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicManager/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1000
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-1112681077409098093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,13 +394,15 @@ MonoBehaviour:
   - {fileID: 603788249909448816}
   - {fileID: 2944801178731805609}
   - {fileID: -6492537720954948287}
+  - {fileID: 2371903302915724074}
+  - {fileID: -2234553079642355386}
   EditorParameters:
   - {fileID: 1161207385868440903}
   MasterBanks:
   - {fileID: -3714017884759916723}
   StringsBanks:
   - {fileID: 5315259636333810124}
-  stringsBankWriteTime: 637543431836103925
+  stringsBankWriteTime: 637543795584355780
   cacheVersion: 6
 --- !u!114 &603788249909448816
 MonoBehaviour:
@@ -422,6 +467,49 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &2124588804060649530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicManager/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1000
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &2371903302915724074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rain
+  m_EditorClassIdentifier: 
+  Path: event:/Rain
+  guid: 7e1e04a9d0e43047af9da190d7d79abf
+  Banks:
+  - {fileID: -3714017884759916723}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 144729
 --- !u!114 &2404317171426946558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,11 +648,11 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637543662335343222
+  lastModified: 637543795584355780
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1450
+    Value: 1574
   Exists: 1
 --- !u!114 &6496423237772174242
 MonoBehaviour:
@@ -606,7 +694,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1881908996514941542}
+  - {fileID: -1112681077409098093}
   MinDistance: 0
   MaxDistance: 0
   Length: 390000
@@ -812,4 +900,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 562
+  Length: 750
