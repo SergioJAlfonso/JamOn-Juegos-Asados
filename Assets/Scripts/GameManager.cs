@@ -15,9 +15,16 @@ public class GameManager : MonoBehaviour
     public int actualScene = 1;
 
     public GameObject bg;
-    public Transform playerTr;
-    public Rigidbody2D playerRb;
+    [SerializeField]
+    GameObject carpa;
+    [HideInInspector] public Transform playerTr;
+    [HideInInspector] public Rigidbody2D playerRb;
+    public GameObject dragon;
+
     public Transform dumpingObjectTr;
+
+    [SerializeField]
+    GameObject buttons;
 
     Parallax[] childrenParallax;
     float[] originParallaxVel;
@@ -65,9 +72,15 @@ public class GameManager : MonoBehaviour
     public GameObject Menu;
 
     public GameObject cascada;
+   
     bool cascadaEspauneada = false;
 
     [SerializeField] Admin elAdmin;
+
+    public Image colorPanel;
+    Color newColor;
+
+    [SerializeField] GameObject rainEffect;
 
     // En el método Awake comprueba si hay otro GameManger
     // y si no lo hay se inicializa como GameManager. En el caso
@@ -89,6 +102,9 @@ public class GameManager : MonoBehaviour
         int numChildren = bg.transform.childCount;
         childrenParallax = new Parallax[numChildren];
         originParallaxVel = new float[numChildren];
+
+        playerTr = carpa.transform.GetChild(0);
+        playerRb = playerTr.GetComponent<Rigidbody2D>();
         for (int i = 0; i < numChildren; i++)
         {
             childrenParallax[i] = bg.transform.GetChild(i).gameObject.GetComponent<Parallax>();
@@ -102,6 +118,9 @@ public class GameManager : MonoBehaviour
         originalScaleY = playerTr.localScale.y;
 
         obstSpeed = minObstSpeed;
+
+        //newColor = new Color(255, 0, 0, 125);
+        //colorPanel.CrossFadeColor(newColor, 5f, true, true);
 
         //##! SONIDOS
         //musicMusic
@@ -137,6 +156,7 @@ public class GameManager : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/winMusic");
 
+            buttons.GetComponent<GoDown>().enabled = true;
             Vector2 a = new Vector2(0, 0);
             if (InitDistance < 8)
             {
@@ -154,7 +174,7 @@ public class GameManager : MonoBehaviour
                 if (InitDistance % TiempoBucle > TiempoBucle / 2)
                     timeRemain = TiempoBucle - InitDistance % TiempoBucle;
                 else
-                    timeRemain = TiempoBucle / 2 - InitDistance % TiempoBucle ;
+                    timeRemain = TiempoBucle / 2 - InitDistance % TiempoBucle;
             }
             else
                 timeRemain = TiempoBucle - InitDistance;
@@ -213,7 +233,11 @@ public class GameManager : MonoBehaviour
         {
             perspectiveRecovery -= Time.deltaTime;
             if (perspectiveRecovery <= 0)
+            {
                 hasToRecover = false;
+                waterfallEvent();
+            }
+
         }
 
         if (hasToRestore)
@@ -257,6 +281,36 @@ public class GameManager : MonoBehaviour
         velChain = 0;
     }
 
+    private void waterfallEvent()
+    {
+        switch (sectionId)
+        {
+            case 1:
+                newColor = new Color(255, 0, 0, 125);
+                colorPanel.CrossFadeColor(newColor, 7f, true, true);
+                rainEffect.SetActive(true);
+                break;
+            case 2:
+                newColor = new Color(255, 0, 0, 125);
+                colorPanel.CrossFadeColor(newColor, 7f, true, true);
+                rainEffect.SetActive(false);
+                break;
+            case 3:
+                newColor = new Color(255, 255, 255, 1);
+                colorPanel.CrossFadeColor(newColor, 0.2f, true, true);
+                dragonTransition();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void dragonTransition()
+    {
+        GameObject dragonObj = Instantiate(dragon, new Vector3(0, 0, 0), Quaternion.identity);
+        dragonObj.transform.position = playerTr.position;
+        carpa.SetActive(false);
+    }
 
     public void addVelChain()
     {
@@ -269,7 +323,7 @@ public class GameManager : MonoBehaviour
     public float getSpeed()
     {
         return obstSpeed;
-    }   
+    }
     public float getMinSpeed()
     {
         return minObstSpeed;
@@ -294,7 +348,7 @@ public class GameManager : MonoBehaviour
             restoreTime = 5;
             velChain++;
         }
-    }  
+    }
     public void setHasToRestoreWaterfall(bool b)
     {
         hasToRestore = b;
