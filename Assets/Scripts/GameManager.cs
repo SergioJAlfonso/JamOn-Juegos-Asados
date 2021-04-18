@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public int actualScene = 1;
 
     public GameObject bg;
+
+    public GameObject tierraBg; 
     [SerializeField]
     GameObject carpa;
     [HideInInspector] public Transform playerTr;
@@ -28,6 +30,9 @@ public class GameManager : MonoBehaviour
 
     Parallax[] childrenParallax;
     float[] originParallaxVel;
+    [SerializeField]
+    Parallax[] childrenTierraParallax;
+    float[] originTierraParallaxVel;
 
     float originalFOV;
     float originalScaleY;
@@ -103,13 +108,27 @@ public class GameManager : MonoBehaviour
         int numChildren = bg.transform.childCount;
         childrenParallax = new Parallax[numChildren];
         originParallaxVel = new float[numChildren];
+        
+        int numTierraChildren = childrenTierraParallax.Length;
+        //childrenTierraParallax = new Parallax[numTierraChildren];
+        originTierraParallaxVel = new float[numTierraChildren];
+
+
 
         playerTr = carpa.transform.GetChild(0);
         playerRb = playerTr.GetComponent<Rigidbody2D>();
+
         for (int i = 0; i < numChildren; i++)
         {
             childrenParallax[i] = bg.transform.GetChild(i).gameObject.GetComponent<Parallax>();
             originParallaxVel[i] = childrenParallax[i].parallaxEffect;
+        }
+
+
+        for (int i = 0; i < numTierraChildren; i++)
+        {
+            //childrenTierraParallax[i] = tierraBg.transform.GetChild(i).gameObject.GetComponent<Parallax>();
+            originTierraParallaxVel[i] = childrenTierraParallax[i].parallaxEffect;
         }
 
         //Pilla
@@ -127,8 +146,8 @@ public class GameManager : MonoBehaviour
         //musicMusic
         musicMusic = FMODUnity.RuntimeManager.CreateInstance(musicManagerEvent);
         musicMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
-        //musicMusic.start();
-        //musicMusic.release();
+        musicMusic.start();
+        musicMusic.release();
         //musicMusic
         backgroundMusic = FMODUnity.RuntimeManager.CreateInstance(backgroundManagerEvent);
         backgroundMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
@@ -148,13 +167,15 @@ public class GameManager : MonoBehaviour
             {
                 childrenParallax[i].parallEffectMultiplier(val);
             }
+            for (int i = 0; i < childrenTierraParallax.Length; ++i)
+            {
+                childrenTierraParallax[i].parallEffectMultiplier(val);
+            }
         }
     }
 
     public void PlayGame()
     {
-        fishState = 5;
-
         if (botonesMenuHabilitados)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/winMusic");
@@ -186,7 +207,6 @@ public class GameManager : MonoBehaviour
             Invoke("gameStart", timeRemain);
             musicMusic.setParameterByName("Distance", distance);
             botonesMenuHabilitados = false;
-            //distance = 400;
         }
     }
     void gameStart()
@@ -218,7 +238,7 @@ public class GameManager : MonoBehaviour
             elAdmin.enabled = true;
         }
         musicMusic.setParameterByName("Distance", distance);
-        backgroundMusic.setParameterByName("Distance", distance);
+        backgroundMusic.setParameterByName("isDragon", distance);
 
         if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && distance > sectionTimeStamps[sectionId] - 4)
         {
@@ -275,6 +295,12 @@ public class GameManager : MonoBehaviour
         {
             childrenParallax[i].parallaxEffect = originParallaxVel[i];
         }
+
+        for (int i = 0; i < childrenTierraParallax.Length; ++i)
+        {
+            childrenTierraParallax[i].parallaxEffect = originTierraParallaxVel[i];
+        }
+        
         //Scale
         playerTr.localScale = new Vector3(playerTr.localScale.x, originalScaleY, playerTr.localScale.z);
 
@@ -293,7 +319,7 @@ public class GameManager : MonoBehaviour
         switch (sectionId)
         {
             case 1:
-                newColor = new Color(255, 0, 0, 125);
+                newColor = new Color(0, 255, 207, 60);
                 colorPanel.CrossFadeColor(newColor, 7f, true, true);  
                 break;
             case 2:

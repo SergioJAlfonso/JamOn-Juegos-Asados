@@ -13,7 +13,7 @@ public class nenufar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //transform.rotation.z = 0.0f; // Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)).z;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
