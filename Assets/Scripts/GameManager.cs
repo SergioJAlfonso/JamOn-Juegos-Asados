@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using FMODUnity;
 using UnityEngine.SceneManagement;  //Controla el cambio de escenas
 using FMOD;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -158,6 +159,11 @@ public class GameManager : MonoBehaviour
         gameStates = !gameStates;
         Menu.SetActive(false);
 
+    }
+
+    public void volumeChange()
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("MusicMasterVolume", Menu.transform.GetChild(2).gameObject.GetComponent<Slider>().value);
     }
 
     public void QuitGame()

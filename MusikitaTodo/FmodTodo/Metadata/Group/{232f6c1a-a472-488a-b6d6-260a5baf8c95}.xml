@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{232f6c1a-a472-488a-b6d6-260a5baf8c95}">
+		<property name="name">
+			<value>WaterSplash</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{ce833ae3-7294-4680-9045-4650589081e7}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{d3590298-5f01-494e-84ff-169b8eae92af}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{137d2c14-96fa-4e51-952b-c6f3157ef7df}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{ce833ae3-7294-4680-9045-4650589081e7}">
+		<relationship name="effects">
+			<destination>{37b8848d-660f-48b0-90a0-4fe4758dcaef}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{d3590298-5f01-494e-84ff-169b8eae92af}" />
+	<object class="MixerBusFader" id="{37b8848d-660f-48b0-90a0-4fe4758dcaef}" />
+</objects>

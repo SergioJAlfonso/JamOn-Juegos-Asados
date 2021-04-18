@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Master Bus</value>
 		</property>
+		<relationship name="automators">
+			<destination>{907737eb-aa44-4424-9657-96a9521566f2}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{1c34340b-330e-440d-9f09-82345e244d1c}</destination>
 		</relationship>
@@ -12,6 +15,14 @@
 		</relationship>
 		<relationship name="mixer">
 			<destination>{48656fc5-1943-40c5-a3f2-2041ac9cfa28}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{907737eb-aa44-4424-9657-96a9521566f2}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>volume</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{6094fa91-7b4d-40ad-b9de-8c776bd04cdf}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{1c34340b-330e-440d-9f09-82345e244d1c}">
@@ -24,5 +35,36 @@
 			<value>2</value>
 		</property>
 	</object>
+	<object class="AutomationCurve" id="{6094fa91-7b4d-40ad-b9de-8c776bd04cdf}">
+		<relationship name="parameter">
+			<destination>{2de7cd18-95e2-4a02-9810-d2e1e4b54eae}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{2ccbcf03-218f-41b1-8e91-51910a62e20f}</destination>
+			<destination>{cbca1897-1284-4176-baa1-ef23b738e9c2}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{be3b4002-7d9a-4e7a-93c1-56146c8e9f79}" />
+	<object class="AutomationPoint" id="{2ccbcf03-218f-41b1-8e91-51910a62e20f}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>-75</value>
+		</property>
+		<property name="curveShape">
+			<value>0.5</value>
+		</property>
+		<property name="isSCurve">
+			<value>true</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{cbca1897-1284-4176-baa1-ef23b738e9c2}">
+		<property name="position">
+			<value>100</value>
+		</property>
+		<property name="value">
+			<value>10</value>
+		</property>
+	</object>
 </objects>
