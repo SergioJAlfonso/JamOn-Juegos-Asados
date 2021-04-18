@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -810563751
       objectReference: {fileID: 0}
+    - target: {fileID: 5800310303849079231, guid: 7a12411e37b2ec548817360f6f5e0bc0, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5800310303912435156, guid: 7a12411e37b2ec548817360f6f5e0bc0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -146,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800310303912435158, guid: 7a12411e37b2ec548817360f6f5e0bc0, type: 3}
       propertyPath: m_Name
-      value: rock5
+      value: rock5 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a12411e37b2ec548817360f6f5e0bc0, type: 3}

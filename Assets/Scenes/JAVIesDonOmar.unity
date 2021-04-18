@@ -2448,9 +2448,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actualScene: 1
   bg: {fileID: 392846807}
+  carpa: {fileID: 0}
   playerTr: {fileID: 1432473290}
   playerRb: {fileID: 0}
+  dragon: {fileID: 0}
   dumpingObjectTr: {fileID: 0}
+  buttons: {fileID: 14064780}
   minObstSpeed: 7
   sectionTimeStamps:
   - 80
@@ -2458,11 +2461,12 @@ MonoBehaviour:
   - 248
   - 320
   smoothDelay: 0.125
-  musicManagerEvent: event:/MusicManager
-  backgroundManagerEvent: event:/BackgroundMusic
   Menu: {fileID: 14064780}
   cascada: {fileID: 4006531810020372424, guid: f56d4afae96201e4a8b5f3ae93c2a2e8, type: 3}
   elAdmin: {fileID: 1382134922}
+  colorPanel: {fileID: 0}
+  fishState: 1
+  rainEffect: {fileID: 0}
 --- !u!1001 &1232027823
 PrefabInstance:
   m_ObjectHideFlags: 0

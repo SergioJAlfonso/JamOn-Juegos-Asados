@@ -424,6 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed_: 7
   destroyable: 1
+  particle: 0
 --- !u!114 &-4769199635697323984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,9 +445,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 6
-  OverrideMaxDistance: 15
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1902191320003336245
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int actualScene = 1;
 
-    public GameObject bg;
+    public GameObject bg;
+
     public GameObject tierraBg; 
     [SerializeField]
     GameObject carpa;
@@ -110,8 +111,10 @@ public class GameManager : MonoBehaviour
         
         int numTierraChildren = childrenTierraParallax.Length;
         //childrenTierraParallax = new Parallax[numTierraChildren];
-        originTierraParallaxVel = new float[numTierraChildren];
-
+        originTierraParallaxVel = new float[numTierraChildren];
+
+
+
         playerTr = carpa.transform.GetChild(0);
         playerRb = playerTr.GetComponent<Rigidbody2D>();
 
@@ -119,7 +122,8 @@ public class GameManager : MonoBehaviour
         {
             childrenParallax[i] = bg.transform.GetChild(i).gameObject.GetComponent<Parallax>();
             originParallaxVel[i] = childrenParallax[i].parallaxEffect;
-        }
+        }
+
 
         for (int i = 0; i < numTierraChildren; i++)
         {
@@ -234,7 +238,7 @@ public class GameManager : MonoBehaviour
             elAdmin.enabled = true;
         }
         musicMusic.setParameterByName("Distance", distance);
-        backgroundMusic.setParameterByName("isDragon", distance);
+        backgroundMusic.setParameterByName("Distance", distance);
 
         if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && distance > sectionTimeStamps[sectionId] - 4)
         {
@@ -315,7 +319,7 @@ public class GameManager : MonoBehaviour
         switch (sectionId)
         {
             case 1:
-                newColor = new Color(255, 0, 0, 125);
+                newColor = new Color(0, 255, 207, 60);
                 colorPanel.CrossFadeColor(newColor, 7f, true, true);  
                 break;
             case 2:
