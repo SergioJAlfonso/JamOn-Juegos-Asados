@@ -7,8 +7,11 @@ public class GoDown : MonoBehaviour
     //ROCK_TYPE type_;
     [SerializeField]
     float speed_;
+    [SerializeField]
+    bool destroyable = true;
     float limit_ = -60;
     Rigidbody2D rb;
+
 
     private void Start()
     {
@@ -27,7 +30,7 @@ public class GoDown : MonoBehaviour
             rb.velocity = new Vector2(0, -speed_);
         }
 
-        if (GameManager.instance.getRecovery())
+        if (GameManager.instance.getRecovery() && destroyable)
             Destroy(this.gameObject);
     }
 
