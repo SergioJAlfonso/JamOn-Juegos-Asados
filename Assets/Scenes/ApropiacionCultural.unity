@@ -2192,8 +2192,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayMenu, Assembly-CSharp
+      - m_Target: {fileID: 1196916761}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -3252,6 +3252,10 @@ PrefabInstance:
     - target: {fileID: 413384179285340079, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}
       propertyPath: m_Name
       value: Admin
+      objectReference: {fileID: 0}
+    - target: {fileID: 413384179285340079, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}

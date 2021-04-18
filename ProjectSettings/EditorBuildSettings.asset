@@ -8,7 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ApropiacionCultural.unity
     guid: 6a271e734ee20054e93bac2f7c02d9f6
-  - enabled: 1
-    path: Assets/Scenes/JavoDeff.unity
-    guid: fbbd3aaf1f46d3e4fa274b0e6b02a25f
   m_configObjects: {}
