@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gObj:
   - {fileID: 5800310303912435158, guid: 7a12411e37b2ec548817360f6f5e0bc0, type: 3}
-  - {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
+  - {fileID: 4210014501216018219, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
   position:
   - pos: {x: 2, y: 7}
     randRangeX: 0
