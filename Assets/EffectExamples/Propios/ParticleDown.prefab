@@ -601,7 +601,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 2000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -866,7 +866,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 98.38
+      scalar: 333
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4780,7 +4780,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 3
+  m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0.009
   m_MaxParticleSize: 0.009
