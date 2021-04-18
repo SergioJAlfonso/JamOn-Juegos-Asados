@@ -15,11 +15,24 @@ public class GoDown : MonoBehaviour
 
     private void Start()
     {
-        speed_ = GameManager.instance.getSpeed();
+
         rb = GetComponent<Rigidbody2D>();
 
         if (rb != null)
-            rb.velocity = new Vector2(0, -speed_);
+        {
+            if (destroyable)
+            {
+                speed_ = GameManager.instance.getSpeed();
+                rb.velocity = new Vector2(0, -speed_);
+            }
+            else
+            {
+                speed_ = GameManager.instance.getMinSpeed();
+                rb.velocity = new Vector2(0, -speed_);
+
+            }
+        }
+
     }
 
     void Update()

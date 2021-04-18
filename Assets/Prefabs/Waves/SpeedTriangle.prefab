@@ -48,9 +48,6 @@ MonoBehaviour:
   - {fileID: 6558476095424974809, guid: b850fae7ca09b6242a0a89c0655eef1e, type: 3}
   position:
   - pos: {x: 10, y: -11}
-    randRangeX: 2
-    randRangeY: 4
-  - pos: {x: 9, y: 18.5}
-    randRangeX: 0
-    randRangeY: 0
+    randRangeX: 30
+    randRangeY: 2
   randObstacle: 0
