@@ -1,9 +1,12 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GoDown : MonoBehaviour
 {
+
+
     //ROCK_TYPE type_;
     [SerializeField]
     float speed_;
@@ -15,9 +18,22 @@ public class GoDown : MonoBehaviour
     Rigidbody2D rb;
 
 
+    [FMODUnity.EventRef] string musicManagerEvent = "event:/Waterfall";
+    private FMOD.Studio.EventInstance corrienteMusic;
+
+
+
+
     private void Start()
     {
-
+        corrienteMusic = FMODUnity.RuntimeManager.CreateInstance(musicManagerEvent);
+        corrienteMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+        corrienteMusic.setParameterByName("Distance", GameManager.instance.getDistance());
+        if (this.name == "Cascada" || this.name == "Cascada (1)")
+        {
+            corrienteMusic.start();
+            corrienteMusic.release();
+        }
         rb = GetComponent<Rigidbody2D>();
 
         if (rb != null)
@@ -39,6 +55,7 @@ public class GoDown : MonoBehaviour
 
     void Update()
     {
+        corrienteMusic.setParameterByName("Distance", GameManager.instance.getDistance());
         if (speed_ != GameManager.instance.getSpeed() && destroyable)
         {
             speed_ = GameManager.instance.getSpeed();
@@ -53,7 +70,7 @@ public class GoDown : MonoBehaviour
         if (transform.position.y < limit_)
         {
             if (!particle)
-            Destroy(this.gameObject);
+                Destroy(this.gameObject);
         }
     }
 
