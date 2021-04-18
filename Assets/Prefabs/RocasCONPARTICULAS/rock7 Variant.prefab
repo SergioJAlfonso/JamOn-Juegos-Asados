@@ -369,9 +369,13 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -810563751
       objectReference: {fileID: 0}
+    - target: {fileID: 3402940811881846672, guid: 155b8be70df31444a82505bededdd256, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3402940811915138002, guid: 155b8be70df31444a82505bededdd256, type: 3}
       propertyPath: m_Name
-      value: rock7
+      value: rock7 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3402940811915138004, guid: 155b8be70df31444a82505bededdd256, type: 3}
       propertyPath: m_RootOrder
@@ -425,6 +429,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -810563751
       objectReference: {fileID: 0}
+    - target: {fileID: 3402940812306858787, guid: 155b8be70df31444a82505bededdd256, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3402940812350659359, guid: 155b8be70df31444a82505bededdd256, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -432,6 +440,10 @@ PrefabInstance:
     - target: {fileID: 3402940812350659359, guid: 155b8be70df31444a82505bededdd256, type: 3}
       propertyPath: m_SortingLayerID
       value: -810563751
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402940812350659424, guid: 155b8be70df31444a82505bededdd256, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3402940812810407024, guid: 155b8be70df31444a82505bededdd256, type: 3}
       propertyPath: m_SortingLayer
@@ -448,6 +460,10 @@ PrefabInstance:
     - target: {fileID: 3402940813013099650, guid: 155b8be70df31444a82505bededdd256, type: 3}
       propertyPath: m_SortingLayerID
       value: -810563751
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402940813013099651, guid: 155b8be70df31444a82505bededdd256, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 155b8be70df31444a82505bededdd256, type: 3}

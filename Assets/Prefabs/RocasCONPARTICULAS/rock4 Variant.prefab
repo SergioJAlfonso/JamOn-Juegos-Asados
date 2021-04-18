@@ -141,9 +141,13 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -810563751
       objectReference: {fileID: 0}
+    - target: {fileID: 1575616118621753247, guid: 8689f374a173eab40b64c221f222618c, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1575616118696013416, guid: 8689f374a173eab40b64c221f222618c, type: 3}
       propertyPath: m_Name
-      value: rock4
+      value: rock4 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1575616118696013418, guid: 8689f374a173eab40b64c221f222618c, type: 3}
       propertyPath: m_RootOrder
@@ -197,6 +201,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -810563751
       objectReference: {fileID: 0}
+    - target: {fileID: 1575616119026059133, guid: 8689f374a173eab40b64c221f222618c, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1575616119260345513, guid: 8689f374a173eab40b64c221f222618c, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -213,6 +221,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -810563751
       objectReference: {fileID: 0}
+    - target: {fileID: 1575616119268154373, guid: 8689f374a173eab40b64c221f222618c, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1575616119272853721, guid: 8689f374a173eab40b64c221f222618c, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -220,6 +232,10 @@ PrefabInstance:
     - target: {fileID: 1575616119272853721, guid: 8689f374a173eab40b64c221f222618c, type: 3}
       propertyPath: m_SortingLayerID
       value: -810563751
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575616119272853722, guid: 8689f374a173eab40b64c221f222618c, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8689f374a173eab40b64c221f222618c, type: 3}

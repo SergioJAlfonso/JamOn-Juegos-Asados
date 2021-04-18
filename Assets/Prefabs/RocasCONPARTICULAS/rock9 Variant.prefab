@@ -214,6 +214,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6979182770081056057, guid: 11ef465d087488e47bd30a579296fd7d, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6979182770081056062, guid: 11ef465d087488e47bd30a579296fd7d, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -232,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6979182770527882377, guid: 11ef465d087488e47bd30a579296fd7d, type: 3}
       propertyPath: m_Name
-      value: rock9
+      value: rock9 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6979182770527882379, guid: 11ef465d087488e47bd30a579296fd7d, type: 3}
       propertyPath: m_RootOrder
@@ -286,6 +290,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -810563751
       objectReference: {fileID: 0}
+    - target: {fileID: 6979182770782654781, guid: 11ef465d087488e47bd30a579296fd7d, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6979182771211535442, guid: 11ef465d087488e47bd30a579296fd7d, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -293,6 +301,14 @@ PrefabInstance:
     - target: {fileID: 6979182771211535442, guid: 11ef465d087488e47bd30a579296fd7d, type: 3}
       propertyPath: m_SortingLayerID
       value: -810563751
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979182771211535453, guid: 11ef465d087488e47bd30a579296fd7d, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979182771329663030, guid: 11ef465d087488e47bd30a579296fd7d, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6979182771329663031, guid: 11ef465d087488e47bd30a579296fd7d, type: 3}
       propertyPath: m_SortingLayer
