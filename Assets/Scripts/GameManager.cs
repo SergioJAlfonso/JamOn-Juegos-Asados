@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     public float getDistance() { return distance; }
 
     int velChain = 0;
+    bool chupala = true;
 
     [SerializeField] float minObstSpeed = 7;
     float obstSpeed;
@@ -284,6 +285,19 @@ public class GameManager : MonoBehaviour
                 FOVRestoration = false;
                 Camera.main.fieldOfView = originalFOV;
             }
+        }
+        if(distance > 368)
+        {
+            if (chupala)
+            {
+                newColor = new Color(255, 255, 255, 255);
+                colorPanel.CrossFadeColor(newColor, 0.7f, true, true);
+            }
+            chupala = false;
+        }
+        if(distance > 377)
+        {
+            Application.Quit();
         }
     }
 
