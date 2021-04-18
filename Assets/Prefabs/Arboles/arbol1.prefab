@@ -68,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1116136251
+  m_SortingLayerID: 985191657
   m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ce0630dc9d57b4d41b4d542d9f263d3c, type: 3}
@@ -257,6 +257,14 @@ PrefabInstance:
     - target: {fileID: 5800310303912435158, guid: 7a12411e37b2ec548817360f6f5e0bc0, type: 3}
       propertyPath: m_Name
       value: arbol1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800310303912435159, guid: 7a12411e37b2ec548817360f6f5e0bc0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800310303912435159, guid: 7a12411e37b2ec548817360f6f5e0bc0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 985191657
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6161684284161422226, guid: 7a12411e37b2ec548817360f6f5e0bc0, type: 3}

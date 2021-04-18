@@ -53,7 +53,6 @@ public class CameraFollow : MonoBehaviour
                     speedBoosted = true;
                     blancoBienTemporizador = 7.5f;
                 }
-
             }
             else
             {
@@ -77,9 +76,9 @@ public class CameraFollow : MonoBehaviour
                     }
                     if (speedBoosted)
                     {
-                        Vector3 newScale = new Vector3(player.transform.localScale.x, player.transform.localScale.y * 1.5f, player.transform.localScale.z);
+                        //Vector3 newScale = new Vector3(player.transform.localScale.x, player.transform.localScale.y * 1.5f, player.transform.localScale.z);
 
-                        player.transform.localScale = Vector3.Lerp(transform.localScale, newScale, smoothDelay);
+                        //player.transform.localScale = Vector3.Lerp(transform.localScale, newScale, smoothDelay);
 
                         GameManager.instance.parallaxMultiplier(5f);
                         //GameManager.instance.speedMultiplier(1.5f);
@@ -112,4 +111,9 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
+    public void ChangePlayer(GameObject p)
+    {
+        player = p;
+        Debug.Log(p.name);
+    }
 }

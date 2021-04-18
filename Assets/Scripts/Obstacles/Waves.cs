@@ -34,7 +34,6 @@ public class Waves : MonoBehaviour
         }
         for (int i = 0; i < position.Length; i++)
         {
-            Debug.Log(i);
             //Instanciamos la roca
             int j;
             if (!randObstacle)
