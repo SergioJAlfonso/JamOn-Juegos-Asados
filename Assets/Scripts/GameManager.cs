@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float smoothDelay = 0.125f;
 
     bool gameStates = false;
-
+    bool botonesMenuHabilitados = true;
     //////##! SONIDOS
     private FMOD.Studio.EventInstance musicMusic;
     private FMOD.Studio.EventInstance backgroundMusic;
@@ -128,31 +128,34 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
-        Vector2 a = new Vector2(0, 0);
-        if (InitDistance < 8)
+        if (botonesMenuHabilitados)
         {
-            distance = 8;
-            TiempoBucle = 8;
-        }
-        else
-        {
-            distance = 16;
-            TiempoBucle = 16;
-        }
-        if (InitDistance > TiempoBucle)
-        {
-            if (InitDistance % TiempoBucle > TiempoBucle / 2)
-                timeRemain = TiempoBucle - InitDistance % TiempoBucle;
+            Vector2 a = new Vector2(0, 0);
+            if (InitDistance < 8)
+            {
+                distance = 8;
+                TiempoBucle = 8;
+            }
             else
-                timeRemain = TiempoBucle - InitDistance % TiempoBucle / 2;
+            {
+                distance = 16;
+                TiempoBucle = 16;
+            }
+            if (InitDistance > TiempoBucle)
+            {
+                if (InitDistance % TiempoBucle > TiempoBucle / 2)
+                    timeRemain = TiempoBucle - InitDistance % TiempoBucle;
+                else
+                    timeRemain = TiempoBucle - InitDistance % TiempoBucle / 2;
+            }
+            else
+                timeRemain = TiempoBucle - InitDistance;
+
+            LeanTween.scale(Menu, a, timeRemain).setEaseInCirc();
+            Invoke("gameStart", timeRemain);
+            musicMusic.setParameterByName("Distance", distance);
+            botonesMenuHabilitados = false;
         }
-        else
-            timeRemain = TiempoBucle - InitDistance;
-
-        LeanTween.scale(Menu, a, timeRemain).setEaseInCirc();
-        Invoke("gameStart", timeRemain);
-        musicMusic.setParameterByName("Distance", distance);
-
     }
     void gameStart()
     {

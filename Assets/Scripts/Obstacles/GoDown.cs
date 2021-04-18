@@ -27,10 +27,7 @@ public class GoDown : MonoBehaviour
             rb.velocity = new Vector2(0, -speed_);
         }
 
-        if (transform.position.y <= limit_)
-        {
-            Destroy(this.gameObject);
-        }
+     
     }
 
     //public void initialize(int speed)
