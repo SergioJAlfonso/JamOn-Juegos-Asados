@@ -320,13 +320,13 @@ public class GameManager : MonoBehaviour
             case 1:
                 newColor = new Color(0, 255, 207, 60);
                 //colorPanel.CrossFadeColor(new Color(255, 255, 255, 1), 0f, true, true);
-                colorPanel.CrossFadeColor(newColor, 7f, true, true);  
+                colorPanel.CrossFadeColor(newColor, 3f, true, true);  
                 break;
             case 2:
                 newColor = new Color(255, 67, 0, 90);
                 //colorPanel.CrossFadeColor(new Color(255, 255, 255, 1), 0f, true, true);
                 //colorPanel.color();
-                colorPanel.CrossFadeColor(new Color(255, 255, 255, 1), 0.2f, true, true);
+                //colorPanel.CrossFadeColor(new Color(255, 255, 255, 1), 0.2f, true, true);
                 colorPanel.CrossFadeColor(newColor, 7f, true, true);
                 rainEffect.SetActive(true);
                 break;
