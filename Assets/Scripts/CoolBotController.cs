@@ -25,7 +25,7 @@ public class CoolBotController : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sp;
     Vector3 mousePos;
-    Vector2 direction;
+    Vector3 direction;
     float posZ = 0; // Posición z
     float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
     float alphaValue;
