@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour
 
     //////##! SONIDOS
     private FMOD.Studio.EventInstance instanceMusic;
+    private FMOD.Studio.EventInstance backgroundMusic;
+
     [FMODUnity.EventRef]
     [SerializeField] string fmodEvent;
 
@@ -98,6 +100,7 @@ public class GameManager : MonoBehaviour
         obstSpeed = minObstSpeed;
 
         //##! SONIDOS
+        //instance
         instanceMusic = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
         instanceMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
         instanceMusic.start();
