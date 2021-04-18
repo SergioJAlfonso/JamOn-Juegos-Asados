@@ -217,7 +217,9 @@ public class GameManager : MonoBehaviour
 
         if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && distance > sectionTimeStamps[sectionId] - 4)
         {
-            GameObject cascadita = Instantiate(cascada, new Vector3(0, 0, 0), Quaternion.identity);
+            GameObject cascadita;
+            if (sectionId != 3)
+                cascadita = Instantiate(cascada, new Vector3(0, 0, 0), Quaternion.identity);
             cascadaEspauneada = true;
         }
 
@@ -287,19 +289,21 @@ public class GameManager : MonoBehaviour
         {
             case 1:
                 newColor = new Color(255, 0, 0, 125);
-                colorPanel.CrossFadeColor(newColor, 7f, true, true);
-                rainEffect.SetActive(true);
+                colorPanel.CrossFadeColor(newColor, 7f, true, true);  
                 break;
             case 2:
                 newColor = new Color(255, 0, 0, 125);
                 colorPanel.CrossFadeColor(newColor, 7f, true, true);
-                rainEffect.SetActive(false);
+                rainEffect.SetActive(true);
                 break;
             case 3:
+                rainEffect.SetActive(false);
                 newColor = new Color(255, 255, 255, 1);
                 colorPanel.CrossFadeColor(newColor, 0.2f, true, true);
                 dragonTransition();
                 break;
+            case 4:
+
             default:
                 break;
         }
