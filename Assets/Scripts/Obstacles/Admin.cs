@@ -33,7 +33,7 @@ public class Admin : MonoBehaviour
         }
         else done = false;
 
-        if (actualManager != rockManagers[actual])
+        if (actual < rockManagers.Length && actualManager != rockManagers[actual])
         {
             Destroy(lol);
             lol = Instantiate(rockManagers[actual]);

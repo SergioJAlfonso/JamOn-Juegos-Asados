@@ -1582,7 +1582,7 @@ MonoBehaviour:
   dumpingObjectTr: {fileID: 0}
   minObstSpeed: 7
   sectionTimeStamps:
-  - 26
+  - 89
   - 170
   - 250
   - 321
@@ -1590,6 +1590,7 @@ MonoBehaviour:
   fmodEvent: event:/MusicManager
   Menu: {fileID: 14064780}
   cascada: {fileID: 4006531810020372424, guid: f56d4afae96201e4a8b5f3ae93c2a2e8, type: 3}
+  elAdmin: {fileID: 1382134922}
 --- !u!1 &1314612263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,6 +1673,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1382134922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 413384179285340077, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}
+  m_PrefabInstance: {fileID: 1450622512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd886dd5282199f4fb9ad2cb2eb40cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1432473289 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 395725200396624844, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
@@ -1819,6 +1831,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 413384179285340077, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 413384179285340077, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}
       propertyPath: rockManagers.Array.size
       value: 3

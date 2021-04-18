@@ -166,8 +166,6 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(direction.x * speed, 0);
             if (sombra != null)
                 sRb.velocity = new Vector2(direction.x * speed, 0);
-
-            Debug.Log(tr.position.z + " " + ascending);
         }
         else 
             timeToActive -= Time.deltaTime;

@@ -66,6 +66,8 @@ public class GameManager : MonoBehaviour
     public GameObject cascada;
     bool cascadaEspauneada = false;
 
+    [SerializeField] Admin elAdmin;
+
     // En el método Awake comprueba si hay otro GameManger
     // y si no lo hay se inicializa como GameManager. En el caso
     // que hubiera otro se autodestruye
@@ -150,7 +152,7 @@ public class GameManager : MonoBehaviour
         if (gameStates)
         {
             distance += Time.deltaTime;
-            //gameTime += Time.deltaTime;
+            elAdmin.enabled = true;
             instanceMusic.setParameterByName("Distance", distance);
         }
 
