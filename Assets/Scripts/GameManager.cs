@@ -175,7 +175,6 @@ public class GameManager : MonoBehaviour
         {
             distance += Time.deltaTime;
             elAdmin.enabled = true;
-            instanceMusic.setParameterByName("Distance", distance);
         }
         musicMusic.setParameterByName("Distance", distance);
 
