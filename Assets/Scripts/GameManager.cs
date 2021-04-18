@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
     }
     void gameStart()
     {
-        gameStates = !gameStates;
+        gameStates = true;
         Menu.SetActive(false);
 
     }

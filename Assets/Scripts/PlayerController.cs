@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     public float timeToActive = 0f;
 
     public bool ascending = false;
-
+    public bool canFall = true;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
                 if (sSp.color.a - 0.04 > 0.1) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a - 0.015f);
                 ascending = true;
             }
-            else if (tr.position.z < 0 && Time.time - timeAtTop >= timeToDrop)
+            else if (tr.position.z < 0 && Time.time - timeAtTop >= timeToDrop && canFall)
             {
                 if (nextPiece == null)
                 {
