@@ -47,6 +47,11 @@ public class GoDown : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        if (transform.position.y < limit_)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     //public void initialize(int speed)
