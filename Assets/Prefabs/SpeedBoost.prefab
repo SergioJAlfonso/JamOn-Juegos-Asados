@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_: 5
-  destroyable: 1
+  limit_: -10
 --- !u!50 &6558476095424974811
 Rigidbody2D:
   serializedVersion: 4
@@ -198,4 +198,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c66e89df380384429a727aee8e88297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  route: event:/winMusic
+  route: event:/Spring

@@ -55,11 +55,9 @@ public class GameManager : MonoBehaviour
     //////##! SONIDOS
     private FMOD.Studio.EventInstance musicMusic;
     private FMOD.Studio.EventInstance backgroundMusic;
-    private FMOD.Studio.EventInstance birdsMusic;
 
     [FMODUnity.EventRef] [SerializeField] string musicManagerEvent;
     [FMODUnity.EventRef] [SerializeField] string backgroundManagerEvent;
-    [FMODUnity.EventRef] string birdsEvent = "event:/RamdomBirds";
 
 
     public GameObject Menu;
@@ -114,11 +112,6 @@ public class GameManager : MonoBehaviour
         backgroundMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
         backgroundMusic.start();
         backgroundMusic.release();
-        //birdsMusic
-        birdsMusic = FMODUnity.RuntimeManager.CreateInstance(birdsEvent);
-        birdsMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
-        birdsMusic.start();
-        birdsMusic.release();
     }
     public void parallaxMultiplier(float val)
     {
@@ -148,13 +141,12 @@ public class GameManager : MonoBehaviour
                 distance = 16;
                 TiempoBucle = 16;
             }
-
             if (InitDistance > TiempoBucle)
             {
                 if (InitDistance % TiempoBucle > TiempoBucle / 2)
                     timeRemain = TiempoBucle - InitDistance % TiempoBucle;
                 else
-                    timeRemain = TiempoBucle / 2 - InitDistance % TiempoBucle ;
+                    timeRemain = TiempoBucle - InitDistance % TiempoBucle / 2;
             }
             else
                 timeRemain = TiempoBucle - InitDistance;
