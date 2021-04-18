@@ -22,13 +22,8 @@ public class ObstacleManager : MonoBehaviour
 
     void Update()
     {
-        int velChain = 1;
-        if (GameManager.instance != null)
-        {
-            velChain = GameManager.instance.getVelChain();
-            velChain++;
-        }
-        timer += (Time.deltaTime* (1.5 * velChain));
+
+        timer += Time.deltaTime;
 
         if (actualWave < WAVES.Length && timer >= WAVES[actualWave].duration)
         {
