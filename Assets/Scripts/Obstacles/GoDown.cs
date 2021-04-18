@@ -24,14 +24,16 @@ public class GoDown : MonoBehaviour
 
     void Update()
     {
-        if (speed_ != GameManager.instance.getSpeed())
+        if (speed_ != GameManager.instance.getSpeed() && destroyable)
         {
             speed_ = GameManager.instance.getSpeed();
             rb.velocity = new Vector2(0, -speed_);
         }
 
         if (GameManager.instance.getRecovery() && destroyable)
+        {
             Destroy(this.gameObject);
+        }
     }
 
     //public void initialize(int speed)
