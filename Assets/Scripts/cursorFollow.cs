@@ -10,6 +10,7 @@ public class cursorFollow : MonoBehaviour
     float maxHideTime = 5;
     float hideTime;
     Vector2 hotspot;
+    CursorTrail cTr;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,9 @@ public class cursorFollow : MonoBehaviour
         Cursor.visible = true;
         hotspot = new Vector2(cursorTex.width / 2, cursorTex.height / 2);
         Cursor.SetCursor(cursorTex, hotspot, CursorMode.ForceSoftware);
+
+        cTr = this.gameObject.GetComponent<CursorTrail>();
+
         //StartCoroutine(ShowCursorAfter(HideTime));
     }
 
@@ -27,6 +31,7 @@ public class cursorFollow : MonoBehaviour
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
         {
             Cursor.visible = true;
+            cTr.enabled = true;
             hideTime = maxHideTime;
         }
         else
@@ -43,6 +48,7 @@ public class cursorFollow : MonoBehaviour
         if (hideTime <= 0.0f)
         {
             Cursor.visible = false;
+            cTr.enabled = false;
         }
 
     } 

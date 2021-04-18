@@ -10,6 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2841691775063787911}
   - component: {fileID: 2841691775063787904}
+  - component: {fileID: -4854542259127310417}
+  - component: {fileID: 6907195379389250161}
+  - component: {fileID: 8972893289825069139}
+  - component: {fileID: 6692259736934975102}
+  - component: {fileID: 8640566835136863369}
   m_Layer: 0
   m_Name: rock11
   m_TagString: Untagged
@@ -45,8 +50,101 @@ SortingGroup:
   m_GameObject: {fileID: 2841691775063787905}
   m_Enabled: 1
   m_SortingLayerID: -810563751
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
+--- !u!114 &-4854542259127310417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2841691775063787905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b0b2d0f9f5c1c4cb023e55f169c3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &6907195379389250161
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2841691775063787905}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.5954843, y: 1.1283014}
+      - {x: -0.067726776, y: 1.126424}
+      - {x: -0.71626955, y: 1.1849538}
+      - {x: -0.7175606, y: 0.0719502}
+      - {x: -0.73734355, y: -1.0390259}
+      - {x: -0.25818074, y: -1.0618647}
+      - {x: -0.046363287, y: -0.8664856}
+      - {x: 0.411738, y: -0.8544869}
+      - {x: 0.8406331, y: -0.4748967}
+      - {x: 0.8291476, y: 0.6792584}
+--- !u!114 &8972893289825069139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2841691775063787905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9567544391e3e50469c9f02911f642c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed_: 7
+--- !u!114 &6692259736934975102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2841691775063787905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd16703c744ce43a5eabacf93fde63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &8640566835136863369
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2841691775063787905}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2841691775133949362
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,10 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd881202fb3d5e644bca8237eec87711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   parallaxVerticalFactor: -0.1
-  parallaxHorizontalFactor: 1
-  playerRb: {fileID: 0}
+  parallaxHorizontalFactor: -0.1
 --- !u!1 &2841691775288779487
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,10 +337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd881202fb3d5e644bca8237eec87711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   parallaxVerticalFactor: -0.3
-  parallaxHorizontalFactor: -1
-  playerRb: {fileID: 0}
+  parallaxHorizontalFactor: -0.3
 --- !u!1 &2841691775858885246
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,10 +434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd881202fb3d5e644bca8237eec87711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   parallaxVerticalFactor: 0.3
-  parallaxHorizontalFactor: 1
-  playerRb: {fileID: 0}
+  parallaxHorizontalFactor: 0.3
 --- !u!1 &2841691775927322518
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,10 +531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd881202fb3d5e644bca8237eec87711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   parallaxVerticalFactor: 0.3
-  parallaxHorizontalFactor: 1
-  playerRb: {fileID: 0}
+  parallaxHorizontalFactor: 0.3
 --- !u!1 &2841691776021565186
 GameObject:
   m_ObjectHideFlags: 0
