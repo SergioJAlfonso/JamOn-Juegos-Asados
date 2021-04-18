@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ApropiacionCultural.unity
-    guid: 6a271e734ee20054e93bac2f7c02d9f6
+    path: Assets/Scenes/DEFINITIVA.unity
+    guid: 3357948d599aef84e9b37ca09df2d646
   m_configObjects: {}

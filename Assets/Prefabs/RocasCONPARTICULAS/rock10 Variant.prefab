@@ -202,6 +202,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2595664753226718866, guid: 9c3a58a2da29e9847a78e25e1ee43c0e, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2595664753226718867, guid: 9c3a58a2da29e9847a78e25e1ee43c0e, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -209,6 +213,10 @@ PrefabInstance:
     - target: {fileID: 2595664753226718867, guid: 9c3a58a2da29e9847a78e25e1ee43c0e, type: 3}
       propertyPath: m_SortingLayerID
       value: -810563751
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595664753886378310, guid: 9c3a58a2da29e9847a78e25e1ee43c0e, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2595664753886378311, guid: 9c3a58a2da29e9847a78e25e1ee43c0e, type: 3}
       propertyPath: m_SortingLayer
@@ -272,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2595664754463934817, guid: 9c3a58a2da29e9847a78e25e1ee43c0e, type: 3}
       propertyPath: m_Name
-      value: rock10
+      value: rock10 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c3a58a2da29e9847a78e25e1ee43c0e, type: 3}

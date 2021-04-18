@@ -121,6 +121,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6023736173992740246, guid: b5fc48095e3b09e4788a0f464ed27521, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023736174096284334, guid: b5fc48095e3b09e4788a0f464ed27521, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023736174772549317, guid: b5fc48095e3b09e4788a0f464ed27521, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6023736175009671349, guid: b5fc48095e3b09e4788a0f464ed27521, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -167,7 +179,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6023736175009671351, guid: b5fc48095e3b09e4788a0f464ed27521, type: 3}
       propertyPath: m_Name
-      value: rock2
+      value: rock2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023736175372560880, guid: b5fc48095e3b09e4788a0f464ed27521, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5fc48095e3b09e4788a0f464ed27521, type: 3}

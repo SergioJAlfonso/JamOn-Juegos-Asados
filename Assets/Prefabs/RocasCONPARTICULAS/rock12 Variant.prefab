@@ -76,6 +76,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3633360750104669914, guid: 32d335262707b7e4abb694cb3fdc68f8, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633360750104669917, guid: 32d335262707b7e4abb694cb3fdc68f8, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -91,6 +95,10 @@ PrefabInstance:
     - target: {fileID: 3633360750587501756, guid: 32d335262707b7e4abb694cb3fdc68f8, type: 3}
       propertyPath: m_SortingLayerID
       value: -810563751
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633360750587501757, guid: 32d335262707b7e4abb694cb3fdc68f8, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3633360751026232088, guid: 32d335262707b7e4abb694cb3fdc68f8, type: 3}
       propertyPath: m_RootOrder
@@ -138,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3633360751026232090, guid: 32d335262707b7e4abb694cb3fdc68f8, type: 3}
       propertyPath: m_Name
-      value: rock12
+      value: rock12 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3633360751383279032, guid: 32d335262707b7e4abb694cb3fdc68f8, type: 3}
       propertyPath: m_SortingLayer
