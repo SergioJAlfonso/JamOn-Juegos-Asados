@@ -315,7 +315,7 @@ public class GameManager : MonoBehaviour
         switch (sectionId)
         {
             case 1:
-                newColor = new Color(255, 0, 0, 125);
+                newColor = new Color(0, 255, 207, 60);
                 colorPanel.CrossFadeColor(newColor, 7f, true, true);  
                 break;
             case 2:

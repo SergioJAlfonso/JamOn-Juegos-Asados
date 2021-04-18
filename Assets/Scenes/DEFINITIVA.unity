@@ -1507,6 +1507,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &513523202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513523203}
+  m_Layer: 0
+  m_Name: Dumping
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &513523203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513523202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.8578043, y: -41.1, z: 3.2690163}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548804957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,7 +2978,7 @@ MonoBehaviour:
   playerTr: {fileID: 1432473290}
   playerRb: {fileID: 0}
   dragon: {fileID: 372460808}
-  dumpingObjectTr: {fileID: 0}
+  dumpingObjectTr: {fileID: 513523203}
   buttons: {fileID: 2102170935}
   childrenTierraParallax:
   - {fileID: 1626125291}
@@ -2977,7 +3007,7 @@ MonoBehaviour:
   - {fileID: 1591755135}
   minObstSpeed: 7
   sectionTimeStamps:
-  - 80
+  - 26
   - 168
   - 248
   - 320
@@ -3265,7 +3295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6262542419617546965, guid: b39313d59ed17bb4cbe7e64711d1261b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.6
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 6695417266807295680, guid: b39313d59ed17bb4cbe7e64711d1261b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3872,20 +3902,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 413384179285340077, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}
       propertyPath: rockManagers.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 413384179285340077, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}
       propertyPath: rockManagers.Array.data[0]
       value: 
-      objectReference: {fileID: 3397560533329837886, guid: 4c7961768d6ab7346ac1a6fb02ef2500, type: 3}
+      objectReference: {fileID: 3397560533329837886, guid: 35ca682e3032f08488e25f4af7ca1a54, type: 3}
     - target: {fileID: 413384179285340077, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}
       propertyPath: rockManagers.Array.data[1]
       value: 
-      objectReference: {fileID: 3397560533329837886, guid: 0562125719b95c54e8dc595922b9d59f, type: 3}
+      objectReference: {fileID: 3397560533329837886, guid: 1fd4d03985c3581439453689c2847862, type: 3}
     - target: {fileID: 413384179285340077, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}
       propertyPath: rockManagers.Array.data[2]
       value: 
-      objectReference: {fileID: 3397560533329837886, guid: 00269ff3de992624a978f7d1c6ef365f, type: 3}
+      objectReference: {fileID: 3397560533329837886, guid: 0638b48cd2552f94fb4df93aa7c85e5e, type: 3}
+    - target: {fileID: 413384179285340077, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}
+      propertyPath: rockManagers.Array.data[3]
+      value: 
+      objectReference: {fileID: 3397560533329837886, guid: 0ebf9a9610af39843b00ef6eacf3b062, type: 3}
     - target: {fileID: 413384179285340078, guid: 8dbf0e8c976af9046832d09732b28bdc, type: 3}
       propertyPath: m_RootOrder
       value: 2

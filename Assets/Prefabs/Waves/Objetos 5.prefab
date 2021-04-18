@@ -44,17 +44,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gObj:
-  - {fileID: 5800310303912435158, guid: 7a12411e37b2ec548817360f6f5e0bc0, type: 3}
-  - {fileID: 2828577972829602762, guid: 2a5388a914ea83047bf837cfb28a0705, type: 3}
+  - {fileID: 4666808696364274759, guid: c47fc57b7e8ee6545afef392dc5e39af, type: 3}
+  - {fileID: 7538621438471287251, guid: 618faa691ec9cdf44a2d08cf07ef536c, type: 3}
   - {fileID: 6558476095424974809, guid: ab3fe89be4dc3b446a89be9996d63e19, type: 3}
   position:
-  - pos: {x: 7, y: 7}
+  - pos: {x: 6, y: 7}
     randRangeX: 3
     randRangeY: 4
-  - pos: {x: 6, y: -5}
+  - pos: {x: -4, y: -5}
     randRangeX: 0
     randRangeY: 8
-  - pos: {x: 7, y: 4}
+  - pos: {x: -3, y: 4}
     randRangeX: 6
     randRangeY: 0
   randObstacle: 1

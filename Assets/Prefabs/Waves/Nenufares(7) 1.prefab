@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8117139551537918262}
   - component: {fileID: 5635977919193571523}
   m_Layer: 0
-  m_Name: Nenufares(7)
+  m_Name: Nenufares(7) 1
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   - pos: {x: 6.75, y: -2}
     randRangeX: 4.5
     randRangeY: 3
-  - pos: {x: 3, y: -5}
+  - pos: {x: 0, y: -5}
     randRangeX: 9.5
     randRangeY: 1
   randObstacle: 1
