@@ -6,10 +6,12 @@ public class CursorTrail : MonoBehaviour
 {
     public float speed = 8.0f;
     public float distanceFromCamera = 0.0f;
+    float maxHideTime = 5;
+    float hideTime;
     // Start is called before the first frame update
     void Start()
     {
-        
+        hideTime = maxHideTime;
     }
 
     // Update is called once per frame

@@ -8,6 +8,7 @@ public class Admin : MonoBehaviour
     GameObject[] rockManagers;
 
     GameObject actualManager;
+    GameObject lol;
     int actual = 0;
 
     bool done = false;
@@ -16,7 +17,7 @@ public class Admin : MonoBehaviour
     void Start()
     {
         actualManager = rockManagers[0];
-        Instantiate(rockManagers[0]);
+        lol = Instantiate(rockManagers[0]);
     }
 
     // Update is called once per frame
@@ -34,8 +35,9 @@ public class Admin : MonoBehaviour
 
         if (actualManager != rockManagers[actual])
         {
-            Destroy(actualManager);
-            Instantiate(rockManagers[actual]);
+            Destroy(lol);
+            lol = Instantiate(rockManagers[actual]);
+            actualManager = rockManagers[actual];
         }
     }
 }

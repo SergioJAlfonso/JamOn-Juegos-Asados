@@ -95,10 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd881202fb3d5e644bca8237eec87711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   parallaxVerticalFactor: -0.1
-  parallaxHorizontalFactor: 1
-  playerRb: {fileID: 0}
+  parallaxHorizontalFactor: -0.1
 --- !u!1 &1575616118696013416
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,6 +108,10 @@ GameObject:
   - component: {fileID: 1575616118696013418}
   - component: {fileID: 1575616118696013417}
   - component: {fileID: -3831014237542461029}
+  - component: {fileID: 334848107843292109}
+  - component: {fileID: 5005566834556046380}
+  - component: {fileID: 4805154347769685888}
+  - component: {fileID: -9011438155480254224}
   m_Layer: 0
   m_Name: rock4
   m_TagString: Untagged
@@ -159,6 +161,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b0b2d0f9f5c1c4cb023e55f169c3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &334848107843292109
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575616118696013416}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 3.840644, y: 0.88676095}
+      - {x: 2.5760398, y: 6.552664}
+      - {x: -0.054182053, y: 6.6890736}
+      - {x: -2.494422, y: 6.4385595}
+      - {x: -3.8768654, y: 0.71537936}
+      - {x: -3.8657746, y: -4.0870066}
+      - {x: -0.25202978, y: -5.19773}
+      - {x: 3.849774, y: -4.2422414}
+--- !u!114 &5005566834556046380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575616118696013416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd16703c744ce43a5eabacf93fde63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4805154347769685888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575616118696013416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9567544391e3e50469c9f02911f642c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed_: 0
+--- !u!50 &-9011438155480254224
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575616118696013416}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1575616119026059122
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,10 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd881202fb3d5e644bca8237eec87711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   parallaxVerticalFactor: -0.3
-  parallaxHorizontalFactor: -1
-  playerRb: {fileID: 0}
+  parallaxHorizontalFactor: -0.3
 --- !u!1 &1575616119260345519
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,10 +514,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd881202fb3d5e644bca8237eec87711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   parallaxVerticalFactor: 0.3
-  parallaxHorizontalFactor: 1
-  playerRb: {fileID: 0}
+  parallaxHorizontalFactor: 0.3
 --- !u!1 &1575616119272853727
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +611,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd881202fb3d5e644bca8237eec87711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   parallaxVerticalFactor: 0.3
-  parallaxHorizontalFactor: 1
-  playerRb: {fileID: 0}
+  parallaxHorizontalFactor: 0.3

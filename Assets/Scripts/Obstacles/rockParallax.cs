@@ -1,24 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class rockParallax : MonoBehaviour
 {
-    [SerializeField]
+    
     Transform player;
     [SerializeField]
     float parallaxVerticalFactor;
     [SerializeField]
     float parallaxHorizontalFactor;
-    [SerializeField]
+    
     Rigidbody2D playerRb;
 
     float startPos;
 
 
     // Start is called before the first frame update
+
     void Start()
     {
+        player = GameManager.instance.playerTr;
+        playerRb = GameManager.instance.playerRb;
         startPos = transform.position.x;
     }
 
@@ -26,9 +30,12 @@ public class rockParallax : MonoBehaviour
     void Update()
     {
         //Movimiento de capas en vertical
-        float difY = player.position.y - transform.position.y; 
-        transform.Translate(Vector2.down * parallaxVerticalFactor * -difY * 0.02f * Time.smoothDeltaTime);
+        float difY = Math.Abs(player.position.y - transform.position.y);        
 
+        if(difY < 15)
+        {
+            transform.Translate(Vector2.down * parallaxVerticalFactor * -difY * 0.02f * Time.smoothDeltaTime);
+        }
         //Movimiento en capas horizontal
         if(playerRb != null)
         {

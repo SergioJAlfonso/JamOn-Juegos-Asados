@@ -95,10 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd881202fb3d5e644bca8237eec87711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   parallaxVerticalFactor: 0.3
-  parallaxHorizontalFactor: 1
-  playerRb: {fileID: 0}
+  parallaxHorizontalFactor: 0.3
 --- !u!1 &2595664753886378313
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,10 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd881202fb3d5e644bca8237eec87711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   parallaxVerticalFactor: -0.3
-  parallaxHorizontalFactor: -1
-  playerRb: {fileID: 0}
+  parallaxHorizontalFactor: -0.3
 --- !u!1 &2595664753979472342
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +286,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2595664754463934815}
   - component: {fileID: 2595664754463934816}
-  - component: {fileID: 421204833441467635}
+  - component: {fileID: 5492582484492438424}
+  - component: {fileID: 6452465966741757198}
+  - component: {fileID: 3462826540320832487}
+  - component: {fileID: 8728865684108362402}
+  - component: {fileID: 3870289625073787821}
   m_Layer: 0
   m_Name: rock10
   m_TagString: Untagged
@@ -326,7 +326,45 @@ SortingGroup:
   m_SortingLayerID: -810563751
   m_SortingLayer: 3
   m_SortingOrder: 0
---- !u!114 &421204833441467635
+--- !u!60 &5492582484492438424
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595664754463934817}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.13166556, y: 0.5298648}
+      - {x: -0.08237773, y: 0.56774855}
+      - {x: -0.20769629, y: 1.1444844}
+      - {x: -0.55372435, y: 1.2255899}
+      - {x: -0.55420244, y: 0.12389933}
+      - {x: -0.4116949, y: -0.0008073896}
+      - {x: -0.39130083, y: -0.39763725}
+      - {x: -0.14650407, y: -0.5218166}
+      - {x: 0.2040272, y: -0.46065333}
+      - {x: 0.28595358, y: -0.6682641}
+      - {x: 0.50651324, y: -0.7503202}
+      - {x: 0.6515173, y: -0.6321686}
+      - {x: 0.6124207, y: 0.4309258}
+--- !u!114 &6452465966741757198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,3 +376,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b0b2d0f9f5c1c4cb023e55f169c3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3462826540320832487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595664754463934817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd16703c744ce43a5eabacf93fde63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8728865684108362402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595664754463934817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9567544391e3e50469c9f02911f642c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed_: 7
+--- !u!50 &3870289625073787821
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595664754463934817}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

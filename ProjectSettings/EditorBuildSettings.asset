@@ -5,10 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/ANDALUZPORRO.unity
-    guid: bf418bd57ad2c7b47ac2803bc96ec600
   - enabled: 1
-    path: Assets/Scenes/Escena1.unity
-    guid: ffe0c4064d93f5f40ae7a4e286dd441a
+    path: Assets/Scenes/EscenaBien.unity
+    guid: c6010888531c30949b6fcc6435486e14
   m_configObjects: {}

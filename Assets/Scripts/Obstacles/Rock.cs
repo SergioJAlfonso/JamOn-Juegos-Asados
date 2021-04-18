@@ -17,7 +17,7 @@ public class Rock : MonoBehaviour
         PlayerController plC = other.GetComponent<PlayerController>();
         CoolBotController boot = other.GetComponent<CoolBotController>();
 
-        if (boot != null /*&& plC.nextPiece == null*/)
+        if (boot != null && plC.nextPiece == null)
         {
             //other.GetComponent<CoolCarpaBotFollow>().setTarget(GameManager.instance.dumpingObjectTr, 0.0f);
             Transform oTr = other.GetComponent<Transform>();
@@ -54,11 +54,11 @@ public class Rock : MonoBehaviour
                 //CameraEffects.ShakeOnce(0.5f, 1.5f, new Vector3(2, 1, 0));
             }
         }
-        else if (plC != null /*&& plC.nextPiece == null*/)
+        else if (plC != null && plC.nextPiece == null)
         {
             Transform oTr = other.GetComponent<Transform>();
 
-            if (oTr.position.z >= 0)
+            if (oTr.position.z >= 0 && !plC.ascending)
             {
                 plC.enabled = false;
                 Rigidbody2D oRb = other.GetComponent<Rigidbody2D>();

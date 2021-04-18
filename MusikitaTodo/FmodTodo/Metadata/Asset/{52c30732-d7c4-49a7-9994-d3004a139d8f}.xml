@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{52c30732-d7c4-49a7-9994-d3004a139d8f}">
+		<property name="assetPath">
+			<value>FX/Splash/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a0e08269-5529-47e9-ac5c-0c6be5b4204c}</destination>
+		</relationship>
+	</object>
+</objects>

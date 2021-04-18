@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
     const float timeToDrop = 0.1f;
     public float timeToActive = 0f;
 
+    public bool ascending = false;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -114,6 +116,7 @@ public class PlayerController : MonoBehaviour
                 if (sSp.color.a + 0.02 < 0.4) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a + 0.01f);
 
                 diveReach = -tr.position.z;
+                ascending = false;
             }
             else if (tr.position.z - 0.25 > diveReach / 1.3)
             {
@@ -135,6 +138,7 @@ public class PlayerController : MonoBehaviour
                 }
                 if (sp.color.a + 0.02 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.02f);
                 if (sSp.color.a - 0.04 > 0.1) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a - 0.015f);
+                ascending = true;
             }
             else if (tr.position.z < 0 && Time.time - timeAtTop >= timeToDrop)
             {
@@ -157,25 +161,15 @@ public class PlayerController : MonoBehaviour
                 else sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 0.85f);
                 if (sSp.color.a + 0.04 < 0.25) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a + 0.007f);
                 else sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, 0.25f);
+                ascending = false;
             }
-            //else if (tr.position.z < 0)
-            //{
-            //    if (nextPiece == null)
-            //    {
-            //        tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.03f);
-            //        sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + 0.048f);
-            //    }
-            //    else if (nextPiece.position.z > -diveReach / 1.5)
-            //    {
-            //        tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + (diff * 0.5f)/*nextPiece.position.z - 0.06f*/);
-            //        sTr.position = new Vector3(sTr.position.x, sTr.position.y, sTr.position.z + (sDiff * 0.4f)/*nextSombra.position.z - 0.048f*/);
-            //    }
-            //}
             rb.velocity = new Vector2(direction.x * speed, 0);
             if (sombra != null)
                 sRb.velocity = new Vector2(direction.x * speed, 0);
+
+            Debug.Log(tr.position.z + " " + ascending);
         }
-        else
+        else 
             timeToActive -= Time.deltaTime;
     }
 
