@@ -2470,14 +2470,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6262542417738038174, guid: b39313d59ed17bb4cbe7e64711d1261b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -19
-      objectReference: {fileID: 0}
-    - target: {fileID: 6262542417738038174, guid: b39313d59ed17bb4cbe7e64711d1261b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.92
-      objectReference: {fileID: 0}
     - target: {fileID: 6262542417805722456, guid: b39313d59ed17bb4cbe7e64711d1261b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 5.6
@@ -2529,14 +2521,6 @@ PrefabInstance:
     - target: {fileID: 6262542419113358789, guid: b39313d59ed17bb4cbe7e64711d1261b, type: 3}
       propertyPath: m_Name
       value: bgColliders
-      objectReference: {fileID: 0}
-    - target: {fileID: 6262542419479053409, guid: b39313d59ed17bb4cbe7e64711d1261b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 6262542419479053409, guid: b39313d59ed17bb4cbe7e64711d1261b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 6262542419617546964, guid: b39313d59ed17bb4cbe7e64711d1261b, type: 3}
       propertyPath: m_Enabled

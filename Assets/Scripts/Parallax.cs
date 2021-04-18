@@ -25,7 +25,7 @@ public class Parallax : MonoBehaviour
             transform.Translate(Vector2.down * (parallaxEffect / 2) * Time.smoothDeltaTime);
 
 
-        if (transform.position.y < startPos - length) transform.position = new Vector2(0, startPos);
+        if (transform.position.y < startPos - length) transform.position = new Vector2(transform.position.x, startPos);
     }
 
     public void parallEffectMultiplier(float val)
