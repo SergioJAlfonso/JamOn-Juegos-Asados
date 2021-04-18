@@ -18,17 +18,17 @@ public class CarpaSounds : MonoBehaviour
     void FixedUpdate()
     {
         //Sale del agua
-        if (tr.position.z < 0 && control)
+        if (tr.position.z < 3 && control)
         {
             FMODUnity.RuntimeManager.PlayOneShot(route);
             control = !control;
         }
-        else if (tr.position.z > 0 && control)
+        else if (tr.position.z > 2 && control)
         {
             FMODUnity.RuntimeManager.PlayOneShot(route);
             control = !control;
         }
-        else if(tr.position.z == 0)
+        else if(tr.position.z == 2)
             control = true;
     }
 
