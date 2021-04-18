@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8726844727063619857}
   - component: {fileID: 6207840801387674340}
-  - component: {fileID: 6486905133098557737}
-  - component: {fileID: 1952665278284406490}
   m_Layer: 6
   m_Name: Carpa (7)
   m_TagString: Untagged
@@ -27,11 +25,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185021689315537216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83500016, y: 0, z: 0}
+  m_LocalPosition: {x: -0.23500013, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4735309394172320629}
-  m_RootOrder: 7
+  m_Father: {fileID: 4735309395109734447}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6207840801387674340
 SpriteRenderer:
@@ -71,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1659277491
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a75ed76273ba903418809a0df178c553, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.2509804}
@@ -84,49 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &6486905133098557737
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185021689315537216}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1952665278284406490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185021689315537216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f835089292386f64d8f30d4be3f0596b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corriente: 1
-  fuerzaCorriente: 1.4
-  speed: 2
-  depth: 15
-  maxDif: 1.2
-  nextPiece: {fileID: 2105211285050699895}
-  amplitude: 0.5
-  coleteo: 2
-  RotationSpeed: 1
-  anguloColeteo: 60
 --- !u!1 &3043391329836594153
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,8 +92,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7090137965070310450}
   - component: {fileID: 5192824594374773284}
-  - component: {fileID: 8928109971614605493}
-  - component: {fileID: 293199472796540130}
   m_Layer: 6
   m_Name: Carpa (9)
   m_TagString: Untagged
@@ -154,11 +107,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3043391329836594153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4350002, y: 0, z: 0}
+  m_LocalPosition: {x: -0.23500013, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4735309394172320629}
-  m_RootOrder: 9
+  m_Father: {fileID: 4735309395365947675}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5192824594374773284
 SpriteRenderer:
@@ -198,7 +151,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1659277491
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8f073bcf6f88baf48894f4d1e11b3e1a, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.2509804}
@@ -211,49 +164,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &8928109971614605493
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3043391329836594153}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &293199472796540130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3043391329836594153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f835089292386f64d8f30d4be3f0596b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corriente: 1
-  fuerzaCorriente: 1.4
-  speed: 2
-  depth: 15
-  maxDif: 1.2
-  nextPiece: {fileID: 4066885845741647291}
-  amplitude: 0.5
-  coleteo: 2
-  RotationSpeed: 1
-  anguloColeteo: 60
 --- !u!1 &4832571867496575015
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,8 +174,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4066885845741647291}
   - component: {fileID: 7484133450118992812}
-  - component: {fileID: 6513548391897854042}
-  - component: {fileID: 2553214400313590639}
   m_Layer: 6
   m_Name: Carpa (8)
   m_TagString: Untagged
@@ -281,11 +189,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4832571867496575015}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.135, y: 0, z: 0}
+  m_LocalPosition: {x: -0.23500001, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4735309394172320629}
-  m_RootOrder: 8
+  m_Father: {fileID: 4735309395493145701}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7484133450118992812
 SpriteRenderer:
@@ -325,7 +233,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1659277491
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b07eee0df72e24a43ac501f27bf86c7a, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.2509804}
@@ -338,49 +246,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &6513548391897854042
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4832571867496575015}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &2553214400313590639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4832571867496575015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f835089292386f64d8f30d4be3f0596b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corriente: 1
-  fuerzaCorriente: 1.4
-  speed: 2
-  depth: 15
-  maxDif: 1.2
-  nextPiece: {fileID: 8726844727063619857}
-  amplitude: 0.5
-  coleteo: 2
-  RotationSpeed: 1
-  anguloColeteo: 60
 --- !u!1 &6440998730806021224
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,8 +256,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9214529617082395273}
   - component: {fileID: 8615571525755647537}
-  - component: {fileID: 3645554656365461276}
-  - component: {fileID: 4466314165225018989}
   m_Layer: 6
   m_Name: Carpa (5)
   m_TagString: Untagged
@@ -411,8 +274,8 @@ Transform:
   m_LocalPosition: {x: -0.23500013, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4735309394172320629}
-  m_RootOrder: 5
+  m_Father: {fileID: 4735309394998543878}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8615571525755647537
 SpriteRenderer:
@@ -452,7 +315,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1659277491
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 709dc1e151020f94eadd993f9953c135, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.2509804}
@@ -465,49 +328,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &3645554656365461276
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6440998730806021224}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &4466314165225018989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6440998730806021224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f835089292386f64d8f30d4be3f0596b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corriente: 1
-  fuerzaCorriente: 1.4
-  speed: 2
-  depth: 15
-  maxDif: 1.2
-  nextPiece: {fileID: 0}
-  amplitude: 0.5
-  coleteo: 2
-  RotationSpeed: 1
-  anguloColeteo: 60
 --- !u!1 &8439745716672629518
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,8 +338,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2105211285050699895}
   - component: {fileID: 8305227867746160675}
-  - component: {fileID: 542949779880246780}
-  - component: {fileID: 4825341369366665047}
   m_Layer: 6
   m_Name: Carpa (6)
   m_TagString: Untagged
@@ -535,11 +353,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8439745716672629518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.53500015, y: 0, z: 0}
+  m_LocalPosition: {x: -0.23500013, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4735309394172320629}
-  m_RootOrder: 6
+  m_Father: {fileID: 4735309395634072013}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8305227867746160675
 SpriteRenderer:
@@ -579,7 +397,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1659277491
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f44ac3e7434b7df43bb1b873ffdef68a, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.2509804}
@@ -592,49 +410,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &542949779880246780
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8439745716672629518}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &4825341369366665047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8439745716672629518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f835089292386f64d8f30d4be3f0596b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corriente: 1
-  fuerzaCorriente: 1.4
-  speed: 2
-  depth: 15
-  maxDif: 1.2
-  nextPiece: {fileID: 9214529617082395273}
-  amplitude: 0.5
-  coleteo: 2
-  RotationSpeed: 1
-  anguloColeteo: 60
 --- !u!1001 &7626587174997026573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -648,7 +423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 766667885931881432, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: corriente
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 766667885931881432, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: fuerzaCorriente
@@ -656,7 +431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2909367615321940232, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2909367615321940232, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_SortingOrder
@@ -668,7 +443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2909367615504420643, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2909367615504420643, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_SortingOrder
@@ -680,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2909367615951415444, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2909367615951415444, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_SortingOrder
@@ -692,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2909367616028659393, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2909367616028659393, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_SortingOrder
@@ -704,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2909367616296717842, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2909367616296717842, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: m_SortingOrder
@@ -768,7 +543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6237571223624116667, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: corriente
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6237571223624116667, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: fuerzaCorriente
@@ -780,7 +555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6249315099206476218, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: corriente
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6249315099206476218, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: fuerzaCorriente
@@ -792,7 +567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7000786476615812506, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: corriente
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7000786476615812506, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: fuerzaCorriente
@@ -804,7 +579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7285583015553310206, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: corriente
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7285583015553310206, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
       propertyPath: fuerzaCorriente
@@ -812,8 +587,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
---- !u!4 &4735309394172320629 stripped
+--- !u!4 &4735309394998543878 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2909367617247083640, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2909367615321940235, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+  m_PrefabInstance: {fileID: 7626587174997026573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4735309395634072013 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2909367616028659392, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+  m_PrefabInstance: {fileID: 7626587174997026573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4735309395109734447 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2909367615504420642, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+  m_PrefabInstance: {fileID: 7626587174997026573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4735309395493145701 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2909367615951416168, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
+  m_PrefabInstance: {fileID: 7626587174997026573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4735309395365947675 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2909367616296717846, guid: de9a9cbb76ff1584383e1d10be521e8c, type: 3}
   m_PrefabInstance: {fileID: 7626587174997026573}
   m_PrefabAsset: {fileID: 0}
