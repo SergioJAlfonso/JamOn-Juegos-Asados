@@ -1783,6 +1783,8 @@ MonoBehaviour:
   actualScene: 1
   bg: {fileID: 9624062}
   playerTr: {fileID: 1432473290}
+  playerRb: {fileID: 0}
+  dumpingObjectTr: {fileID: 0}
   minObstSpeed: 7
   sectionTimeStamps:
   - 5
@@ -1791,7 +1793,8 @@ MonoBehaviour:
   - 65
   - 85
   smoothDelay: 0.125
-  fmodEvent: event:/MusicManager
+  musicManagerEvent: event:/MusicManager
+  backgroundManagerEvent: event:/BackgroundMusic
   Menu: {fileID: 273252092}
   cascada: {fileID: 4006531810020372424, guid: f56d4afae96201e4a8b5f3ae93c2a2e8, type: 3}
 --- !u!1001 &1230596472

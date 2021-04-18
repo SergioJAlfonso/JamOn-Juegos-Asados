@@ -30,9 +30,9 @@ public class GameManager : MonoBehaviour
     bool FOVRestoration = false;
 
     //DISTANCIA QUE LLEVA EL PEZ RECORRIDA
-    float distance = 16;
+    float distance = 0;
     float InitDistance = 0;
-    float TiempoBucle = 16;
+    float TiempoBucle;
     float timeRemain;
     public float getDistance() { return distance; }
 
@@ -54,11 +54,11 @@ public class GameManager : MonoBehaviour
     bool gameStates = false;
 
     //////##! SONIDOS
-    private FMOD.Studio.EventInstance instanceMusic;
+    private FMOD.Studio.EventInstance musicMusic;
     private FMOD.Studio.EventInstance backgroundMusic;
 
-    [FMODUnity.EventRef]
-    [SerializeField] string fmodEvent;
+    [FMODUnity.EventRef] [SerializeField] string musicManagerEvent;
+    [FMODUnity.EventRef] [SerializeField] string backgroundManagerEvent;
 
 
     public GameObject Menu;
@@ -101,11 +101,16 @@ public class GameManager : MonoBehaviour
         obstSpeed = minObstSpeed;
 
         //##! SONIDOS
-        //instance
-        instanceMusic = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-        instanceMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
-        instanceMusic.start();
-        instanceMusic.release();
+        //musicMusic
+        musicMusic = FMODUnity.RuntimeManager.CreateInstance(musicManagerEvent);
+        musicMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+        musicMusic.start();
+        musicMusic.release();
+        //musicMusic
+        backgroundMusic = FMODUnity.RuntimeManager.CreateInstance(backgroundManagerEvent);
+        backgroundMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
+        backgroundMusic.start();
+        backgroundMusic.release();
     }
     public void parallaxMultiplier(float val)
     {
@@ -121,19 +126,36 @@ public class GameManager : MonoBehaviour
     public void PlayGame()
     {
         Vector2 a = new Vector2(0, 0);
-       
+        if (InitDistance < 8)
+        {
+            distance = 8;
+            TiempoBucle = 8;
+        }
+        else
+        {
+            distance = 16;
+            TiempoBucle = 16;
+        }
         if (InitDistance > TiempoBucle)
-            timeRemain = TiempoBucle - InitDistance % TiempoBucle;
+        {
+            if (InitDistance % TiempoBucle > TiempoBucle / 2)
+                timeRemain = TiempoBucle - InitDistance % TiempoBucle;
+            else
+                timeRemain = TiempoBucle - InitDistance % TiempoBucle / 2;
+        }
         else
             timeRemain = TiempoBucle - InitDistance;
 
         LeanTween.scale(Menu, a, timeRemain).setEaseInCirc();
         Invoke("gameStart", timeRemain);
+        musicMusic.setParameterByName("Distance", distance);
+
     }
-    void gameStart() {
+    void gameStart()
+    {
         gameStates = !gameStates;
         Menu.SetActive(false);
-       
+
     }
 
     public void QuitGame()
@@ -151,8 +173,8 @@ public class GameManager : MonoBehaviour
         {
             distance += Time.deltaTime;
             //gameTime += Time.deltaTime;
-            instanceMusic.setParameterByName("Distance", distance);
         }
+        musicMusic.setParameterByName("Distance", distance);
 
         if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && distance > sectionTimeStamps[sectionId] - 4)
         {
