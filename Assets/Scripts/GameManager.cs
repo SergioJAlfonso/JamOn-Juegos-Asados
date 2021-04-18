@@ -80,6 +80,8 @@ public class GameManager : MonoBehaviour
     public Image colorPanel;
     Color newColor;
 
+    [SerializeField] GameObject rainEffect;
+
     // En el método Awake comprueba si hay otro GameManger
     // y si no lo hay se inicializa como GameManager. En el caso
     // que hubiera otro se autodestruye
@@ -285,11 +287,13 @@ public class GameManager : MonoBehaviour
         {
             case 1:
                 newColor = new Color(255, 0, 0, 125);
-                colorPanel.CrossFadeColor(newColor, 7f, true, true);               
+                colorPanel.CrossFadeColor(newColor, 7f, true, true);
+                rainEffect.SetActive(true);
                 break;
             case 2:
                 newColor = new Color(255, 0, 0, 125);
                 colorPanel.CrossFadeColor(newColor, 7f, true, true);
+                rainEffect.SetActive(false);
                 break;
             case 3:
                 newColor = new Color(255, 255, 255, 1);
