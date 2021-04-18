@@ -47,25 +47,10 @@ MonoBehaviour:
   - {fileID: 7050113702270948723, guid: c9e9546da3a612d48ba8db3d40135ac1, type: 3}
   - {fileID: 2487037536726861199, guid: 64acf8e0d27dd97469a60e849e4a8e18, type: 3}
   position:
-  - pos: {x: -4, y: 5}
+  - pos: {x: -7, y: 5}
     randRangeX: 7.5
     randRangeY: 2.5
-  - pos: {x: 2, y: 8}
+  - pos: {x: 7, y: 8}
     randRangeX: 7.5
     randRangeY: 2.5
-  - pos: {x: -5, y: 5}
-    randRangeX: 5.5
-    randRangeY: 2
-  - pos: {x: -5, y: 1}
-    randRangeX: 5.5
-    randRangeY: 2
-  - pos: {x: 4.25, y: 1}
-    randRangeX: 4.5
-    randRangeY: 3
-  - pos: {x: 6.75, y: -2}
-    randRangeX: 4.5
-    randRangeY: 3
-  - pos: {x: 3, y: -5}
-    randRangeX: 9.5
-    randRangeY: 1
   randObstacle: 1

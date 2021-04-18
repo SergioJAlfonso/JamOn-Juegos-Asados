@@ -303,7 +303,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 26133215634582087}
+  - {fileID: -5405718475765560600}
   MinDistance: 0
   MaxDistance: 0
   Length: 17250
@@ -347,6 +347,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-5405718475765560600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Waterfall/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1000
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-5338211617952979688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,9 +542,29 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637543837988814258
+  lastModified: 637543848990407666
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-3033647108727313886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BackgroundMusic/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1000
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &-2902168093545834395
 MonoBehaviour:
@@ -769,7 +809,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -6028742404522403942}
+  - {fileID: -3033647108727313886}
   MinDistance: 0
   MaxDistance: 0
   Length: 49313
@@ -793,6 +833,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-1318123568262326554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WaterSplash/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1000
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1210911627149090640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,6 +873,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-1153986987314205688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicManager/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1000
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-850553520624900902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,7 +1004,7 @@ MonoBehaviour:
   - {fileID: -3714017884759916723}
   StringsBanks:
   - {fileID: 5315259636333810124}
-  stringsBankWriteTime: 637543837985661490
+  stringsBankWriteTime: 637543823841883056
   cacheVersion: 6
 --- !u!114 &26133215634582087
 MonoBehaviour:
@@ -1006,7 +1086,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 7705035344405209804}
+  - {fileID: 6957021629994449403}
   MinDistance: 1
   MaxDistance: 20
   Length: 12399
@@ -1431,7 +1511,7 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637543837985661490
+  lastModified: 637543823841883056
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1617,10 +1697,30 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -850553520624900902}
+  - {fileID: -1153986987314205688}
   MinDistance: 0
   MaxDistance: 0
   Length: 390000
+--- !u!114 &6957021629994449403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/corrientes/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1000
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &6990316433746982370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1901,7 +2001,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 5194355300371966625}
+  - {fileID: -1318123568262326554}
   MinDistance: 0
   MaxDistance: 0
   Length: 750
