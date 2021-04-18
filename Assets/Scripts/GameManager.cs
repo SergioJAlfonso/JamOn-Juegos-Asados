@@ -238,7 +238,7 @@ public class GameManager : MonoBehaviour
             elAdmin.enabled = true;
         }
         musicMusic.setParameterByName("Distance", distance);
-        backgroundMusic.setParameterByName("isDragon", distance);
+        backgroundMusic.setParameterByName("Distance", distance);
 
         if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && distance > sectionTimeStamps[sectionId] - 4)
         {
