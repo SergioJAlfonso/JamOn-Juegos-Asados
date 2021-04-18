@@ -404,6 +404,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_: 7
+  destroyable: 1
+  particle: 0
 --- !u!114 &4053802685737212692
 MonoBehaviour:
   m_ObjectHideFlags: 0

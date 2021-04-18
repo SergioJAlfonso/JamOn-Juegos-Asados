@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gObj:
-  - {fileID: 3402940811915138002, guid: 155b8be70df31444a82505bededdd256, type: 3}
-  - {fileID: 3633360751026232090, guid: 32d335262707b7e4abb694cb3fdc68f8, type: 3}
+  - {fileID: 7210603471504493759, guid: 57733136f96151240a1a3f73c30e231b, type: 3}
+  - {fileID: 2487037536726861199, guid: 64acf8e0d27dd97469a60e849e4a8e18, type: 3}
   - {fileID: 6558476095424974809, guid: 6508fcc6dc0fbc8489798a77f51f3b11, type: 3}
+  - {fileID: 4666808696364274759, guid: 614c71bae4a7c1f448aeaab8fbb8e478, type: 3}
   position:
   - pos: {x: 7, y: 6}
     randRangeX: 5
@@ -55,6 +56,9 @@ MonoBehaviour:
     randRangeX: 0
     randRangeY: 4
   - pos: {x: 8, y: -3}
+    randRangeX: 0
+    randRangeY: 4
+  - pos: {x: -23, y: -3}
     randRangeX: 0
     randRangeY: 4
   randObstacle: 1

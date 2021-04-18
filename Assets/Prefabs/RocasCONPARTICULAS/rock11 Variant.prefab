@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2841691775063787905, guid: 5b76c5e06ade35a4fb759e759ac4649c, type: 3}
       propertyPath: m_Name
-      value: rock11
+      value: rock11 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2841691775063787911, guid: 5b76c5e06ade35a4fb759e759ac4649c, type: 3}
       propertyPath: m_RootOrder
@@ -63,6 +63,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -810563751
       objectReference: {fileID: 0}
+    - target: {fileID: 2841691775133949367, guid: 5b76c5e06ade35a4fb759e759ac4649c, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841691775288779484, guid: 5b76c5e06ade35a4fb759e759ac4649c, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2841691775288779485, guid: 5b76c5e06ade35a4fb759e759ac4649c, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -70,6 +78,10 @@ PrefabInstance:
     - target: {fileID: 2841691775288779485, guid: 5b76c5e06ade35a4fb759e759ac4649c, type: 3}
       propertyPath: m_SortingLayerID
       value: -810563751
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841691775858885235, guid: 5b76c5e06ade35a4fb759e759ac4649c, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2841691775858885244, guid: 5b76c5e06ade35a4fb759e759ac4649c, type: 3}
       propertyPath: m_SortingLayer
@@ -86,6 +98,10 @@ PrefabInstance:
     - target: {fileID: 2841691775927322516, guid: 5b76c5e06ade35a4fb759e759ac4649c, type: 3}
       propertyPath: m_SortingLayerID
       value: -810563751
+      objectReference: {fileID: 0}
+    - target: {fileID: 2841691775927322539, guid: 5b76c5e06ade35a4fb759e759ac4649c, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2841691776021565184, guid: 5b76c5e06ade35a4fb759e759ac4649c, type: 3}
       propertyPath: m_SortingLayer

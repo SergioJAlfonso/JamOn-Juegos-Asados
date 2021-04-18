@@ -283,6 +283,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2447697655674176212, guid: 076f5d50245434442b40d8ee82d13d5f, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2447697655674176219, guid: 076f5d50245434442b40d8ee82d13d5f, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -293,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447697656225169300, guid: 076f5d50245434442b40d8ee82d13d5f, type: 3}
       propertyPath: m_Name
-      value: rock8
+      value: rock8 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2447697656225169302, guid: 076f5d50245434442b40d8ee82d13d5f, type: 3}
       propertyPath: m_RootOrder
@@ -347,6 +351,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -810563751
       objectReference: {fileID: 0}
+    - target: {fileID: 2447697656551754343, guid: 076f5d50245434442b40d8ee82d13d5f, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447697656797282800, guid: 076f5d50245434442b40d8ee82d13d5f, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2447697656797282807, guid: 076f5d50245434442b40d8ee82d13d5f, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -370,6 +382,10 @@ PrefabInstance:
     - target: {fileID: 2447697657151169168, guid: 076f5d50245434442b40d8ee82d13d5f, type: 3}
       propertyPath: m_SortingLayerID
       value: -810563751
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447697657151169169, guid: 076f5d50245434442b40d8ee82d13d5f, type: 3}
+      propertyPath: parallaxHorizontalFactor
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 076f5d50245434442b40d8ee82d13d5f, type: 3}

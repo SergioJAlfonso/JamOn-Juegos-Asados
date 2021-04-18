@@ -900,6 +900,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &659517804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659517805}
+  m_Layer: 0
+  m_Name: arbol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &659517805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659517804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.917847, y: 0.062373642, z: -8.488045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &912665679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,9 +1210,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actualScene: 1
   bg: {fileID: 9624062}
+  carpa: {fileID: 0}
   playerTr: {fileID: 981933654}
   playerRb: {fileID: 0}
+  dragon: {fileID: 0}
   dumpingObjectTr: {fileID: 0}
+  buttons: {fileID: 0}
   minObstSpeed: 7
   sectionTimeStamps:
   - 0
@@ -1191,8 +1224,13 @@ MonoBehaviour:
   - 0
   - 0
   smoothDelay: 0.125
-  fmodEvent: 
+  musicManagerEvent: 
+  backgroundManagerEvent: 
+  Menu: {fileID: 0}
   cascada: {fileID: 0}
+  elAdmin: {fileID: 0}
+  colorPanel: {fileID: 0}
+  rainEffect: {fileID: 0}
 --- !u!1 &1314612263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,7 +2790,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1981749078
@@ -3107,7 +3145,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2092677394

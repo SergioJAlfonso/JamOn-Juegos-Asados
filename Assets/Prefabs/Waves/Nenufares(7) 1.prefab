@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8117139551537918262}
   - component: {fileID: 5635977919193571523}
   m_Layer: 0
-  m_Name: Nenufares(7)
+  m_Name: Nenufares(7) 1
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gObj:
-  - {fileID: 6558476095424974809, guid: d4ca302b6a9c5114b8512b3ae009303c, type: 3}
   - {fileID: 6558476095424974809, guid: ab3fe89be4dc3b446a89be9996d63e19, type: 3}
   - {fileID: 6558476095424974809, guid: 2d99cf63fa1bf2b4ea75c5c877167c41, type: 3}
   - {fileID: 6558476095424974809, guid: 6508fcc6dc0fbc8489798a77f51f3b11, type: 3}
@@ -67,7 +66,7 @@ MonoBehaviour:
   - pos: {x: 6.75, y: -2}
     randRangeX: 4.5
     randRangeY: 3
-  - pos: {x: 3, y: -5}
+  - pos: {x: 0, y: -5}
     randRangeX: 9.5
     randRangeY: 1
   randObstacle: 1

@@ -44,20 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WAVES:
-  - type: {fileID: 4034594725033149886, guid: a3952a9e166fe6f4e827bde436751712, type: 3}
-    duration: 3
-  - type: {fileID: 4034594725033149886, guid: a3952a9e166fe6f4e827bde436751712, type: 3}
-    duration: 3
-  - type: {fileID: 4034594725033149886, guid: a3952a9e166fe6f4e827bde436751712, type: 3}
-    duration: 3
-  - type: {fileID: 4034594725033149886, guid: a3952a9e166fe6f4e827bde436751712, type: 3}
-    duration: 3
-  - type: {fileID: 4034594725033149886, guid: a3952a9e166fe6f4e827bde436751712, type: 3}
-    duration: 3
-  - type: {fileID: 4034594725033149886, guid: 05afaf98f523f5a4c9ab2a5947e1dd38, type: 3}
-    duration: 3
-  - type: {fileID: 4034594725033149886, guid: c98473319d019bd4d8fbb55b0d1b0b46, type: 3}
-    duration: 3
-  - type: {fileID: 4034594725033149886, guid: 20b6b8334c79af542963d244d6c5180b, type: 3}
-    duration: 3
+  - type: {fileID: 4034594725033149886, guid: 7b4721aa9abde20459435929e5d3ef28, type: 3}
+    duration: 0
   actualWave: 0
