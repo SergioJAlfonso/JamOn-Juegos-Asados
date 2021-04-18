@@ -25,9 +25,7 @@ public class nenufar : MonoBehaviour
 
             //segun si la x es positiva o negativa giramos izquierda o derecha, con
             gameObject.GetComponent<Rigidbody2D>().angularVelocity = direction.x;
-            Debug.Log("colision carpa");
         }
-        else Debug.Log("colision");
     }
 
 }

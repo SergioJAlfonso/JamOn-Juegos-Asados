@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
     Parallax[] childrenTierraParallax;
     float[] originTierraParallaxVel;
 
+    [SerializeField]
+    Camera cam;
+
     float originalFOV;
     float originalScaleY;
     float restoreTime = 0;
@@ -315,8 +318,9 @@ public class GameManager : MonoBehaviour
         switch (sectionId)
         {
             case 1:
-                newColor = new Color(255, 0, 0, 125);
-                colorPanel.CrossFadeColor(newColor, 7f, true, true);  
+                //newColor = new Color(255, 0, 0, 125);
+                colorPanel.CrossFadeColor(newColor, 7f, true, true);
+                dragonTransition();
                 break;
             case 2:
                 newColor = new Color(255, 0, 0, 125);
@@ -338,8 +342,17 @@ public class GameManager : MonoBehaviour
 
     private void dragonTransition()
     {
-        GameObject dragonObj = Instantiate(dragon, new Vector3(0, 0, 0), Quaternion.identity);
-        dragonObj.transform.position = playerTr.position;
+        childrenTierraParallax = new Parallax[0];
+        for(int i=6; i < bg.transform.childCount; ++i)
+        {
+            bg.transform.GetChild(i).gameObject.SetActive(true);
+        }
+        for(int i=0; i<tierraBg.transform.childCount-2; ++i)
+        {
+            tierraBg.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        dragon.SetActive(true);
+        cam.GetComponent<CameraFollow>().ChangePlayer(dragon.transform.GetChild(0).gameObject);
         carpa.SetActive(false);
     }
 
