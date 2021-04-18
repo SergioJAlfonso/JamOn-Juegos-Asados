@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{c0028d2f-3699-4e75-8416-73d5a95c5197}">
 		<property name="assetPath">
-			<value>FX/Splash/waterfall.wav</value>
+			<value>FX/Fall/waterfall.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

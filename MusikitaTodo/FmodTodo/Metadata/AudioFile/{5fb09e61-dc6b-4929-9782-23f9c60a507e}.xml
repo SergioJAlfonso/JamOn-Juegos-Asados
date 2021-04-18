@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{5fb09e61-dc6b-4929-9782-23f9c60a507e}">
+		<property name="assetPath">
+			<value>FX/Raining/itsrainingmen.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>144.72997732426305</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a0e08269-5529-47e9-ac5c-0c6be5b4204c}</destination>
+		</relationship>
+	</object>
+</objects>

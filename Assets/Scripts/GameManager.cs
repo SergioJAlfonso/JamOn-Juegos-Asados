@@ -60,8 +60,8 @@ public class GameManager : MonoBehaviour
     private FMOD.Studio.EventInstance backgroundMusic;
     private FMOD.Studio.EventInstance birdsMusic;
 
-    [FMODUnity.EventRef] [SerializeField] string musicManagerEvent;
-    [FMODUnity.EventRef] [SerializeField] string backgroundManagerEvent;
+    [FMODUnity.EventRef] string musicManagerEvent = "event:/MusicManager";
+    [FMODUnity.EventRef] string backgroundManagerEvent = "event:/BackgroundMusic";
     [FMODUnity.EventRef] string birdsEvent = "event:/RamdomBirds";
 
 
@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
     public Image colorPanel;
     Color newColor;
 
+    public int fishState = 0;
     // En el método Awake comprueba si hay otro GameManger
     // y si no lo hay se inicializa como GameManager. En el caso
     // que hubiera otro se autodestruye
@@ -164,7 +165,7 @@ public class GameManager : MonoBehaviour
                 if (InitDistance % TiempoBucle > TiempoBucle / 2)
                     timeRemain = TiempoBucle - InitDistance % TiempoBucle;
                 else
-                    timeRemain = TiempoBucle / 2 - InitDistance % TiempoBucle ;
+                    timeRemain = TiempoBucle / 2 - InitDistance % TiempoBucle;
             }
             else
                 timeRemain = TiempoBucle - InitDistance;
@@ -204,6 +205,7 @@ public class GameManager : MonoBehaviour
             elAdmin.enabled = true;
         }
         musicMusic.setParameterByName("Distance", distance);
+        backgroundMusic.setParameterByName("isDragon", distance);
 
         if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && distance > sectionTimeStamps[sectionId] - 4)
         {
@@ -303,7 +305,7 @@ public class GameManager : MonoBehaviour
     public float getSpeed()
     {
         return obstSpeed;
-    }   
+    }
     public float getMinSpeed()
     {
         return minObstSpeed;
@@ -328,7 +330,7 @@ public class GameManager : MonoBehaviour
             restoreTime = 5;
             velChain++;
         }
-    }  
+    }
     public void setHasToRestoreWaterfall(bool b)
     {
         hasToRestore = b;

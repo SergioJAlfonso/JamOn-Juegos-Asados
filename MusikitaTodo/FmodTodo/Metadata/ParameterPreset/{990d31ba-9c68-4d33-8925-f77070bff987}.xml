@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{990d31ba-9c68-4d33-8925-f77070bff987}">
+		<property name="name">
+			<value>isDragon</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c84faa52-8ef5-473b-83ce-b569b0095387}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{08ed936f-3ae2-43e0-b074-cc3f755e53b9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{08ed936f-3ae2-43e0-b074-cc3f755e53b9}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
