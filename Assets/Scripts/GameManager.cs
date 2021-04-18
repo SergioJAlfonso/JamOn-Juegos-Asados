@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public GameObject bg;
     public Transform playerTr;
     public Rigidbody2D playerRb;
+    public Transform dumpingObjectTr;
+
     Parallax[] childrenParallax;
     float[] originParallaxVel;
 
