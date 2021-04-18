@@ -59,13 +59,13 @@ MonoBehaviour:
   guid: 36ccba06b22d4a48bda8457212e3d49e
   Banks:
   - {fileID: -3714017884759916723}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 3000
+  Length: 12000
 --- !u!114 &-5338053044236836358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637543510012836802
+  lastModified: 637543519600002674
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -227,7 +227,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-527500178683247541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   - {fileID: -3714017884759916723}
   StringsBanks:
   - {fileID: 5315259636333810124}
-  stringsBankWriteTime: 637543510012846777
+  stringsBankWriteTime: 637543519600022619
   cacheVersion: 6
 --- !u!114 &603788249909448816
 MonoBehaviour:
@@ -342,6 +342,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &2404317171426946558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicManager/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1000
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &2944801178731805609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,7 +460,7 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637543510012846777
+  lastModified: 637543519600022619
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -486,7 +506,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -654203511933254270}
+  - {fileID: 2404317171426946558}
   MinDistance: 0
   MaxDistance: 0
   Length: 378000

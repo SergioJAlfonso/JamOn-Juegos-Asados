@@ -142,12 +142,13 @@ public class GameManager : MonoBehaviour
                 distance = 16;
                 TiempoBucle = 16;
             }
+
             if (InitDistance > TiempoBucle)
             {
                 if (InitDistance % TiempoBucle > TiempoBucle / 2)
                     timeRemain = TiempoBucle - InitDistance % TiempoBucle;
                 else
-                    timeRemain = TiempoBucle - InitDistance % TiempoBucle / 2;
+                    timeRemain = TiempoBucle / 2 - InitDistance % TiempoBucle ;
             }
             else
                 timeRemain = TiempoBucle - InitDistance;
