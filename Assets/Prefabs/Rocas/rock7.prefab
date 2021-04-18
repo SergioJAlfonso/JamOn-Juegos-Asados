@@ -107,10 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3402940811915138004}
   - component: {fileID: 3402940811915138003}
-  - component: {fileID: 8245935566223644587}
-  - component: {fileID: 4909559709700519119}
-  - component: {fileID: 4204820803577810276}
-  - component: {fileID: 6427137772674154464}
+  - component: {fileID: -6111543727638520301}
   m_Layer: 0
   m_Name: rock7
   m_TagString: Untagged
@@ -148,7 +145,7 @@ SortingGroup:
   m_SortingLayerID: -810563751
   m_SortingLayer: 3
   m_SortingOrder: 0
---- !u!114 &8245935566223644587
+--- !u!114 &-6111543727638520301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +154,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3402940811915138002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9567544391e3e50469c9f02911f642c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 64b0b2d0f9f5c1c4cb023e55f169c3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed_: 7

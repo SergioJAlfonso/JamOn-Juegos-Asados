@@ -302,9 +302,7 @@ GameObject:
   - component: {fileID: 6023736175009671349}
   - component: {fileID: 6023736175009671350}
   - component: {fileID: 6023736175009671354}
-  - component: {fileID: 2918931197964376195}
-  - component: {fileID: 6676514851715167942}
-  - component: {fileID: 1800102448894472934}
+  - component: {fileID: 937740004686963357}
   m_Layer: 0
   m_Name: rock2
   m_TagString: Untagged
@@ -350,7 +348,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6023736175009671351}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -363,7 +361,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2918931197964376195
+--- !u!114 &937740004686963357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -372,7 +370,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6023736175009671351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ecd16703c744ce43a5eabacf93fde63, type: 3}
+  m_Script: {fileID: 11500000, guid: 64b0b2d0f9f5c1c4cb023e55f169c3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6676514851715167942

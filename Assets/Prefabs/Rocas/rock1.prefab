@@ -286,10 +286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1902191319832629725}
   - component: {fileID: 1902191319832629726}
-  - component: {fileID: 2129383856564685318}
-  - component: {fileID: 4076199894596364209}
-  - component: {fileID: 3167074421912503347}
-  - component: {fileID: 5783645184864640177}
+  - component: {fileID: -1752247400047063388}
   m_Layer: 0
   m_Name: rock1
   m_TagString: Untagged
@@ -327,7 +324,7 @@ SortingGroup:
   m_SortingLayerID: -810563751
   m_SortingLayer: 3
   m_SortingOrder: 0
---- !u!114 &2129383856564685318
+--- !u!114 &-1752247400047063388
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -336,7 +333,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1902191319832629727}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9567544391e3e50469c9f02911f642c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 64b0b2d0f9f5c1c4cb023e55f169c3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed_: 7

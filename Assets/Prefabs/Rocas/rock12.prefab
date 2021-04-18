@@ -204,10 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3633360751026232088}
   - component: {fileID: 3633360751026232091}
-  - component: {fileID: 4531860383977593854}
-  - component: {fileID: 7191483714851212657}
-  - component: {fileID: 1632751099966240411}
-  - component: {fileID: 7163897781607945168}
+  - component: {fileID: -4846885479405317556}
   m_Layer: 0
   m_Name: rock12
   m_TagString: Untagged
@@ -243,7 +240,7 @@ SortingGroup:
   m_SortingLayerID: -810563751
   m_SortingLayer: 3
   m_SortingOrder: 0
---- !u!114 &4531860383977593854
+--- !u!114 &-4846885479405317556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,7 +249,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3633360751026232090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9567544391e3e50469c9f02911f642c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 64b0b2d0f9f5c1c4cb023e55f169c3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed_: 7
