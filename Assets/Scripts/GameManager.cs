@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     public Rigidbody2D playerRb;
     public Transform dumpingObjectTr;
 
+    [SerializeField]
+    GameObject buttons;
+
     Parallax[] childrenParallax;
     float[] originParallaxVel;
 
@@ -137,6 +140,7 @@ public class GameManager : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/winMusic");
 
+            buttons.GetComponent<GoDown>().enabled = true;
             Vector2 a = new Vector2(0, 0);
             if (InitDistance < 8)
             {
