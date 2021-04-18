@@ -121,7 +121,7 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637543437504791708
+  lastModified: 637543342414781778
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -217,8 +217,28 @@ MonoBehaviour:
   - {fileID: -3714017884759916723}
   StringsBanks:
   - {fileID: 5315259636333810124}
-  stringsBankWriteTime: 637543437501153293
+  stringsBankWriteTime: 637543342410666218
   cacheVersion: 6
+--- !u!114 &588865685697223593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicManager/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 1000
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &603788249909448816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +440,7 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637543437501153293
+  lastModified: 637543342410666218
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -466,7 +486,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 8202463494663308074}
+  - {fileID: 588865685697223593}
   MinDistance: 0
   MaxDistance: 0
   Length: 378000
@@ -549,7 +569,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8209633420388781419
 MonoBehaviour:
   m_ObjectHideFlags: 0
