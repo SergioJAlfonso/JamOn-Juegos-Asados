@@ -45,11 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gObj:
   - {fileID: 4666808696364274759, guid: 12d71c652bda94c469fb92e582534199, type: 3}
-  - {fileID: 6558476095424974809, guid: a846d2d42feeb064fb798cd61feaef67, type: 3}
-  - {fileID: 6558476095424974809, guid: 8c0ecf16d5de26640bc5d67de020bc50, type: 3}
-  - {fileID: 6558476095424974809, guid: 17a24da36cec1fa40923ce8bf1396856, type: 3}
-  - {fileID: 6558476095424974809, guid: 097319f7f62f20744892af3b9bbcd18c, type: 3}
-  - {fileID: 6558476095424974809, guid: aab7825e112520f47bf8958df075c911, type: 3}
   position:
   - pos: {x: 0, y: 0}
     randRangeX: 0

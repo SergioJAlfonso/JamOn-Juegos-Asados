@@ -92,10 +92,10 @@ MonoBehaviour:
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 99d150c2a2ac0994a8ff4174eaf8147b, type: 3}
     duration: 4
-  - type: {fileID: 4034594725033149886, guid: c98473319d019bd4d8fbb55b0d1b0b46, type: 3}
+  - type: {fileID: 4034594725033149886, guid: 0d5593cb6a0e52244825d5b75e61b35e, type: 3}
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 3a365021395274a40a072ff30924bbcd, type: 3}
-    duration: 4
+    duration: 0
   - type: {fileID: 4034594725033149886, guid: a3952a9e166fe6f4e827bde436751712, type: 3}
     duration: 4
   - type: {fileID: 4034594725033149886, guid: 7613de00e9c12724cb98a47f75b25055, type: 3}
