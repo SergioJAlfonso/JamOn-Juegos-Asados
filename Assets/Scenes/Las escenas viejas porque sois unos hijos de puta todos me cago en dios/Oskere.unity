@@ -1308,8 +1308,11 @@ MonoBehaviour:
   - 0
   - 0
   smoothDelay: 0.125
-  fmodEvent: event:/MusicManager
+  musicManagerEvent: event:/MusicManager
+  backgroundManagerEvent: event:/BackgroundMusic
+  Menu: {fileID: 0}
   cascada: {fileID: 0}
+  elAdmin: {fileID: 0}
 --- !u!1001 &1230596472
 PrefabInstance:
   m_ObjectHideFlags: 0
