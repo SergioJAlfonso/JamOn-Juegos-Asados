@@ -56,3 +56,6 @@ TagManager:
   - name: Cascada
     uniqueID: 3306544813
     locked: 0
+  - name: Bordes
+    uniqueID: 1802159897
+    locked: 0
