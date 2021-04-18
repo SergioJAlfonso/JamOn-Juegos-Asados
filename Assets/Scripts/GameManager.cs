@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int actualScene = 1;
 
-    public GameObject bg;
+    public GameObject bg;
+    public GameObject tierraBg; 
     [SerializeField]
     GameObject carpa;
     [HideInInspector] public Transform playerTr;
@@ -27,7 +28,9 @@ public class GameManager : MonoBehaviour
     GameObject buttons;
 
     Parallax[] childrenParallax;
+    Parallax[] childrenTierraParallax;
     float[] originParallaxVel;
+    float[] originTierraParallaxVel;
 
     float originalFOV;
     float originalScaleY;
@@ -103,13 +106,24 @@ public class GameManager : MonoBehaviour
         int numChildren = bg.transform.childCount;
         childrenParallax = new Parallax[numChildren];
         originParallaxVel = new float[numChildren];
-
+        
+        int numTierraChildren = 6;
+        childrenTierraParallax = new Parallax[numTierraChildren];
+        originTierraParallaxVel = new float[numTierraChildren];
+
         playerTr = carpa.transform.GetChild(0);
         playerRb = playerTr.GetComponent<Rigidbody2D>();
+
         for (int i = 0; i < numChildren; i++)
         {
             childrenParallax[i] = bg.transform.GetChild(i).gameObject.GetComponent<Parallax>();
             originParallaxVel[i] = childrenParallax[i].parallaxEffect;
+        }
+
+        for (int i = 0; i < numTierraChildren; i++)
+        {
+            childrenTierraParallax[i] = tierraBg.transform.GetChild(i).gameObject.GetComponent<Parallax>();
+            originTierraParallaxVel[i] = childrenTierraParallax[i].parallaxEffect;
         }
 
         //Pilla
@@ -147,6 +161,7 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < bg.transform.childCount; ++i)
             {
                 childrenParallax[i].parallEffectMultiplier(val);
+                childrenTierraParallax[i].parallEffectMultiplier(val);
             }
         }
     }
@@ -271,6 +286,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < bg.transform.childCount; ++i)
         {
             childrenParallax[i].parallaxEffect = originParallaxVel[i];
+            childrenTierraParallax[i].parallaxEffect = originTierraParallaxVel[i];
         }
         //Scale
         playerTr.localScale = new Vector3(playerTr.localScale.x, originalScaleY, playerTr.localScale.z);
