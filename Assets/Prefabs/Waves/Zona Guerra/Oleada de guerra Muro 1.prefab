@@ -69,4 +69,4 @@ MonoBehaviour:
   - pos: {x: 0, y: 0}
     randRangeX: 20
     randRangeY: 4
-  randObstacle: 0
+  randObstacle: 1
