@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6558476095424974809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_: 4
+  destroyable: 1
+  particle: 0
 --- !u!50 &6558476095424974811
 Rigidbody2D:
   serializedVersion: 4
@@ -107,7 +109,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1266160429
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 74595d058b3f9814a8c30e66f71316ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
