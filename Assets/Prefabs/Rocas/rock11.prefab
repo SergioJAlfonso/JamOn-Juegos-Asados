@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 2841691775063787911}
   - component: {fileID: 2841691775063787904}
   - component: {fileID: -4854542259127310417}
+  - component: {fileID: 6907195379389250161}
+  - component: {fileID: 8972893289825069139}
+  - component: {fileID: 6692259736934975102}
+  - component: {fileID: 8640566835136863369}
   m_Layer: 0
   m_Name: rock11
   m_TagString: Untagged
@@ -60,19 +64,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b0b2d0f9f5c1c4cb023e55f169c3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8972893289825069139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2841691775063787905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9567544391e3e50469c9f02911f642c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed_: 7
 --- !u!60 &6907195379389250161
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -108,6 +99,52 @@ PolygonCollider2D:
       - {x: 0.411738, y: -0.8544869}
       - {x: 0.8406331, y: -0.4748967}
       - {x: 0.8291476, y: 0.6792584}
+--- !u!114 &8972893289825069139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2841691775063787905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9567544391e3e50469c9f02911f642c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed_: 7
+--- !u!114 &6692259736934975102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2841691775063787905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd16703c744ce43a5eabacf93fde63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &8640566835136863369
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2841691775063787905}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2841691775133949362
 GameObject:
   m_ObjectHideFlags: 0
