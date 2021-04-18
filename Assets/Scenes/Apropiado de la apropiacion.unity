@@ -1647,6 +1647,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &586740888
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4210014501216018219, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_Name
+      value: BoostParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210014501216018231, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210014501216018231, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210014501216018231, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210014501216018231, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210014501216018231, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210014501216018231, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210014501216018231, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210014501216018231, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210014501216018231, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210014501216018231, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210014501216018231, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 833db5c7d3864774da8521c3a12f3fcf, type: 3}
 --- !u!1 &602146115
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,9 +2578,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actualScene: 1
   bg: {fileID: 392846807}
+  tierraBg: {fileID: 0}
+  carpa: {fileID: 0}
   playerTr: {fileID: 1432473290}
   playerRb: {fileID: 0}
+  dragon: {fileID: 0}
   dumpingObjectTr: {fileID: 0}
+  buttons: {fileID: 0}
+  childrenTierraParallax: []
+  cam: {fileID: 0}
   minObstSpeed: 7
   sectionTimeStamps:
   - 26
@@ -2531,11 +2594,12 @@ MonoBehaviour:
   - 250
   - 321
   smoothDelay: 0.125
-  musicManagerEvent: event:/MusicManager
-  backgroundManagerEvent: event:/BackgroundMusic
   Menu: {fileID: 14064780}
   cascada: {fileID: 4006531810020372424, guid: f56d4afae96201e4a8b5f3ae93c2a2e8, type: 3}
   elAdmin: {fileID: 1382134922}
+  colorPanel: {fileID: 0}
+  fishState: 0
+  rainEffect: {fileID: 0}
 --- !u!1 &1323241355
 GameObject:
   m_ObjectHideFlags: 0
