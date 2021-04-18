@@ -2183,6 +2183,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!198 &1094156160 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7895623434188097886, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+  m_PrefabInstance: {fileID: 1639754845}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1111051133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,6 +3153,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 395725200396624845, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: jump
+      value: 
+      objectReference: {fileID: 1094156160}
     - target: {fileID: 395725201717657274, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
       propertyPath: m_Name
       value: CarpaBody
@@ -3194,6 +3203,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 395725201717657275, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 954408700590563412, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: ForceModule.inWorldSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 954408700590563419, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4496285188007443557, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517343467011292984, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895623434188097880, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895623434188097886, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: autoRandomSeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895623434188097886, guid: e36d1c0cdbdae6b409eee08ae7c0e43c, type: 3}
+      propertyPath: ForceModule.enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
