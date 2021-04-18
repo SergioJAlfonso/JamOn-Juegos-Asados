@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int actualScene = 1;
 
-    public GameObject bg;
+    public GameObject bg;
+
     public GameObject tierraBg; 
     [SerializeField]
     GameObject carpa;
@@ -114,8 +115,10 @@ public class GameManager : MonoBehaviour
         
         int numTierraChildren = childrenTierraParallax.Length;
         //childrenTierraParallax = new Parallax[numTierraChildren];
-        originTierraParallaxVel = new float[numTierraChildren];
-
+        originTierraParallaxVel = new float[numTierraChildren];
+
+
+
         playerTr = carpa.transform.GetChild(0);
         playerRb = playerTr.GetComponent<Rigidbody2D>();
 
@@ -123,7 +126,8 @@ public class GameManager : MonoBehaviour
         {
             childrenParallax[i] = bg.transform.GetChild(i).gameObject.GetComponent<Parallax>();
             originParallaxVel[i] = childrenParallax[i].parallaxEffect;
-        }
+        }
+
 
         for (int i = 0; i < numTierraChildren; i++)
         {
@@ -369,6 +373,7 @@ public class GameManager : MonoBehaviour
             tierraBg.transform.GetChild(i).gameObject.SetActive(false);
         }
         dragon.SetActive(true);
+        elAdmin.enabled = false;
         cam.GetComponent<CameraFollow>().ChangePlayer(dragon.transform.GetChild(0).gameObject);
         carpa.SetActive(false);
     }
