@@ -151,5 +151,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Splash Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 579994676650631911, guid: fcf463f3461554645a5f66c300105997, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fcf463f3461554645a5f66c300105997, type: 3}
