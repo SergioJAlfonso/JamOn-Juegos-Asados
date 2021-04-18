@@ -45,13 +45,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gObj:
   - {fileID: 2487037536726861199, guid: 4914aaa31fc7d0a4dbd9d4663be7e25a, type: 3}
-  - {fileID: 6558476095424974809, guid: d4ca302b6a9c5114b8512b3ae009303c, type: 3}
+  - {fileID: 4666808696364274759, guid: 48999cbeeb5e4f14d803d0541cfb16ad, type: 3}
+  - {fileID: 6558476095424974809, guid: 2d99cf63fa1bf2b4ea75c5c877167c41, type: 3}
   - {fileID: 6558476095424974809, guid: 2d99cf63fa1bf2b4ea75c5c877167c41, type: 3}
   position:
   - pos: {x: 8, y: -4}
     randRangeX: 4
     randRangeY: 0
-  - pos: {x: -8, y: 7}
+  - pos: {x: 23, y: 7}
     randRangeX: -4
     randRangeY: 4
   - pos: {x: 0, y: 0}
