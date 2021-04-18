@@ -58,7 +58,7 @@ public class Rock : MonoBehaviour
         {
             Transform oTr = other.GetComponent<Transform>();
 
-            if (oTr.position.z >= 0)
+            if (oTr.position.z >= 0 && !plC.ascending)
             {
                 plC.enabled = false;
                 Rigidbody2D oRb = other.GetComponent<Rigidbody2D>();

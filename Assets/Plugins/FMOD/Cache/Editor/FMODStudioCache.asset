@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5969890058965732250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Waterfall
+  m_EditorClassIdentifier: 
+  Path: event:/Waterfall
+  guid: 36ccba06b22d4a48bda8457212e3d49e
+  Banks:
+  - {fileID: -3714017884759916723}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3000
 --- !u!114 &-3714017884759916723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +38,33 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637542989539719397
+  lastModified: 637543132082370106
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-1971295251935214525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BackgroundMusic
+  m_EditorClassIdentifier: 
+  Path: event:/BackgroundMusic
+  guid: 0860770f91d5384ab079c41f6ea5043d
+  Banks:
+  - {fileID: -3714017884759916723}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 49313
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,13 +82,84 @@ MonoBehaviour:
   - {fileID: -3714017884759916723}
   EditorEvents:
   - {fileID: 6837911063467597878}
+  - {fileID: -1971295251935214525}
+  - {fileID: 9097389705266869789}
+  - {fileID: -5969890058965732250}
+  - {fileID: 603788249909448816}
+  - {fileID: 2944801178731805609}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3714017884759916723}
   StringsBanks:
   - {fileID: 5315259636333810124}
-  stringsBankWriteTime: 637542989529491570
+  stringsBankWriteTime: 637543130957508929
   cacheVersion: 6
+--- !u!114 &603788249909448816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RamdomBirds
+  m_EditorClassIdentifier: 
+  Path: event:/RamdomBirds
+  guid: 5e97084f277f264ca4f5a46f42c298a2
+  Banks:
+  - {fileID: -3714017884759916723}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 22500
+--- !u!114 &2944801178731805609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WinMusic
+  m_EditorClassIdentifier: 
+  Path: event:/WinMusic
+  guid: f15aa07e350d504bba49cbf35a948ba7
+  Banks:
+  - {fileID: -3714017884759916723}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &4779373723640450129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicManager/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5315259636333810124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,12 +175,32 @@ MonoBehaviour:
   Path: MusikitaTodo/FmodTodo/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637542989529491570
+  lastModified: 637543130957508929
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 750
+    Value: 1038
   Exists: 1
+--- !u!114 &6496423237772174242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicManager/Distance
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &6837911063467597878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,8 +219,32 @@ MonoBehaviour:
   - {fileID: -3714017884759916723}
   IsStream: 1
   Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4779373723640450129}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 378000
+--- !u!114 &9097389705266869789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WaterSplash
+  m_EditorClassIdentifier: 
+  Path: event:/WaterSplash
+  guid: 08d0e8dcbc43964897ed9a94d1606a07
+  Banks:
+  - {fileID: -3714017884759916723}
+  IsStream: 0
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 378000
+  Length: 562
