@@ -36,6 +36,7 @@ public class Admin : MonoBehaviour
         {
             Destroy(actualManager);
             Instantiate(rockManagers[actual]);
+            actualManager = rockManagers[actual];
         }
     }
 }
