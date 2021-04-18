@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 395725200243494368}
   - component: {fileID: 395725200243494371}
   - component: {fileID: 395725200243494370}
-  - component: {fileID: 395725200243494373}
   m_Layer: 6
   m_Name: Carpa (2)
   m_TagString: Untagged
@@ -107,6 +106,7 @@ MonoBehaviour:
   coleteo: 4
   timeToActive: 0
   ascending: 0
+  canFall: 1
 --- !u!50 &395725200243494370
 Rigidbody2D:
   serializedVersion: 4
@@ -128,22 +128,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &395725200243494373
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395725200243494372}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &395725200396624844
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +238,7 @@ MonoBehaviour:
   coleteo: 4
   timeToActive: 0
   ascending: 0
+  canFall: 1
 --- !u!50 &395725200396624841
 Rigidbody2D:
   serializedVersion: 4
@@ -329,7 +314,6 @@ GameObject:
   - component: {fileID: 395725200498461905}
   - component: {fileID: 395725200498461904}
   - component: {fileID: 395725200498461907}
-  - component: {fileID: 395725200498461906}
   m_Layer: 6
   m_Name: Carpa (4)
   m_TagString: Untagged
@@ -424,6 +408,7 @@ MonoBehaviour:
   coleteo: 4
   timeToActive: 0
   ascending: 0
+  canFall: 1
 --- !u!50 &395725200498461907
 Rigidbody2D:
   serializedVersion: 4
@@ -445,22 +430,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &395725200498461906
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395725200498461908}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &395725200767601670
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,7 +442,6 @@ GameObject:
   - component: {fileID: 395725200767601666}
   - component: {fileID: 395725200767601669}
   - component: {fileID: 395725200767601668}
-  - component: {fileID: 395725200767601671}
   m_Layer: 6
   m_Name: Carpa (1)
   m_TagString: Untagged
@@ -568,6 +536,7 @@ MonoBehaviour:
   coleteo: 4
   timeToActive: 0
   ascending: 0
+  canFall: 1
 --- !u!50 &395725200767601668
 Rigidbody2D:
   serializedVersion: 4
@@ -589,22 +558,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &395725200767601671
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395725200767601670}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &395725200891226538
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +570,6 @@ GameObject:
   - component: {fileID: 395725200891226711}
   - component: {fileID: 395725200891226710}
   - component: {fileID: 395725200891226537}
-  - component: {fileID: 395725200891226536}
   m_Layer: 6
   m_Name: Carpa (3)
   m_TagString: Untagged
@@ -712,6 +664,7 @@ MonoBehaviour:
   coleteo: 4
   timeToActive: 0
   ascending: 0
+  canFall: 1
 --- !u!50 &395725200891226537
 Rigidbody2D:
   serializedVersion: 4
@@ -733,22 +686,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &395725200891226536
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395725200891226538}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &395725201717657274
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +737,6 @@ GameObject:
   - component: {fileID: 8871748321418976939}
   - component: {fileID: 2376443225733660324}
   - component: {fileID: 7466075571389751205}
-  - component: {fileID: 8084699860472060959}
   m_Layer: 6
   m_Name: CarpaSombra (4)
   m_TagString: Untagged
@@ -894,22 +830,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &8084699860472060959
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3324083381206631594}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &4596206832621241534
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +841,6 @@ GameObject:
   - component: {fileID: 8294393864511888707}
   - component: {fileID: 5105329031980663013}
   - component: {fileID: 5393658921311925472}
-  - component: {fileID: 1633589762553509228}
   m_Layer: 6
   m_Name: CarpaSombra (1)
   m_TagString: Untagged
@@ -1015,22 +934,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &1633589762553509228
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4596206832621241534}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &7950779752698197710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +945,6 @@ GameObject:
   - component: {fileID: 4366272234758353682}
   - component: {fileID: 1234580655920553916}
   - component: {fileID: 1702995660961179568}
-  - component: {fileID: 1556937480304477862}
   m_Layer: 6
   m_Name: CarpaSombra (3)
   m_TagString: Untagged
@@ -1136,22 +1038,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &1556937480304477862
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7950779752698197710}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &8150166021943839415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1049,7 @@ GameObject:
   - component: {fileID: 3113051968533875625}
   - component: {fileID: 2837218511631780634}
   - component: {fileID: 787187674694704152}
-  - component: {fileID: 1948802387836819534}
+  - component: {fileID: 2203024529069494899}
   m_Layer: 6
   m_Name: CarpaSombra
   m_TagString: Untagged
@@ -1257,7 +1143,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &1948802387836819534
+--- !u!58 &2203024529069494899
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1284,7 +1170,6 @@ GameObject:
   - component: {fileID: 3653457096801100016}
   - component: {fileID: 3158870312212806331}
   - component: {fileID: 8582257551380319487}
-  - component: {fileID: 5482503410043834591}
   m_Layer: 6
   m_Name: CarpaSombra (2)
   m_TagString: Untagged
@@ -1378,22 +1263,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &5482503410043834591
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8860589259635693494}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1001 &2478971521440516424
 PrefabInstance:
   m_ObjectHideFlags: 0

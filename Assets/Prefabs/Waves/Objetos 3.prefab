@@ -48,11 +48,11 @@ MonoBehaviour:
   - {fileID: 2595664754463934817, guid: 9c3a58a2da29e9847a78e25e1ee43c0e, type: 3}
   - {fileID: 6558476095424974809, guid: 2d99cf63fa1bf2b4ea75c5c877167c41, type: 3}
   position:
-  - pos: {x: 10, y: 7}
+  - pos: {x: 5, y: 7}
     randRangeX: 7
     randRangeY: 2
   - pos: {x: -6, y: 3}
-    randRangeX: 9
+    randRangeX: 8
     randRangeY: 3
   - pos: {x: 2, y: -5}
     randRangeX: 5

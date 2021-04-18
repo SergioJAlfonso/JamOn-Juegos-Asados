@@ -5,29 +5,29 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     float speed = 10;
-    
+
     [SerializeField]
     float depth = 10;
-   
+
     [SerializeField]
     float maxDif = 1.2f;
 
     public GameObject sombra;
     public Transform nextPiece;
-    
+
     [SerializeField]
     Transform nextSombra;
-    
+
     [SerializeField]
     float amplitude = 0.5f;
-    
+
     [SerializeField]
     float coleteo = 2.0f;
     //Animator[] anim;
     Transform tr;
     Rigidbody2D rb;
     SpriteRenderer sp;
-    
+
     Transform sTr;
     Rigidbody2D sRb;
     SpriteRenderer sSp;
@@ -91,13 +91,12 @@ public class PlayerController : MonoBehaviour
             direction.Normalize();
 
             float diff = 0;
-            if (nextPiece != null) 
+            if (nextPiece != null)
                 diff = nextPiece.position.z - tr.position.z;
             float sDiff = 0;
             if (nextSombra != null)
                 sDiff = nextSombra.position.z - sTr.position.z;
-
-            if (Input.GetMouseButton(0) && tr.position.z >= 0) //profundidad maxima
+            if (Input.GetMouseButton(0) && tr.position.z >= 0 && !GameManager.instance.getRecovery()) //profundidad maxima
             {
                 if (nextPiece == null)
                 {
@@ -167,7 +166,7 @@ public class PlayerController : MonoBehaviour
             if (sombra != null)
                 sRb.velocity = new Vector2(direction.x * speed, 0);
         }
-        else 
+        else
             timeToActive -= Time.deltaTime;
     }
 

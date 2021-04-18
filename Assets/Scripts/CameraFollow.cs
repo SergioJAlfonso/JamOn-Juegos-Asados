@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] Vector3 minBound, maxBound;
     public Image panel;
     bool flashStarted = true;
-    float blancoBienTemporizador = 2.5f;
+    float blancoBienTemporizador = 7.5f;
 
     [SerializeField] float maxReductionTime = 4;
     float reductionTime = 0;
@@ -51,7 +51,7 @@ public class CameraFollow : MonoBehaviour
                     panel.CrossFadeAlpha(0f, 1f, true);
                     flashStarted = true;
                     speedBoosted = true;
-                    blancoBienTemporizador = 2.5f;
+                    blancoBienTemporizador = 7.5f;
                 }
 
             }
@@ -86,7 +86,7 @@ public class CameraFollow : MonoBehaviour
 
                         reductionTime = maxReductionTime;
 
-                        GameManager.instance.setHasToRestore(true);
+                        GameManager.instance.setHasToRestoreWaterfall (true);
                         speedBoosted = false;
                     }
                 }

@@ -51,6 +51,6 @@ MonoBehaviour:
     randRangeX: 5
     randRangeY: 0
   - pos: {x: 8, y: -2}
-    randRangeX: 9
+    randRangeX: 4
     randRangeY: 0
   randObstacle: 0

@@ -1,11 +1,10 @@
-﻿using UnityEditorInternal;
+﻿//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using FMODUnity;
-using UnityEngine.SceneManagement;  //Controla el cambio de escenas
 using FMOD;
 using UnityEngine.UI;
 
@@ -199,7 +198,7 @@ public class GameManager : MonoBehaviour
         {
             sectionId++;
             hasToRecover = true;
-            perspectiveRecovery = 5;
+            perspectiveRecovery = 10;
             cascadaEspauneada = false;
         }
 
@@ -263,6 +262,10 @@ public class GameManager : MonoBehaviour
     public float getSpeed()
     {
         return obstSpeed;
+    }   
+    public float getMinSpeed()
+    {
+        return minObstSpeed;
     }
     public bool getRecovery()
     {
@@ -282,6 +285,15 @@ public class GameManager : MonoBehaviour
         if (hasToRestore)
         {
             restoreTime = 5;
+            velChain++;
+        }
+    }  
+    public void setHasToRestoreWaterfall(bool b)
+    {
+        hasToRestore = b;
+        if (hasToRestore)
+        {
+            restoreTime = 10;
             velChain++;
         }
     }
