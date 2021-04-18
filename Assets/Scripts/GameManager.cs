@@ -127,8 +127,8 @@ public class GameManager : MonoBehaviour
         //musicMusic
         musicMusic = FMODUnity.RuntimeManager.CreateInstance(musicManagerEvent);
         musicMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
-        musicMusic.start();
-        musicMusic.release();
+        //musicMusic.start();
+        //musicMusic.release();
         //musicMusic
         backgroundMusic = FMODUnity.RuntimeManager.CreateInstance(backgroundManagerEvent);
         backgroundMusic.set3DAttributes(RuntimeUtils.To3DAttributes(transform));
@@ -153,6 +153,8 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
+        fishState = 5;
+
         if (botonesMenuHabilitados)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/winMusic");
@@ -184,6 +186,7 @@ public class GameManager : MonoBehaviour
             Invoke("gameStart", timeRemain);
             musicMusic.setParameterByName("Distance", distance);
             botonesMenuHabilitados = false;
+            //distance = 400;
         }
     }
     void gameStart()
@@ -215,7 +218,7 @@ public class GameManager : MonoBehaviour
             elAdmin.enabled = true;
         }
         musicMusic.setParameterByName("Distance", distance);
-        backgroundMusic.setParameterByName("isDragon", distance);
+        backgroundMusic.setParameterByName("Distance", distance);
 
         if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && distance > sectionTimeStamps[sectionId] - 4)
         {

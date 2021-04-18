@@ -20,8 +20,7 @@ public class CarpaSounds : MonoBehaviour
     }
     void FixedUpdate()
     {
-        
-        eventMusic.setParameterByName("isDragon", GameManager.instance.fishState);
+        eventMusic.setParameterByName("Distance", GameManager.instance.getDistance());
 
         //Sale del agua
         if (tr.position.z < 3 && control)
