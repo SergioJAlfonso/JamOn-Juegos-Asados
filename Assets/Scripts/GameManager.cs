@@ -130,10 +130,12 @@ public class GameManager : MonoBehaviour
     {
         if (botonesMenuHabilitados)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/winMusic");
+
             Vector2 a = new Vector2(0, 0);
             if (InitDistance < 8)
             {
-                distance = 8;
+                distance = 16;
                 TiempoBucle = 8;
             }
             else
