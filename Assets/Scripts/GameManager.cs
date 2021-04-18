@@ -5,6 +5,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using FMODUnity;
+using UnityEngine.SceneManagement;  //Controla el cambio de escenas
+using FMOD;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,7 +27,10 @@ public class GameManager : MonoBehaviour
     bool FOVRestoration = false;
 
     //DISTANCIA QUE LLEVA EL PEZ RECORRIDA
-    float distance = 0;
+    float distance = 16;
+    float InitDistance = 0;
+    float TiempoBucle = 16;
+    float timeRemain;
     public float getDistance() { return distance; }
 
     int velChain = 0;
@@ -42,13 +47,16 @@ public class GameManager : MonoBehaviour
     bool hasToRecover = false;
 
     [SerializeField] float smoothDelay = 0.125f;
-    public enum States { Playing, Menu };
-    States GameStates;
+
+    bool gameStates = false;
 
     //////##! SONIDOS
     private FMOD.Studio.EventInstance instanceMusic;
     [FMODUnity.EventRef]
     [SerializeField] string fmodEvent;
+
+
+    public GameObject Menu;
 
     public GameObject cascada;
     bool cascadaEspauneada = false;
@@ -57,8 +65,7 @@ public class GameManager : MonoBehaviour
     // que hubiera otro se autodestruye
     void Awake()
     {
-        //GameStates = States.Menu;
-
+        Menu.SetActive(true);
         if (instance == null)
         {
             instance = this;
@@ -95,7 +102,7 @@ public class GameManager : MonoBehaviour
     }
     public void parallaxMultiplier(float val)
     {
-        if (GameStates == States.Playing)
+        if (gameStates)
         {
             for (int i = 0; i < bg.transform.childCount; ++i)
             {
@@ -104,22 +111,37 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void changePlayState(int n)
+    public void PlayGame()
     {
-        if (n == 0)
-            GameStates = States.Playing;
-        else if (n == 1)
-            GameStates = States.Menu;
+        Vector2 a = new Vector2(0, 0);
+       
+        if (InitDistance > TiempoBucle)
+            timeRemain = TiempoBucle - InitDistance % TiempoBucle;
+        else
+            timeRemain = TiempoBucle - InitDistance;
+
+        LeanTween.scale(Menu, a, timeRemain).setEaseInCirc();
+        Invoke("gameStart", timeRemain);
+    }
+    void gameStart() {
+        gameStates = !gameStates;
+        Menu.SetActive(false); }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 
     private void Update()
     {
+        //Vamos guardando tiempo desde el inicial
+        InitDistance += Time.deltaTime;
         //LA DISTANCIA SOLO AVANZA SI EL JUGADOR ESTA JUGANDO
-        if (GameStates == States.Playing)
+        if (gameStates)
         {
             distance += Time.deltaTime;
-            //instanceMusic.setParameterByName("Distance", distance);
+            instanceMusic.setParameterByName("Distance", distance);
         }
 
         gameTime += Time.deltaTime;
@@ -139,7 +161,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (hasToRecover)
-        {           
+        {
             perspectiveRecovery -= Time.deltaTime;
             if (perspectiveRecovery <= 0)
                 hasToRecover = false;
