@@ -261,6 +261,10 @@ public class GameManager : MonoBehaviour
     public float getSpeed()
     {
         return obstSpeed;
+    }   
+    public float getMinSpeed()
+    {
+        return minObstSpeed;
     }
     public bool getRecovery()
     {

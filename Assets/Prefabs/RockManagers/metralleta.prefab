@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3397560533329837880}
   - component: {fileID: 3397560533329837887}
   m_Layer: 0
-  m_Name: RockManager1
+  m_Name: metralleta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,12 +44,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WAVES:
-  - type: {fileID: 4034594725033149886, guid: a3952a9e166fe6f4e827bde436751712, type: 3}
-    duration: 8
-  - type: {fileID: 4034594725033149886, guid: a3952a9e166fe6f4e827bde436751712, type: 3}
-    duration: 12
-  - type: {fileID: 4034594725033149886, guid: a3952a9e166fe6f4e827bde436751712, type: 3}
-    duration: 12
+  - type: {fileID: 4034594725033149886, guid: 7ca97508c3b6032468c646bf4f95a984, type: 3}
+    duration: 3
+  - type: {fileID: 4034594725033149886, guid: 1e2fcd5118f0c714f9b6121f918757c6, type: 3}
+    duration: 3
+  - type: {fileID: 4034594725033149886, guid: 619cd5f23a95e5e47bae1137cbd85279, type: 3}
+    duration: 3
   - type: {fileID: 4034594725033149886, guid: 543f080a7f913a040a0a7ee8c33ab309, type: 3}
-    duration: 12
+    duration: 3
+  - type: {fileID: 4034594725033149886, guid: 99d150c2a2ac0994a8ff4174eaf8147b, type: 3}
+    duration: 3
+  - type: {fileID: 4034594725033149886, guid: 05afaf98f523f5a4c9ab2a5947e1dd38, type: 3}
+    duration: 3
+  - type: {fileID: 4034594725033149886, guid: c98473319d019bd4d8fbb55b0d1b0b46, type: 3}
+    duration: 3
+  - type: {fileID: 4034594725033149886, guid: 20b6b8334c79af542963d244d6c5180b, type: 3}
+    duration: 3
   actualWave: 0

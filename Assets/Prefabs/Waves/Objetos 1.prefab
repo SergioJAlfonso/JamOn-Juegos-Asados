@@ -47,6 +47,6 @@ MonoBehaviour:
   - {fileID: 8138697760027829715, guid: 6f7a5711bda36e9468df0559e3e3b675, type: 3}
   position:
   - pos: {x: 0, y: 5}
-    randRangeX: 30
+    randRangeX: 20
     randRangeY: 0
   randObstacle: 0
