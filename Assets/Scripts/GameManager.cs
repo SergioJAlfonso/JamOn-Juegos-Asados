@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] float[] sectionTimeStamps = new float[5];
     int sectionId = 0;
 
-    float gameTime = 0;
+    //float gameTime = 0;
 
     float perspectiveRecovery;
     bool hasToRecover = false;
@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject cascada;
     bool cascadaEspauneada = false;
+
     // En el método Awake comprueba si hay otro GameManger
     // y si no lo hay se inicializa como GameManager. En el caso
     // que hubiera otro se autodestruye
@@ -131,7 +132,9 @@ public class GameManager : MonoBehaviour
     }
     void gameStart() {
         gameStates = !gameStates;
-        Menu.SetActive(false); }
+        Menu.SetActive(false);
+       
+    }
 
     public void QuitGame()
     {
@@ -147,18 +150,17 @@ public class GameManager : MonoBehaviour
         if (gameStates)
         {
             distance += Time.deltaTime;
+            //gameTime += Time.deltaTime;
             instanceMusic.setParameterByName("Distance", distance);
         }
 
-        gameTime += Time.deltaTime;
-
-        if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && gameTime > sectionTimeStamps[sectionId] - 4)
+        if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && distance > sectionTimeStamps[sectionId] - 4)
         {
             GameObject cascadita = Instantiate(cascada, new Vector3(0, 0, 0), Quaternion.identity);
             cascadaEspauneada = true;
         }
 
-        if (sectionId < sectionTimeStamps.Length && gameTime > sectionTimeStamps[sectionId])
+        if (sectionId < sectionTimeStamps.Length && distance > sectionTimeStamps[sectionId])
         {
             sectionId++;
             hasToRecover = true;
