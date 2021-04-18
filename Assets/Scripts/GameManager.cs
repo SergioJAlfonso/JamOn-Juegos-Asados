@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int actualScene = 1;
 
-    public GameObject bg;
+    public GameObject bg;
+    public GameObject tierraBg; 
     [SerializeField]
     GameObject carpa;
     [HideInInspector] public Transform playerTr;
@@ -28,6 +29,9 @@ public class GameManager : MonoBehaviour
 
     Parallax[] childrenParallax;
     float[] originParallaxVel;
+    [SerializeField]
+    Parallax[] childrenTierraParallax;
+    float[] originTierraParallaxVel;
 
     float originalFOV;
     float originalScaleY;
@@ -64,8 +68,8 @@ public class GameManager : MonoBehaviour
     private FMOD.Studio.EventInstance backgroundMusic;
     private FMOD.Studio.EventInstance birdsMusic;
 
-    [FMODUnity.EventRef] [SerializeField] string musicManagerEvent;
-    [FMODUnity.EventRef] [SerializeField] string backgroundManagerEvent;
+    [FMODUnity.EventRef] string musicManagerEvent = "event:/MusicManager";
+    [FMODUnity.EventRef] string backgroundManagerEvent = "event:/BackgroundMusic";
     [FMODUnity.EventRef] string birdsEvent = "event:/RamdomBirds";
 
 
@@ -80,6 +84,7 @@ public class GameManager : MonoBehaviour
     public Image colorPanel;
     Color newColor;
 
+    public int fishState = 0;
     [SerializeField] GameObject rainEffect;
 
     // En el método Awake comprueba si hay otro GameManger
@@ -102,13 +107,24 @@ public class GameManager : MonoBehaviour
         int numChildren = bg.transform.childCount;
         childrenParallax = new Parallax[numChildren];
         originParallaxVel = new float[numChildren];
-
+        
+        int numTierraChildren = childrenTierraParallax.Length;
+        //childrenTierraParallax = new Parallax[numTierraChildren];
+        originTierraParallaxVel = new float[numTierraChildren];
+
         playerTr = carpa.transform.GetChild(0);
         playerRb = playerTr.GetComponent<Rigidbody2D>();
+
         for (int i = 0; i < numChildren; i++)
         {
             childrenParallax[i] = bg.transform.GetChild(i).gameObject.GetComponent<Parallax>();
             originParallaxVel[i] = childrenParallax[i].parallaxEffect;
+        }
+
+        for (int i = 0; i < numTierraChildren; i++)
+        {
+            //childrenTierraParallax[i] = tierraBg.transform.GetChild(i).gameObject.GetComponent<Parallax>();
+            originTierraParallaxVel[i] = childrenTierraParallax[i].parallaxEffect;
         }
 
         //Pilla
@@ -146,6 +162,10 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < bg.transform.childCount; ++i)
             {
                 childrenParallax[i].parallEffectMultiplier(val);
+            }
+            for (int i = 0; i < childrenTierraParallax.Length; ++i)
+            {
+                childrenTierraParallax[i].parallEffectMultiplier(val);
             }
         }
     }
@@ -214,6 +234,7 @@ public class GameManager : MonoBehaviour
             elAdmin.enabled = true;
         }
         musicMusic.setParameterByName("Distance", distance);
+        backgroundMusic.setParameterByName("isDragon", distance);
 
         if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && distance > sectionTimeStamps[sectionId] - 4)
         {
@@ -270,6 +291,12 @@ public class GameManager : MonoBehaviour
         {
             childrenParallax[i].parallaxEffect = originParallaxVel[i];
         }
+
+        for (int i = 0; i < childrenTierraParallax.Length; ++i)
+        {
+            childrenTierraParallax[i].parallaxEffect = originTierraParallaxVel[i];
+        }
+        
         //Scale
         playerTr.localScale = new Vector3(playerTr.localScale.x, originalScaleY, playerTr.localScale.z);
 
