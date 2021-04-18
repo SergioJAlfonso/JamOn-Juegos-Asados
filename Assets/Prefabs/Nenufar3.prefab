@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6558476095424974804}
   - component: {fileID: 6558476095424974805}
-  - component: {fileID: 6558476095424974811}
   - component: {fileID: 6558476095424974808}
   - component: {fileID: 3082556346966413056}
   - component: {fileID: -2657995386145118104}
+  - component: {fileID: -7686340183261492022}
   m_Layer: 7
   m_Name: Nenufar3
   m_TagString: Untagged
@@ -48,26 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_: 4
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6558476095424974809}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  destroyable: 1
 --- !u!212 &6558476095424974808
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -106,7 +87,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1266160429
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 12119d43bd4be67419d10a7f92ee9504, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -147,3 +128,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a6aaa2875a2c74a96ed9c111212aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &-7686340183261492022
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6558476095424974809}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
