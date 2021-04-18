@@ -27,7 +27,8 @@ public class GoDown : MonoBehaviour
             rb.velocity = new Vector2(0, -speed_);
         }
 
-     
+        if (GameManager.instance.getRecovery())
+            Destroy(this.gameObject);
     }
 
     //public void initialize(int speed)
