@@ -40,9 +40,9 @@ public class Boost : MonoBehaviour
             if (GameManager.instance.getVelChain() < 3)
             {
 
-                Vector3 newScale = new Vector3(tr.localScale.x, tr.localScale.y * 5f, tr.localScale.z);
+                //Vector3 newScale = new Vector3(tr.localScale.x, tr.localScale.y * 5f, tr.localScale.z);
 
-                tr.localScale = Vector3.Lerp(transform.localScale, newScale, smoothDelay);
+                //tr.localScale = Vector3.Lerp(transform.localScale, newScale, smoothDelay);
 
                 GameManager.instance.parallaxMultiplier(1.75f);
                 GameManager.instance.speedMultiplier(1.5f);

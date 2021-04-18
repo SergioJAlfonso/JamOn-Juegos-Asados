@@ -14,8 +14,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int actualScene = 1;
 
-    public GameObject bg;
-
+    public GameObject bg;
     public GameObject tierraBg; 
     [SerializeField]
     GameObject carpa;
@@ -33,6 +32,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Parallax[] childrenTierraParallax;
     float[] originTierraParallaxVel;
+
+    [SerializeField]
+    Camera cam;
 
     float originalFOV;
     float originalScaleY;
@@ -111,10 +113,8 @@ public class GameManager : MonoBehaviour
         
         int numTierraChildren = childrenTierraParallax.Length;
         //childrenTierraParallax = new Parallax[numTierraChildren];
-        originTierraParallaxVel = new float[numTierraChildren];
-
-
-
+        originTierraParallaxVel = new float[numTierraChildren];
+
         playerTr = carpa.transform.GetChild(0);
         playerRb = playerTr.GetComponent<Rigidbody2D>();
 
@@ -122,8 +122,7 @@ public class GameManager : MonoBehaviour
         {
             childrenParallax[i] = bg.transform.GetChild(i).gameObject.GetComponent<Parallax>();
             originParallaxVel[i] = childrenParallax[i].parallaxEffect;
-        }
-
+        }
 
         for (int i = 0; i < numTierraChildren; i++)
         {
@@ -238,7 +237,7 @@ public class GameManager : MonoBehaviour
             elAdmin.enabled = true;
         }
         musicMusic.setParameterByName("Distance", distance);
-        backgroundMusic.setParameterByName("Distance", distance);
+        backgroundMusic.setParameterByName("isDragon", distance);
 
         if (!cascadaEspauneada && sectionId < sectionTimeStamps.Length && distance > sectionTimeStamps[sectionId] - 4)
         {
@@ -320,10 +319,14 @@ public class GameManager : MonoBehaviour
         {
             case 1:
                 newColor = new Color(0, 255, 207, 60);
+                //colorPanel.CrossFadeColor(new Color(255, 255, 255, 1), 0f, true, true);
                 colorPanel.CrossFadeColor(newColor, 7f, true, true);  
                 break;
             case 2:
-                newColor = new Color(255, 0, 0, 125);
+                newColor = new Color(255, 67, 0, 90);
+                //colorPanel.CrossFadeColor(new Color(255, 255, 255, 1), 0f, true, true);
+                //colorPanel.color();
+                colorPanel.CrossFadeColor(new Color(255, 255, 255, 1), 0.2f, true, true);
                 colorPanel.CrossFadeColor(newColor, 7f, true, true);
                 rainEffect.SetActive(true);
                 break;
@@ -342,8 +345,17 @@ public class GameManager : MonoBehaviour
 
     private void dragonTransition()
     {
-        GameObject dragonObj = Instantiate(dragon, new Vector3(0, 0, 0), Quaternion.identity);
-        dragonObj.transform.position = playerTr.position;
+        childrenTierraParallax = new Parallax[0];
+        for(int i=6; i < bg.transform.childCount; ++i)
+        {
+            bg.transform.GetChild(i).gameObject.SetActive(true);
+        }
+        for(int i=0; i<tierraBg.transform.childCount-2; ++i)
+        {
+            tierraBg.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        dragon.SetActive(true);
+        cam.GetComponent<CameraFollow>().ChangePlayer(dragon.transform.GetChild(0).gameObject);
         carpa.SetActive(false);
     }
 
