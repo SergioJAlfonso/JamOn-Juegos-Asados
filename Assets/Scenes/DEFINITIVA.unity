@@ -2800,10 +2800,11 @@ MonoBehaviour:
   buttons: {fileID: 2102170935}
   minObstSpeed: 7
   sectionTimeStamps:
-  - 26
-  - 45
-  - 250
-  - 321
+  - 80
+  - 168
+  - 248
+  - 320
+  - 368
   smoothDelay: 0.125
   musicManagerEvent: event:/MusicManager
   backgroundManagerEvent: event:/BackgroundMusic

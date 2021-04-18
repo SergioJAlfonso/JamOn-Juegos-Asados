@@ -7,7 +7,7 @@ public class cursorFollow : MonoBehaviour
     [SerializeField]
     Texture2D cursorTex;
     [SerializeField]
-    float maxHideTime = 5;
+    float maxHideTime = 1;
     float hideTime;
     Vector2 hotspot;
     CursorTrail cTr;
@@ -16,9 +16,9 @@ public class cursorFollow : MonoBehaviour
     void Start()
     {
         hideTime = maxHideTime;
-        Cursor.visible = true;
-        hotspot = new Vector2(cursorTex.width / 2, cursorTex.height / 2);
-        Cursor.SetCursor(cursorTex, hotspot, CursorMode.ForceSoftware);
+        Cursor.visible = false;
+        //hotspot = new Vector2(cursorTex.width / 2, cursorTex.height / 2);
+        //Cursor.SetCursor(cursorTex, hotspot, CursorMode.ForceSoftware);
 
         cTr = this.gameObject.GetComponent<CursorTrail>();
 
@@ -30,7 +30,7 @@ public class cursorFollow : MonoBehaviour
         // Is true when the mouse has moved
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
         {
-            Cursor.visible = true;
+            //Cursor.visible = true;
             cTr.enabled = true;
             hideTime = maxHideTime;
         }
@@ -47,7 +47,7 @@ public class cursorFollow : MonoBehaviour
 
         if (hideTime <= 0.0f)
         {
-            Cursor.visible = false;
+            //Cursor.visible = false;
             cTr.enabled = false;
         }
 

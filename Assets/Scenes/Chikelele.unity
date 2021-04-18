@@ -2797,8 +2797,8 @@ MonoBehaviour:
   sectionTimeStamps:
   - 26
   - 45
-  - 250
-  - 321
+  - 60
+  - 80
   smoothDelay: 0.125
   musicManagerEvent: event:/MusicManager
   backgroundManagerEvent: event:/BackgroundMusic
