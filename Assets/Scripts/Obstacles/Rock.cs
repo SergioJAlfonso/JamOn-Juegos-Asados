@@ -85,6 +85,8 @@ public class Rock : MonoBehaviour
 
                 CameraEffects.ShakeOnce(0.5f, 1.5f, new Vector3(2, 1, 0));
             }
+            else
+                plC.canFall = false;
         }
     }
 
@@ -132,6 +134,7 @@ public class Rock : MonoBehaviour
         {
             plC.enabled = true;
             plC.timeToActive = 0.075f;
+            plC.canFall = true;
         }
         if (boot != null)
             boot.enabled = true;
