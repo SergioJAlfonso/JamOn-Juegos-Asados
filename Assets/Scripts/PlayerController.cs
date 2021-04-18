@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
 
     float diveReach = 0; // Valor absoluto de la z al bucear (para el salto) 
     float timeAtTop;
+    float firstClicked; //caped at time.time - timeToDrop
+    bool clicked = false;
     float initY;
 
     const float maxAngle = 30;
@@ -45,6 +47,13 @@ public class PlayerController : MonoBehaviour
 
     public bool ascending = false;
     public bool canFall = true;
+
+    public ParticleSystem jump;
+    public ParticleSystem splash;
+
+    bool jumpingAnmation = false;
+    bool SplashinAnimation = false;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -96,10 +105,24 @@ public class PlayerController : MonoBehaviour
             float sDiff = 0;
             if (nextSombra != null)
                 sDiff = nextSombra.position.z - sTr.position.z;
+
+            if (!Input.GetMouseButton(0)){
+                //cuando se suelta el click
+                clicked = false;
+            }
+
             if (Input.GetMouseButton(0) && tr.position.z >= 0 && !GameManager.instance.getRecovery()) //profundidad maxima
             {
                 if (nextPiece == null)
                 {
+
+                    if (!clicked)
+                    {
+                        //para recoger cuando se clica por primera vez
+                        clicked = true;
+                        firstClicked = Time.time;
+                    }
+
                     if (tr.position.z + 0.25f <= depth)
                     {
                         tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.z + 0.25f);
@@ -116,6 +139,7 @@ public class PlayerController : MonoBehaviour
 
                 diveReach = -tr.position.z;
                 ascending = false;
+                //marca el momento en el que esta ascendiendo o no justo aqui
             }
             else if (tr.position.z - 0.25 > diveReach / 1.3)
             {
@@ -137,7 +161,30 @@ public class PlayerController : MonoBehaviour
                 }
                 if (sp.color.a + 0.02 < 1.2) sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, sp.color.a + 0.02f);
                 if (sSp.color.a - 0.04 > 0.1) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a - 0.015f);
+                if (nextPiece == null)
+                {
+                    if (!ascending)
+                    {
+                        if (firstClicked < Time.time - timeToDrop)
+                        {
+                            firstClicked = Time.time - timeToDrop;
+                        }
+
+                        //TOMA DANLLES HIJO DE PUTA SI QUIERES MODIFICAR VALORES AQUI OLE MI POYAAAA
+                        //tiene que estar capado a time.time - timeatTop
+                        jump.maxParticles = (int) (50 * (Time.time - firstClicked) / timeToDrop);
+                        jump.startSpeed = 22 * (Time.time - firstClicked) / timeToDrop;
+                        jump.startLifetime = 0.52f * (Time.time - firstClicked) / timeToDrop;
+                        jump.Play(false);
+                        Debug.Log(0.52f * (Time.time - firstClicked) / timeToDrop);
+                        /*
+                        jumpingAnmation = true;
+                        SplashinAnimation = false;
+                        */
+                    }
+                }
                 ascending = true;
+                //marca el momento en el que esta ascendiendo o no justo aqui
             }
             else if (tr.position.z < 0 && Time.time - timeAtTop >= timeToDrop && canFall)
             {
@@ -160,7 +207,16 @@ public class PlayerController : MonoBehaviour
                 else sp.color = new Color(sp.color.r, sp.color.g, sp.color.b, 0.85f);
                 if (sSp.color.a + 0.04 < 0.25) sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, sSp.color.a + 0.007f);
                 else sSp.color = new Color(sSp.color.r, sSp.color.g, sSp.color.b, 0.25f);
+                if (nextPiece == null)
+                {
+                    if (ascending)
+                    {
+                        splash.Play(false);
+                    }
+                }
                 ascending = false;
+
+                //marca el momento en el que esta ascendiendo o no justo aqui
             }
             rb.velocity = new Vector2(direction.x * speed, 0);
             if (sombra != null)

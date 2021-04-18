@@ -9,6 +9,8 @@ public class GoDown : MonoBehaviour
     float speed_;
     [SerializeField]
     bool destroyable = true;
+    [SerializeField]
+    bool particle = false;
     float limit_ = -60;
     Rigidbody2D rb;
 
@@ -50,6 +52,7 @@ public class GoDown : MonoBehaviour
 
         if (transform.position.y < limit_)
         {
+            if (!particle)
             Destroy(this.gameObject);
         }
     }
